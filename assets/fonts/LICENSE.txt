@@ -1,0 +1,6 @@
+Fonts in this folder are licensed under the SIL Open Font License, Version 1.1.
+
+- Noto Sans: Copyright 2014-2021 Adobe Systems Incorporated and Google LLC.
+- Noto Sans CJK SC: Copyright 2014-2021 Adobe Systems Incorporated and Google LLC.
+
+Full license text: https://scripts.sil.org/OFL

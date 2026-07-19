@@ -40,6 +40,10 @@ window/handheld/orientation=1
 renderer/rendering_method="gl_compatibility"
 textures/vram_compression/import_etc2_astc=true
 
+[gui]
+
+theme/custom_font="res://assets/fonts/default_font.tres"
+
 [internationalization]
 locale_fallback="en"
 locale="en"

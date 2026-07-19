@@ -96,7 +96,9 @@ The bottom music bar scans `assets/audio/` for `.ogg`, `.mp3`, and `.wav` files 
 
 ### Fonts
 
-The project uses Godot's default font. To add custom fonts (e.g. Cinzel or Playfair Display), place the files in `assets/fonts/` and set them as theme overrides on the labels/buttons.
+The project now bundles **Noto Sans** (for Latin, Turkish, Russian, and Spanish) with **Noto Sans CJK SC** as a fallback (for Simplified Chinese). Both are set as the default project font in `assets/fonts/default_font.tres`.
+
+To add custom fonts (e.g. Cinzel or Playfair Display), place the files in `assets/fonts/` and set them as theme overrides on the labels/buttons, or replace `default_font.tres`.
 
 ## Building Release Binaries
 
