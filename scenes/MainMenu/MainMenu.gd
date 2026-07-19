@@ -46,14 +46,17 @@ func _build_chapter_list() -> void:
 		var b := Button.new()
 		b.text = tr("UI_CHAPTER_TITLE") % [chapter["id"], HistoricalData.localize(chapter["title"]), chapter["years"]]
 		b.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		# Small portrait of the chapter's first sultan as a visual cue
+		b.custom_minimum_size = Vector2(0, 96)
+		b.icon_alignment = HORIZONTAL_ALIGNMENT_LEFT
+		b.vertical_icon_alignment = VERTICAL_ALIGNMENT_CENTER
+		b.expand_icon = true
+		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		# Portrait of the chapter's first sultan as a visual cue
 		var sultans: Array = chapter.get("sultans", [])
 		if sultans.size() > 0:
 			var p: String = sultans[0].get("portrait", "")
 			if p != "" and ResourceLoader.exists(p):
 				b.icon = load(p)
-				b.expand_icon = true
-				b.custom_minimum_size = Vector2(0, 72)
 		b.pressed.connect(_on_chapter_pressed.bind(chapter["id"] - 1))
 		chapter_list.add_child(b)
 

@@ -55,20 +55,15 @@ func _render_sultan() -> void:
 	quiz_button.text = tr("UI_TAKE_CHAPTER_TEST")
 
 func _load_portrait(path: String) -> void:
-	print("Loading portrait: ", path)
-	print("ResourceLoader.exists: ", ResourceLoader.exists(path))
-	if path != "" and ResourceLoader.exists(path):
-		var tex := load(path) as Texture2D
-		print("Loaded texture: ", tex)
-		if tex:
-			print("Texture size: ", tex.get_size())
-		portrait_rect.texture = tex
+	if path == "":
+		portrait_rect.visible = false
+		return
+	var res := load(path)
+	if res is Texture2D:
+		portrait_rect.texture = res
 		portrait_rect.visible = true
-		print("PortraitRect visible: ", portrait_rect.visible)
-		print("PortraitRect texture: ", portrait_rect.texture)
 	else:
 		portrait_rect.visible = false
-		print("Portrait not found or path empty")
 
 func _build_content(sultan: Dictionary) -> String:
 	var lines: Array = []
