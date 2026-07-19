@@ -148,6 +148,41 @@ chmod +x tools/build.sh
 | Android  | `build/android/Chronicles_of_the_House_of_Osman.apk` (release-signed with auto-generated keystore) |
 | iOS      | `build/ios/Chronicles_of_the_House_of_Osman.xcodeproj` (open in Xcode) |
 
+## CI / CD
+
+GitHub Actions workflows in `.github/workflows/` build and test the project on every push/PR and create releases for tagged versions.
+
+### Continuous Integration
+
+`.github/workflows/ci.yml` runs on pushes and pull requests to `main`/`master`:
+
+1. Installs Godot `4.7.1-stable` and the matching export templates (cached between runs).
+2. Sets up the Android SDK.
+3. Runs the headless test suite (`test_runner.tscn`).
+4. Builds Android, iOS, macOS, Windows, and Linux artifacts.
+5. Uploads the artifacts to the workflow run.
+
+### Release builds
+
+`.github/workflows/release.yml` triggers when you push a tag starting with `v`:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+The workflow runs the same build/test steps and then creates a GitHub Release with the following assets:
+
+| Asset | Description |
+|-------|-------------|
+| `Chronicles_of_the_House_of_Osman.apk` | Android release APK |
+| `Chronicles_of_the_House_of_Osman.zip` | macOS `.app` bundle |
+| `Chronicles_of_the_House_of_Osman_iOS_xcodeproject.zip` | iOS Xcode project (sign in Xcode to produce an `.ipa`) |
+| `Chronicles_of_the_House_of_Osman_Windows.zip` | Windows executable + `.pck` |
+| `Chronicles_of_the_House_of_Osman_Linux.zip` | Linux executable + `.pck` |
+
+> **iOS note:** Godot exports an Xcode project, not a signed `.ipa`, because Apple code signing requires a macOS runner, a valid Apple Developer Team ID, and provisioning-profile secrets. Download the iOS archive, open it in Xcode, configure signing, and archive to produce an `.ipa`.
+
 ## Mobile Export
 
 The project is preconfigured for mobile (portrait orientation, `gl_compatibility` renderer, `canvas_items` stretch). To export manually from the editor instead of using the script:
