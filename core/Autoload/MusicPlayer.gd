@@ -33,8 +33,18 @@ func _scan_tracks() -> void:
 		var file := dir.get_next()
 		while file != "":
 			var ext := file.get_extension().to_lower()
+			var base := file.get_basename()
+			var path := ""
 			if ext in ["ogg", "mp3", "wav"]:
-				tracks.append("res://assets/audio/" + file)
+				# Editor / raw-source builds see the actual audio file.
+				path = "res://assets/audio/" + file
+			elif ext == "import" and base.get_extension().to_lower() in ["ogg", "mp3", "wav"]:
+				# Exported builds ship the .import metadata and the imported stream,
+				# but not the raw source file. The res:// path without .import still
+				# resolves to the imported stream via ResourceLoader.
+				path = "res://assets/audio/" + base
+			if path != "" and not tracks.has(path):
+				tracks.append(path)
 			file = dir.get_next()
 		tracks.sort()
 

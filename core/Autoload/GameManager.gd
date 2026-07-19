@@ -25,10 +25,28 @@ signal quiz_completed(chapter_id: int, result: Dictionary)
 signal locale_changed(new_locale: String)
 
 func _ready() -> void:
-	_load_translations()
+	_load_translation_resources()
 	SaveManager.load_progress()
 	_apply_locale()
 	_configure_desktop_display()
+
+func _load_translation_resources() -> void:
+	# Godot's project-setting translations are not always loaded in headless or
+	# exported runs. Load the compiled .translation resources explicitly so tr()
+	# works everywhere (editor, CI, exported builds).
+	var paths := [
+		"res://assets/i18n/ui_translations.en.translation",
+		"res://assets/i18n/ui_translations.tr.translation",
+		"res://assets/i18n/ui_translations.zh.translation",
+		"res://assets/i18n/ui_translations.ru.translation",
+		"res://assets/i18n/ui_translations.es.translation",
+	]
+	for path in paths:
+		var res := ResourceLoader.load(path, "Translation")
+		if res is Translation:
+			TranslationServer.add_translation(res)
+		else:
+			push_warning("Failed to load translation resource: %s" % path)
 
 func _configure_desktop_display() -> void:
 	# Only apply on desktop platforms (Windows, macOS, Linux/BSD).
@@ -39,31 +57,6 @@ func _configure_desktop_display() -> void:
 	# Full-screen on desktop so the mobile-portrait UI fills the monitor.
 	# canvas_items + expand stretch mode scales menus and text automatically.
 	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-
-func _load_translations() -> void:
-	var file := FileAccess.open("res://assets/i18n/ui_translations.csv", FileAccess.READ)
-	if not file:
-		push_warning("UI translations CSV not found")
-		return
-	var header: PackedStringArray = file.get_csv_line()
-	var lang_cols: Dictionary = {}
-	for i in range(1, header.size()):
-		lang_cols[header[i]] = i
-	var languages := PackedStringArray(["en", "tr", "zh", "ru", "es"])
-	for lang in languages:
-		var col: int = lang_cols.get(lang, -1)
-		if col < 0:
-			continue
-		var translation := Translation.new()
-		translation.locale = lang
-		file.seek(0)
-		file.get_csv_line()  # skip header
-		while not file.eof_reached():
-			var line: PackedStringArray = file.get_csv_line()
-			if line.size() > col and not line[0].is_empty():
-				translation.add_message(line[0], line[col])
-		TranslationServer.add_translation(translation)
-	file.close()
 
 func _process(delta: float) -> void:
 	# Continuously track learning time in seconds

@@ -167,8 +167,8 @@ GitHub Actions workflows in `.github/workflows/` build and test the project on e
 `.github/workflows/release.yml` triggers when you push a tag starting with `v`:
 
 ```bash
-git tag v1.0.0
-git push origin v1.0.0
+git tag v1.0.1
+git push origin v1.0.1
 ```
 
 The workflow runs the same build/test steps and then creates a GitHub Release with the following assets:
@@ -176,10 +176,16 @@ The workflow runs the same build/test steps and then creates a GitHub Release wi
 | Asset | Description |
 |-------|-------------|
 | `Chronicles_of_the_House_of_Osman.apk` | Android release APK |
-| `Chronicles_of_the_House_of_Osman.zip` | macOS `.app` bundle |
+| `Chronicles_of_the_House_of_Osman.zip` | macOS `.app` bundle (ad-hoc signed) |
 | `Chronicles_of_the_House_of_Osman_iOS_xcodeproject.zip` | iOS Xcode project (sign in Xcode to produce an `.ipa`) |
 | `Chronicles_of_the_House_of_Osman_Windows.zip` | Windows executable + `.pck` |
 | `Chronicles_of_the_House_of_Osman_Linux.zip` | Linux executable + `.pck` |
+
+> **macOS note:** The released `.app` is ad-hoc signed. If macOS shows **"... is damaged and can't be opened"**, this is Gatekeeper, not real file damage. Fix it by right-clicking the app and choosing **Open**, or run in Terminal:
+> ```bash
+> xattr -cr "Chronicles of the House of Osman.app"
+> ```
+> For a fully trusted build you need an Apple Developer ID certificate and notarization.
 
 > **iOS note:** Godot exports an Xcode project, not a signed `.ipa`, because Apple code signing requires a macOS runner, a valid Apple Developer Team ID, and provisioning-profile secrets. Download the iOS archive, open it in Xcode, configure signing, and archive to produce an `.ipa`.
 

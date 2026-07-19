@@ -47,3 +47,4 @@ theme/custom_font="res://assets/fonts/default_font.tres"
 [internationalization]
 locale_fallback="en"
 locale="en"
+translations=PackedStringArray("res://assets/i18n/ui_translations.en.translation", "res://assets/i18n/ui_translations.tr.translation", "res://assets/i18n/ui_translations.zh.translation", "res://assets/i18n/ui_translations.ru.translation", "res://assets/i18n/ui_translations.es.translation")
