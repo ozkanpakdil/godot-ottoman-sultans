@@ -18,7 +18,10 @@ func _ready() -> void:
 
 	if not tracks.is_empty():
 		_load_track(0)
-		audio_player.play()
+		# Don't autoplay audio in headless/CI runs; the bottom bar would still try to
+		# initialize an audio device and can hang the process.
+		if DisplayServer.get_name() != "headless":
+			audio_player.play()
 		_update_ui()
 	else:
 		visible = false

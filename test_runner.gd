@@ -125,4 +125,7 @@ func _ready() -> void:
 		print("ALL TESTS PASSED")
 	else:
 		print("%d FAILURES" % failures)
+	call_deferred("_finish", failures)
+
+func _finish(failures: int) -> void:
 	get_tree().quit(1 if failures > 0 else 0)
