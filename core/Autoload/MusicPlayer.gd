@@ -7,12 +7,14 @@ extends CanvasLayer
 
 var tracks: Array = []
 var current_index: int = 0
+var _current_track_name: String = ""
 
 func _ready() -> void:
 	_scan_tracks()
 	play_button.pressed.connect(_toggle_play)
 	next_button.pressed.connect(_next_track)
 	audio_player.finished.connect(_on_track_finished)
+	GameManager.locale_changed.connect(_on_locale_changed)
 
 	if not tracks.is_empty():
 		_load_track(0)
@@ -41,8 +43,8 @@ func _load_track(idx: int) -> void:
 	var stream := ResourceLoader.load(path, "AudioStream") as AudioStream
 	if stream:
 		audio_player.stream = stream
-		var display_name := path.get_file().get_basename().replace("_", " ")
-		track_label.text = tr("UI_MUSIC_NOW_PLAYING") + ": " + display_name
+		_current_track_name = path.get_file().get_basename().replace("_", " ")
+		_refresh_track_label()
 
 func _toggle_play() -> void:
 	if tracks.is_empty():
@@ -66,9 +68,16 @@ func _on_track_finished() -> void:
 	_load_track(current_index + 1)
 	audio_player.play()
 
+func _refresh_track_label() -> void:
+	track_label.text = tr("UI_MUSIC_NOW_PLAYING") + ": " + _current_track_name
+
 func _update_ui() -> void:
 	play_button.text = tr("UI_MUSIC_PAUSE") if audio_player.playing else tr("UI_MUSIC_PLAY")
 	next_button.text = tr("UI_MUSIC_NEXT")
+
+func _on_locale_changed(_new_locale: String) -> void:
+	_refresh_track_label()
+	_update_ui()
 
 func set_muted(muted: bool) -> void:
 	audio_player.volume_db = -80.0 if muted else 0.0

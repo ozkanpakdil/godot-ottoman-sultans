@@ -28,6 +28,17 @@ func _ready() -> void:
 	_load_translations()
 	SaveManager.load_progress()
 	_apply_locale()
+	_configure_desktop_display()
+
+func _configure_desktop_display() -> void:
+	# Only apply on desktop platforms (Windows, macOS, Linux/BSD).
+	var desktop_os := ["Windows", "macOS", "Linux", "FreeBSD", "NetBSD", "OpenBSD", "BSD"]
+	if not (OS.get_name() in desktop_os):
+		return
+
+	# Full-screen on desktop so the mobile-portrait UI fills the monitor.
+	# canvas_items + expand stretch mode scales menus and text automatically.
+	DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _load_translations() -> void:
 	var file := FileAccess.open("res://assets/i18n/ui_translations.csv", FileAccess.READ)

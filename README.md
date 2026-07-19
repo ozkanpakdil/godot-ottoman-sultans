@@ -35,6 +35,8 @@ If Godot is not on your `PATH`, use the full binary path, e.g. on macOS:
 
 The game starts at the **Main Menu**. Choose **Continue the Journey** to start from your saved progress, or pick any chapter to jump straight to it. Progress, study time, quiz results, and your chosen language are saved automatically (encrypted) to the user data folder.
 
+On desktop exports (`./tools/build.sh desktop` or `godot .` on Windows/macOS/Linux), the game starts in **fullscreen** and the mobile-portrait UI is scaled to fill the monitor using Godot's `canvas_items` stretch mode.
+
 ## Supported Languages
 
 The game ships with full UI and content translations for:

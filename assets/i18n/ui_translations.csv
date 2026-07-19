@@ -43,6 +43,7 @@ UI_MUSIC_PLAY,Play,Çal,播放,Играть,Reproducir
 UI_MUSIC_PAUSE,Pause,Duraklat,暂停,Пауза,Pausa
 UI_MUSIC_NEXT,Next,Sonraki,下一首,Следующий,Siguiente
 UI_LANGUAGE,Language,Dil,语言,Язык,Idioma
+UI_EXIT,Exit,Çıkış,退出,Выход,Salir
 UI_CHOOSE_LANGUAGE,Choose language:,Dil seçin:,选择语言：,Выберите язык:,Elija idioma:
 UI_CHRONOLOGY,Chronology,Kronoloji,纪年,Хронология,Cronología
 UI_QUIZ_WHEN_DID_REIGN,When did %s reign?,%s ne zaman hüküm sürdü?,%s 在何时统治？,Когда правил %s?,¿Cuándo reinó %s?

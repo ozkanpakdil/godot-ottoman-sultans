@@ -20,6 +20,7 @@ func _ready() -> void:
 	subtitle_label.text = tr("UI_SUBTITLE")
 	continue_button.text = tr("UI_CONTINUE")
 	%LeaderboardButton.text = tr("UI_LEADERBOARD_PROGRESS")
+	%ExitButton.text = tr("UI_EXIT")
 	%ChapterPromptLabel.text = tr("UI_OR_BEGIN_CHAPTER")
 	%LanguageLabel.text = tr("UI_CHOOSE_LANGUAGE")
 
@@ -28,6 +29,7 @@ func _ready() -> void:
 	_update_stats()
 	continue_button.pressed.connect(_on_continue_pressed)
 	%LeaderboardButton.pressed.connect(_on_leaderboard_pressed)
+	%ExitButton.pressed.connect(_on_exit_pressed)
 	language_select.item_selected.connect(_on_language_selected)
 	%MusicMuteButton.pressed.connect(_on_music_mute_pressed)
 	
@@ -77,6 +79,9 @@ func _on_chapter_pressed(chapter_index: int) -> void:
 
 func _on_leaderboard_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Leaderboard/Leaderboard.tscn")
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()
 
 func _on_music_mute_pressed() -> void:
 	MusicPlayer.toggle_mute()
