@@ -11,10 +11,9 @@ env:
   EXPORT_NAME: "Chronicles_of_the_House_of_Osman"
 
 jobs:
-  build-and-release:
+  build-desktop-mobile-linux:
+    name: Build Android, Windows, Linux, iOS
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,7 +48,6 @@ jobs:
             "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" \
             -o /tmp/templates.tpz
           unzip -q /tmp/templates.tpz -d "$TEMPLATE_DIR"
-          # Godot expects platform zips directly under the version directory.
           if [ -d "$TEMPLATE_DIR/templates" ]; then
             mv "$TEMPLATE_DIR/templates/"* "$TEMPLATE_DIR/" || true
             rmdir "$TEMPLATE_DIR/templates" 2>/dev/null || true
@@ -65,30 +63,137 @@ jobs:
           cmdline-tools-version: 11076708
           packages: platform-tools platforms;android-34 build-tools;34.0.0
 
+      - name: Import Godot project assets
+        run: godot --headless --path . --import
+
       - name: Run headless tests
         run: godot --headless --path . res://test_runner.tscn
 
-      - name: Build all platforms
-        run: ./tools/build.sh all
+      - name: Build Android, Windows, Linux, iOS
+        run: |
+          ./tools/build.sh android
+          ./tools/build.sh windows
+          ./tools/build.sh linux
+          ./tools/build.sh ios
         env:
           ANDROID_SDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}
 
       - name: Package platform artifacts
         run: |
-          # iOS: zip the exported Xcode project directory.
           if [ -d "build/ios/${EXPORT_NAME}" ]; then
             (cd "build/ios" && zip -r "../../${EXPORT_NAME}_iOS_xcodeproject.zip" "${EXPORT_NAME}")
           fi
-
-          # Windows: zip the executable and its .pck file.
           if [ -d "build/windows" ]; then
             (cd "build/windows" && zip -r "../../${EXPORT_NAME}_Windows.zip" .)
           fi
-
-          # Linux: zip the executable and its .pck file.
           if [ -d "build/linux" ]; then
             (cd "build/linux" && zip -r "../../${EXPORT_NAME}_Linux.zip" .)
           fi
+
+      - name: Upload non-macOS artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: desktop-mobile-linux-artifacts
+          if-no-files-found: error
+          path: |
+            build/android/*.apk
+            Chronicles_of_the_House_of_Osman_iOS_xcodeproject.zip
+            Chronicles_of_the_House_of_Osman_Windows.zip
+            Chronicles_of_the_House_of_Osman_Linux.zip
+
+  build-macos:
+    name: Build and sign macOS app
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cache Godot editor and export templates
+        id: cache-godot-macos
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/godot
+            ~/Library/Application Support/Godot/export_templates
+          key: godot-${{ env.GODOT_VERSION_FULL }}-macos-v1
+
+      - name: Install Godot editor
+        if: steps.cache-godot-macos.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p ~/godot
+          curl -L -f --max-time 180 \
+            "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_macos.universal.zip" \
+            -o /tmp/godot.zip
+          unzip -q /tmp/godot.zip -d ~/godot
+          ln -sf "$HOME/godot/Godot.app/Contents/MacOS/Godot" ~/godot/godot
+          chmod +x ~/godot/godot
+          rm -f /tmp/godot.zip
+
+      - name: Install Godot export templates
+        if: steps.cache-godot-macos.outputs.cache-hit != 'true'
+        run: |
+          TEMPLATE_DIR="$HOME/Library/Application Support/Godot/export_templates/${GODOT_VERSION_FULL}"
+          mkdir -p "$TEMPLATE_DIR"
+          curl -L -f --max-time 600 \
+            "https://github.com/godotengine/godot/releases/download/${GODOT_VERSION}-stable/Godot_v${GODOT_VERSION}-stable_export_templates.tpz" \
+            -o /tmp/templates.tpz
+          unzip -q /tmp/templates.tpz -d "$TEMPLATE_DIR"
+          if [ -d "$TEMPLATE_DIR/templates" ]; then
+            mv "$TEMPLATE_DIR/templates/"* "$TEMPLATE_DIR/" || true
+            rmdir "$TEMPLATE_DIR/templates" 2>/dev/null || true
+          fi
+          rm -f /tmp/templates.tpz
+
+      - name: Add Godot to PATH
+        run: echo "$HOME/godot" >> "$GITHUB_PATH"
+
+      - name: Import Godot project assets
+        run: godot --headless --path . --import
+
+      - name: Run headless tests
+        run: godot --headless --path . res://test_runner.tscn
+
+      - name: Build macOS
+        run: ./tools/build.sh mac
+
+      - name: Ad-hoc sign macOS app
+        run: |
+          APP_PATH="build/macos/Chronicles of the House of Osman.app"
+          if [ -d "$APP_PATH" ]; then
+            codesign --deep --force --verify --verbose --sign - "$APP_PATH"
+          fi
+
+      - name: Repackage signed macOS app
+        run: |
+          cd build/macos
+          rm -f Chronicles_of_the_House_of_Osman.zip
+          zip -ry Chronicles_of_the_House_of_Osman.zip "Chronicles of the House of Osman.app"
+
+      - name: Upload macOS artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-artifact
+          if-no-files-found: error
+          path: build/macos/Chronicles_of_the_House_of_Osman.zip
+
+  release:
+    name: Create GitHub Release
+    needs: [build-desktop-mobile-linux, build-macos]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Flatten artifacts for release
+        run: |
+          mkdir -p release-assets
+          cp artifacts/desktop-mobile-linux-artifacts/* release-assets/ || true
+          cp artifacts/macos-artifact/* release-assets/ || true
+          ls -la release-assets/
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
@@ -96,18 +201,20 @@ jobs:
           name: Release ${{ github.ref_name }}
           draft: false
           prerelease: false
-          files: |
-            build/android/*.apk
-            build/macos/*.zip
-            Chronicles_of_the_House_of_Osman_iOS_xcodeproject.zip
-            Chronicles_of_the_House_of_Osman_Windows.zip
-            Chronicles_of_the_House_of_Osman_Linux.zip
+          files: release-assets/*
           body: |
             Automated build for ${{ github.ref_name }}.
+
+            ### macOS note
+            The macOS `.app` is ad-hoc signed. Depending on your Gatekeeper settings you may still need to:
+            - Right-click the app and choose **Open**, or
+            - Run `xattr -cr "Chronicles of the House of Osman.app"` in Terminal.
+
+            For a fully trusted build you would need an Apple Developer ID certificate and notarization.
 
             ### Artifacts
             - **Android**: `.apk` ready to install.
             - **iOS**: Xcode project archive. Open it on macOS, configure signing, and archive to produce an `.ipa`.
-            - **macOS**: `.zip` containing the `.app` bundle.
+            - **macOS**: `.zip` containing the ad-hoc signed `.app` bundle.
             - **Windows**: `.zip` containing the executable and `.pck`.
             - **Linux**: `.zip` containing the executable and `.pck`.

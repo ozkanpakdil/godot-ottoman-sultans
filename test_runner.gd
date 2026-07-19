@@ -118,6 +118,18 @@ func _ready() -> void:
 		print("FAIL: locale save/load expected zh, got " + GameManager.locale)
 		failures += 1
 
+	# UI translation check: make sure project translations are registered so exported
+	# builds show human-readable labels instead of raw keys like UI_EXIT.
+	TranslationServer.set_locale("en")
+	var ui_keys := ["UI_EXIT", "UI_CONTINUE", "UI_BACK", "UI_FORWARD"]
+	for key in ui_keys:
+		var translated: String = tr(key)
+		if translated == key or translated.is_empty():
+			print("FAIL: UI key '%s' is not translated (exported builds will show the key)" % key)
+			failures += 1
+		else:
+			print("OK: %s -> %s" % [key, translated])
+
 	# Reset locale for clean exit state
 	TranslationServer.set_locale("en")
 

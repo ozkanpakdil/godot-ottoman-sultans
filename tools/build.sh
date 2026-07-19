@@ -619,13 +619,20 @@ ensure_android_keystores() {
     generate_android_keystore "$android_debug_keystore" "androiddebugkey" "CN=Android Debug,O=Android,C=US"
     generate_android_keystore "$android_release_keystore" "androidreleasekey" "CN=Android Release,O=Android,C=US"
 
-    if [ -f "$PRESETS_FILE" ] && [ -f "$android_release_keystore" ]; then
-        if grep -q '^keystore/release=""' "$PRESETS_FILE"; then
-            sed -i.bak "s|^keystore/release=\"\"|keystore/release=\"$android_release_keystore\"|" "$PRESETS_FILE"
-            sed -i.bak 's/^keystore\/release_user=""/keystore\/release_user="androidreleasekey"/' "$PRESETS_FILE"
-            sed -i.bak 's/^keystore\/release_password=""/keystore\/release_password="android"/' "$PRESETS_FILE"
-            rm -f "$PRESETS_FILE.bak"
+    if [ -f "$PRESETS_FILE" ]; then
+        # Always rewrite keystore paths so the preset matches the keys generated
+        # on this machine/CI runner, regardless of any absolute paths committed in git.
+        if [ -f "$android_debug_keystore" ]; then
+            sed -i.bak "s#^keystore/debug=\".*\"#keystore/debug=\"$android_debug_keystore\"#" "$PRESETS_FILE"
+            sed -i.bak 's/^keystore\/debug_user=".*"/keystore\/debug_user="androiddebugkey"/' "$PRESETS_FILE"
+            sed -i.bak 's/^keystore\/debug_password=".*"/keystore\/debug_password="android"/' "$PRESETS_FILE"
         fi
+        if [ -f "$android_release_keystore" ]; then
+            sed -i.bak "s#^keystore/release=\".*\"#keystore/release=\"$android_release_keystore\"#" "$PRESETS_FILE"
+            sed -i.bak 's/^keystore\/release_user=".*"/keystore\/release_user="androidreleasekey"/' "$PRESETS_FILE"
+            sed -i.bak 's/^keystore\/release_password=".*"/keystore\/release_password="android"/' "$PRESETS_FILE"
+        fi
+        rm -f "$PRESETS_FILE.bak"
     fi
 }
 

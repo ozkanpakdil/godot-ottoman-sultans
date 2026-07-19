@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main, master]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   GODOT_VERSION: "4.7.1"
   GODOT_VERSION_FULL: "4.7.1.stable"
@@ -63,6 +67,9 @@ jobs:
         with:
           cmdline-tools-version: 11076708
           packages: platform-tools platforms;android-34 build-tools;34.0.0
+
+      - name: Import Godot project assets
+        run: godot --headless --path . --import
 
       - name: Run headless tests
         run: godot --headless --path . res://test_runner.tscn
