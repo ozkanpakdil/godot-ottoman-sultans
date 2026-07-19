@@ -98,15 +98,98 @@ The bottom music bar scans `assets/audio/` for `.ogg`, `.mp3`, and `.wav` files 
 
 The project uses Godot's default font. To add custom fonts (e.g. Cinzel or Playfair Display), place the files in `assets/fonts/` and set them as theme overrides on the labels/buttons.
 
+## Building Release Binaries
+
+A shell script at `tools/build.sh` automates exporting to iOS, Android, macOS, Windows, and Linux. On first run it creates `export_presets.cfg` (and an Android debug keystore) if they do not exist.
+
+### Prerequisites
+
+1. **Godot 4.x Export Templates** are installed automatically by the build script if missing (downloaded from GitHub, extracted, and placed in the layout Godot expects). If you prefer, you can install them manually: **Editor → Manage Export Templates → Download and Install**.
+2. **Android** (optional): configure the Android SDK in **Editor → Editor Settings → Export → Android**, or the export will fail. The script auto-generates a release keystore on first Android build, so `./tools/build.sh android` produces a signed release APK.
+3. **iOS** (optional): requires macOS + Xcode. The preset exports the Xcode project only (`application/export_project_only=true`) so the build script can produce a project without a real Apple Team ID. Open the project in Xcode and set your own team/signing before building.
+
+### Usage
+
+```bash
+# Make the script executable (only once)
+chmod +x tools/build.sh
+
+# Install export templates (run once, or skip if already installed)
+./tools/build.sh --install-templates
+
+# Build everything
+./tools/build.sh all
+
+# Build only mobile platforms
+./tools/build.sh mobile        # ios + android
+
+# Build only desktop platforms
+./tools/build.sh desktop       # mac + windows + linux
+
+# Build a single platform
+./tools/build.sh mac
+./tools/build.sh windows
+./tools/build.sh linux
+./tools/build.sh android
+./tools/build.sh ios
+```
+
+### Output locations
+
+| Platform | Output |
+|----------|--------|
+| macOS    | `build/macos/Chronicles of the House of Osman.app` |
+| Windows  | `build/windows/Chronicles_of_the_House_of_Osman.exe` |
+| Linux    | `build/linux/Chronicles_of_the_House_of_Osman.x86_64` |
+| Android  | `build/android/Chronicles_of_the_House_of_Osman.apk` (release-signed with auto-generated keystore) |
+| iOS      | `build/ios/Chronicles_of_the_House_of_Osman.xcodeproj` (open in Xcode) |
+
 ## Mobile Export
 
-The project is preconfigured for mobile (portrait orientation, `gl_compatibility` renderer, `canvas_items` stretch). To export:
+The project is preconfigured for mobile (portrait orientation, `gl_compatibility` renderer, `canvas_items` stretch). To export manually from the editor instead of using the script:
 
 1. Install Godot's **Export Templates** (Editor → Manage Export Templates).
 2. For Android: configure the Android SDK in Editor Settings, then **Project → Export → Add preset → Android**.
 3. For iOS: **Project → Export → Add preset → iOS** (requires macOS and Xcode).
 
 Game Center / Play Games leaderboard submission activates automatically when the corresponding Godot plugin singleton is present in the build; otherwise the game runs fully offline with a local progress screen.
+
+## Troubleshooting Builds
+
+### "No export template found at the expected path"
+
+The build script downloads and installs the correct Godot export templates automatically (from the official GitHub release) and flattens the `templates/` subfolder that the `.tpz` archive creates into the layout Godot expects (`<version>/ios.zip`, `<version>/android_release.apk`, etc.).
+
+If you want to install them manually:
+
+1. Open the Godot editor.
+2. **Editor → Manage Export Templates**.
+3. Click **Download and Install** for the version shown in the error message.
+4. Re-run `./tools/build.sh`.
+
+The templates are installed to `~/Library/Application Support/Godot/export_templates/<version>/` on macOS, `%APPDATA%\Godot\export_templates\<version>\` on Windows, and `~/.local/share/godot/export_templates/<version>/` on Linux.
+
+### "Metal renderer require iOS 14+"
+
+The iOS export preset already sets the minimum iOS version to 14.0. If you see this error after generating `export_presets.cfg` with an older version of the script, open `export_presets.cfg` and change:
+
+```ini
+application/min_ios_version="14.0"
+```
+
+under the `[preset.1.options]` (iOS) section.
+
+### "cannot connect to daemon at tcp:5037: Connection refused"
+
+This is the Android Debug Bridge (`adb`) daemon. The build script now starts `adb` automatically before invoking Godot when `adb` is on your `PATH`, so this message should no longer appear. If you still see it, make sure the Android SDK is configured or remove the Android preset from `export_presets.cfg`.
+
+### iOS build after export
+
+Godot does **not** produce a ready `.ipa`. The iOS preset is set to **Export Project Only**, so the script writes the Xcode project directly to `build/ios/`. To finish:
+
+1. Open `build/ios/Chronicles_of_the_House_of_Osman.xcodeproj` in Xcode.
+2. Select your Apple Developer Team under **Signing & Capabilities** (the preset uses a placeholder Team ID).
+3. Choose a target device/simulator and build (`Cmd+B`) or archive (`Product → Archive`) to make an `.ipa`.
 
 ## Credits & Licenses
 
