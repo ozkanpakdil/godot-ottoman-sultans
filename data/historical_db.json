@@ -1,0 +1,2346 @@
+{
+  "chapters": [
+    {
+      "id": 1,
+      "title": {
+        "en": "The Establishment & Foundation Era",
+        "tr": "Kuruluş ve Temel Dönemi",
+        "zh": "建立与奠基时代",
+        "ru": "Эпоха основания и становления",
+        "es": "La Era de la Fundación y el Establecimiento"
+      },
+      "years": "1299–1451",
+      "start_year": 1299,
+      "end_year": 1451,
+      "description": {
+        "en": "From a small beylik on the Byzantine frontier to a state knocking on the gates of Constantinople.",
+        "tr": "Bizans sınırındaki küçük bir beylikten Konstantinopolis'in kapılarını zorlayan bir devlete.",
+        "zh": "从拜占庭边境的一个小贝伊国，发展成为叩响君士坦丁堡大门的国家。",
+        "ru": "От небольшого бейлика на византийской границе до государства, стучащегося в ворота Константинополя.",
+        "es": "De un pequeño beylik en la frontera bizantina a un estado que llamaba a las puertas de Constantinopla."
+      },
+      "sultans": [
+        {
+          "name": {
+            "en": "Osman I (Gazi)",
+            "tr": "Osman Gazi",
+            "zh": "奥斯曼一世（加齐）",
+            "ru": "Осман I (Гази)",
+            "es": "Osmán I (Gazi)"
+          },
+          "slug": "osman_i",
+          "portrait": "res://assets/sultans/osman_i.jpg",
+          "reign": "1299–1326",
+          "start_year": 1299,
+          "end_year": 1326,
+          "wives": [
+            "Malhun Hatun",
+            "Rabia Bala Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Bapheus (1302)",
+                "tr": "Koyunhisar Savaşı (1302)",
+                "zh": "巴菲乌斯战役（1302年）",
+                "ru": "Битва при Бафее (1302)",
+                "es": "Batalla de Bafeo (1302)"
+              },
+              "description": {
+                "en": "First major clash against the Byzantine Empire, establishing Ottoman military prestige.",
+                "tr": "Bizans İmparatorluğu'na karşı ilk büyük çatışma; Osmanlı askerî prestijini tesis etti.",
+                "zh": "与拜占庭帝国的首次重大交锋，奠定了奥斯曼的军事声望。",
+                "ru": "Первое крупное столкновение с Византийской империей, упрочившее военный престиж османов.",
+                "es": "Primer gran enfrentamiento contra el Imperio bizantino, que estableció el prestigio militar otomano."
+              }
+            },
+            {
+              "name": {
+                "en": "Siege of Prusa (Bursa)",
+                "tr": "Prusa (Bursa) Kuşatması",
+                "zh": "普鲁萨（布尔萨）之围",
+                "ru": "Осада Прусы (Бурсы)",
+                "es": "Asedio de Prusa (Bursa)"
+              },
+              "description": {
+                "en": "Long blockade of Bursa; the city fell in 1326, the year of Osman's death.",
+                "tr": "Bursa'nın uzun ablukası; şehir, Osman'ın öldüğü yıl olan 1326'da düştü.",
+                "zh": "对布尔萨的长期封锁；该城于1326年——奥斯曼去世之年——陷落。",
+                "ru": "Долгая блокада Бурсы; город пал в 1326 году, в год смерти Османа.",
+                "es": "Largo bloqueo de Bursa; la ciudad cayó en 1326, el año de la muerte de Osmán."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "İlber Ortaylı – Kuruluş Dönemi ve Osman Gazi",
+            "tr": "İlber Ortaylı – Kuruluş Dönemi ve Osman Gazi",
+            "zh": "İlber Ortaylı – Kuruluş Dönemi ve Osman Gazi",
+            "ru": "İlber Ortaylı – Kuruluş Dönemi ve Osman Gazi",
+            "es": "İlber Ortaylı – Kuruluş Dönemi ve Osman Gazi"
+          },
+          "summary": {
+            "en": "Founder of the dream that became an empire. Osman transformed a frontier beylik into an organized state, defeating the Byzantines at Bapheus and besieging Bursa, whose conquest he did not live to see.",
+            "tr": "İmparatorluğa dönüşen hayalin kurucusu. Osman, bir uç beyliğini örgütlü bir devlete dönüştürdü; Koyunhisar'da Bizanslıları yendi ve Bursa'yı kuşattı, ancak fethini göremedi.",
+            "zh": "帝国梦想的奠基人。奥斯曼将边陲贝伊国改造成一个有组织的国家，在巴菲乌斯击败拜占庭人并围困布尔萨，但他未能亲眼看到该城的陷落。",
+            "ru": "Основатель мечты, ставшей империей. Осман превратил пограничный бейлик в организованное государство, разбил византийцев при Бафее и осадил Бурсу, завоевания которой не дожил.",
+            "es": "Fundador del sueño que se convirtió en imperio. Osmán transformó un beylik fronterizo en un estado organizado, derrotó a los bizantinos en Bafeo y sitió Bursa, cuya conquista no llegó a ver."
+          }
+        },
+        {
+          "name": {
+            "en": "Orhan Gazi",
+            "tr": "Orhan Gazi",
+            "zh": "奥尔汗（加齐）",
+            "ru": "Орхан Гази",
+            "es": "Orhan Gazi"
+          },
+          "slug": "orhan",
+          "portrait": "res://assets/sultans/orhan.jpg",
+          "reign": "1326–1362",
+          "start_year": 1326,
+          "end_year": 1362,
+          "wives": [
+            "Nilüfer Hatun",
+            "Asporça Hatun",
+            "Theodora Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Pelekanon (1329)",
+                "tr": "Palekanon Savaşı (1329)",
+                "zh": "佩莱卡农战役（1329年）",
+                "ru": "Битва при Пелеканоне (1329)",
+                "es": "Batalla de Pelecanon (1329)"
+              },
+              "description": {
+                "en": "Defeated Emperor Andronikos III, ending Byzantine attempts to relieve their Anatolian cities.",
+                "tr": "İmparator III. Andronikos'u yenerek Bizans'ın Anadolu'daki şehirlerini kurtarma çabalarını sona erdirdi.",
+                "zh": "击败皇帝安德洛尼卡三世，终结了拜占庭解救其安纳托利亚城市的企图。",
+                "ru": "Разгромил императора Андроника III, положив конец попыткам Византии освободить свои анатолийские города.",
+                "es": "Derrotó al emperador Andrónico III, poniendo fin a los intentos bizantinos de socorrer sus ciudades de Anatolia."
+              }
+            },
+            {
+              "name": {
+                "en": "Conquest of Nicaea (İznik) (1331)",
+                "tr": "İznik'in Fethi (1331)",
+                "zh": "尼西亚（伊兹尼克）的征服（1331年）",
+                "ru": "Взятие Никеи (Изник) (1331)",
+                "es": "Conquista de Nicea (İznik) (1331)"
+              },
+              "description": {
+                "en": "Capture of the historic city of Nicaea, a major blow to Byzantine power in Anatolia.",
+                "tr": "Tarihî İznik şehrinin alınması; Bizans'ın Anadolu'daki gücüne ağır bir darbe.",
+                "zh": "攻占历史名城尼西亚，对拜占庭在安纳托利亚的势力造成重大打击。",
+                "ru": "Захват исторического города Никеи — тяжёлый удар по византийскому могуществу в Анатолии.",
+                "es": "La toma de la histórica ciudad de Nicea, un duro golpe al poder bizantino en Anatolia."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The state-builder. Orhan captured Bursa and made it the capital, took İznik, defeated the Byzantines at Pelekanon, and organized the first regular Ottoman institutions and army corps.",
+            "tr": "Devlet kurucusu. Orhan, Bursa'yı alıp başkent yaptı, İznik'i fethetti, Palekanon'da Bizanslıları yendi ve ilk düzenli Osmanlı kurumları ile ordu teşkilatını oluşturdu.",
+            "zh": "国家的缔造者。奥尔汗攻占布尔萨并定都于此，夺取伊兹尼克，在佩莱卡农击败拜占庭人，建立了第一批正规的奥斯曼制度与军团。",
+            "ru": "Созидатель государства. Орхан захватил Бурсу и сделал её столицей, взял Изник, разбил византийцев при Пелеканоне и создал первые регулярные османские институты и армейские корпуса.",
+            "es": "El constructor del Estado. Orhan capturó Bursa y la convirtió en capital, tomó İznik, derrotó a los bizantinos en Pelecanon y organizó las primeras instituciones regulares y cuerpos de ejército otomanos."
+          }
+        },
+        {
+          "name": {
+            "en": "Murad I (Hüdavendigâr)",
+            "tr": "I. Murad (Hüdavendigâr)",
+            "zh": "穆拉德一世（许达文迪加尔）",
+            "ru": "Мурад I (Худавендигяр)",
+            "es": "Murad I (Hüdavendigâr)"
+          },
+          "slug": "murad_i",
+          "portrait": "res://assets/sultans/murad_i.jpg",
+          "reign": "1362–1389",
+          "start_year": 1362,
+          "end_year": 1389,
+          "wives": [
+            "Gülçiçek Hatun",
+            "Marya Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Maritsa (1371)",
+                "tr": "Sırpsındığı (Meriç) Savaşı (1371)",
+                "zh": "马里查战役（1371年）",
+                "ru": "Битва на Марице (1371)",
+                "es": "Batalla del Maritsa (1371)"
+              },
+              "description": {
+                "en": "Crushing victory over a Serbian-led force that opened the Balkans to Ottoman expansion.",
+                "tr": "Sırp öncülüğündeki kuvvete karşı kazanılan ezici zafer; Balkanları Osmanlı genişlemesine açtı.",
+                "zh": "对塞尔维亚联军的压倒性胜利，为奥斯曼扩张打开了巴尔干的大门。",
+                "ru": "Сокрушительная победа над войском во главе с сербами, открывшая османам путь на Балканы.",
+                "es": "Aplastante victoria sobre una fuerza liderada por serbios que abrió los Balcanes a la expansión otomana."
+              }
+            },
+            {
+              "name": {
+                "en": "First Battle of Kosovo (1389)",
+                "tr": "I. Kosova Savaşı (1389)",
+                "zh": "第一次科索沃战役（1389年）",
+                "ru": "Первая битва на Косовом поле (1389)",
+                "es": "Primera Batalla de Kosovo (1389)"
+              },
+              "description": {
+                "en": "Decisive victory over the Serbian coalition; Murad was martyred on the battlefield.",
+                "tr": "Sırp koalisyonuna karşı kesin zafer; Murad savaş meydanında şehit düştü.",
+                "zh": "对塞尔维亚联军的决定性胜利；穆拉德在战场上殉难。",
+                "ru": "Решительная победа над сербской коалицией; Мурад пал мучеником на поле боя.",
+                "es": "Victoria decisiva sobre la coalición serbia; Murad cayó mártir en el campo de batalla."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The conqueror of Rumelia. Murad I carried the state into the Balkans, founded the Janissary corps, won at Maritsa, and fell as a martyr on the field of Kosovo after winning the battle.",
+            "tr": "Rumeli'nin fatihi. I. Murad devleti Balkanlara taşıdı, Yeniçeri Ocağı'nı kurdu, Meriç'te zafer kazandı ve savaşı kazandıktan sonra Kosova meydanında şehit düştü.",
+            "zh": "鲁米利亚的征服者。穆拉德一世将国家带入巴尔干，创立了近卫军（耶尼切里军团），在马里查获胜，并在赢得科索沃战役后殉难于战场。",
+            "ru": "Завоеватель Румелии. Мурад I перенёс государство на Балканы, основал корпус янычар, победил на Марице и пал мучеником на Косовом поле после одержанной победы.",
+            "es": "El conquistador de Rumelia. Murad I llevó el Estado a los Balcanes, fundó el cuerpo de jenízaros, venció en el Maritsa y cayó mártir en el campo de Kosovo tras ganar la batalla."
+          }
+        },
+        {
+          "name": {
+            "en": "Bayezid I (Yıldırım)",
+            "tr": "Yıldırım Bayezid",
+            "zh": "巴耶济德一世（雷霆）",
+            "ru": "Баязид I (Йылдырым)",
+            "es": "Bayezid I (Yıldırım)"
+          },
+          "slug": "bayezid_i",
+          "portrait": "res://assets/sultans/bayezid_i.jpg",
+          "reign": "1389–1402",
+          "start_year": 1389,
+          "end_year": 1402,
+          "wives": [
+            "Devlet Hatun",
+            "Despina Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Nicopolis (1396)",
+                "tr": "Niğbolu Savaşı (1396)",
+                "zh": "尼科波利斯战役（1396年）",
+                "ru": "Битва при Никополе (1396)",
+                "es": "Batalla de Nicópolis (1396)"
+              },
+              "description": {
+                "en": "Destroyed the crusader army, earning him the nickname 'Yıldırım' (Thunderbolt).",
+                "tr": "Haçlı ordusunu yok etti ve kendisine 'Yıldırım' lakabını kazandırdı.",
+                "zh": "歼灭十字军，为他赢得了“雷霆”（耶尔德勒姆）的绰号。",
+                "ru": "Уничтожил армию крестоносцев, заслужив прозвище «Йылдырым» (Молния).",
+                "es": "Destruyó el ejército cruzado, lo que le valió el apodo de 'Yıldırım' (Rayo)."
+              }
+            },
+            {
+              "name": {
+                "en": "Battle of Ankara (1402)",
+                "tr": "Ankara Savaşı (1402)",
+                "zh": "安卡拉战役（1402年）",
+                "ru": "Битва при Анкаре (1402)",
+                "es": "Batalla de Ankara (1402)"
+              },
+              "description": {
+                "en": "Catastrophic defeat by Timur (Tamerlane); Bayezid was captured and the state nearly collapsed.",
+                "tr": "Timur (Aksak Timur) karşısında felaket bir yenilgi; Bayezid esir düştü ve devlet çökmenin eşiğine geldi.",
+                "zh": "被帖木儿（跛子帖木儿）灾难性击败；巴耶济德被俘，国家几近崩溃。",
+                "ru": "Катастрофическое поражение от Тимура (Тамерлана); Баязид попал в плен, а государство оказалось на грани краха.",
+                "es": "Derrota catastrófica ante Timur (Tamerlán); Bayezid fue capturado y el Estado estuvo a punto de colapsar."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The Thunderbolt. Bayezid I crushed the Crusaders at Nicopolis and besieged Constantinople, but his defeat and capture by Timur at Ankara in 1402 shattered the state and triggered the Interregnum.",
+            "tr": "Yıldırım. I. Bayezid, Haçlıları Niğbolu'nda ezdi ve Konstantinopolis'i kuşattı; ancak 1402'de Ankara'da Timur'a yenilip esir düşmesi devleti parçaladı ve Fetret Devri'ni başlattı.",
+            "zh": "雷霆苏丹。巴耶济德一世在尼科波利斯粉碎十字军并围困君士坦丁堡，但1402年在安卡拉被帖木儿击败并俘虏，国家分崩离析，引发了大空位时期。",
+            "ru": "Молния. Баязид I сокрушил крестоносцев при Никополе и осаждал Константинополь, но его поражение и плен от Тимура под Анкарой в 1402 году разбили государство и вызвали междуцарствие.",
+            "es": "El Rayo. Bayezid I aplastó a los cruzados en Nicópolis y sitió Constantinopla, pero su derrota y captura a manos de Timur en Ankara en 1402 destrozó el Estado y desencadenó el Interregno."
+          }
+        },
+        {
+          "name": {
+            "en": "Mehmed I (Çelebi)",
+            "tr": "Çelebi Mehmed (I. Mehmed)",
+            "zh": "穆罕默德一世（切莱比）",
+            "ru": "Мехмед I (Челеби)",
+            "es": "Mehmed I (Çelebi)"
+          },
+          "slug": "mehmed_i",
+          "portrait": "res://assets/sultans/mehmed_i.jpg",
+          "reign": "1413–1421",
+          "start_year": 1413,
+          "end_year": 1421,
+          "wives": [
+            "Emine Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Restoration of Central Authority",
+                "tr": "Merkezî Otoritenin Yeniden Tesisi",
+                "zh": "中央权威的恢复",
+                "ru": "Восстановление центральной власти",
+                "es": "Restauración de la Autoridad Central"
+              },
+              "description": {
+                "en": "Emerged victorious from the Fetret Devri (Interregnum) civil war and reunified the Ottoman lands.",
+                "tr": "Fetret Devri iç savaşından galip çıktı ve Osmanlı topraklarını yeniden birleştirdi.",
+                "zh": "从大空位时期内战中胜出，重新统一了奥斯曼的疆土。",
+                "ru": "Вышел победителем из междоусобной войны периода междуцарствия (Фетрет Деври) и воссоединил османские земли.",
+                "es": "Salió victorioso de la guerra civil del Fetret Devri (Interregno) y reunificó las tierras otomanas."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The second founder. After the Interregnum (Fetret Devri) civil war between the sons of Bayezid, Mehmed I restored centralized authority and rebuilt the state from its ashes.",
+            "tr": "İkinci kurucu. Bayezid'in oğulları arasındaki Fetret Devri iç savaşının ardından I. Mehmed, merkezî otoriteyi yeniden tesis etti ve devleti küllerinden diriltti.",
+            "zh": "第二奠基者。在巴耶济德诸子之间的大空位内战后，穆罕默德一世重建了中央集权，将国家从灰烬中复兴。",
+            "ru": "Второй основатель. После гражданской войны междуцарствия (Фетрет Деври) между сыновьями Баязида Мехмед I восстановил центральную власть и возродил государство из пепла.",
+            "es": "El segundo fundador. Tras la guerra civil del Interregno (Fetret Devri) entre los hijos de Bayezid, Mehmed I restauró la autoridad centralizada y reconstruyó el Estado de sus cenizas."
+          }
+        },
+        {
+          "name": {
+            "en": "Murad II",
+            "tr": "II. Murad",
+            "zh": "穆拉德二世",
+            "ru": "Мурад II",
+            "es": "Murad II"
+          },
+          "slug": "murad_ii",
+          "portrait": "res://assets/sultans/murad_ii.jpg",
+          "reign": "1421–1444, 1446–1451",
+          "start_year": 1421,
+          "end_year": 1451,
+          "wives": [
+            "Hüma Hatun",
+            "Mara Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Crusade of Varna (1444)",
+                "tr": "Varna Haçlı Seferi (1444)",
+                "zh": "瓦尔纳十字军东征（1444年）",
+                "ru": "Крестовый поход на Варну (1444)",
+                "es": "Cruzada de Varna (1444)"
+              },
+              "description": {
+                "en": "Annihilated the crusader army of Władysław III, securing Ottoman rule in the Balkans.",
+                "tr": "III. Władysław'ın Haçlı ordusunu yok etti; Balkanlardaki Osmanlı hâkimiyetini güvence altına aldı.",
+                "zh": "全歼瓦迪斯瓦夫三世的十字军，巩固了奥斯曼在巴尔干的统治。",
+                "ru": "Уничтожил крестоносное войско Владислава III, закрепив власть османов на Балканах.",
+                "es": "Aniquiló el ejército cruzado de Władysław III, asegurando el dominio otomano en los Balcanes."
+              }
+            },
+            {
+              "name": {
+                "en": "Second Battle of Kosovo (1448)",
+                "tr": "İkinci Kosova Savaşı (1448)",
+                "zh": "第二次科索沃战役（1448年）",
+                "ru": "Вторая битва на Косовом поле (1448)",
+                "es": "Segunda Batalla de Kosovo (1448)"
+              },
+              "description": {
+                "en": "Defeated John Hunyadi, ending crusading hopes of expelling the Ottomans from Europe.",
+                "tr": "John Hunyadi'yi yendi; Osmanlıları Avrupa'dan atma yolundaki Haçlı umutlarını sona erdirdi.",
+                "zh": "击败匈雅提·亚诺什，终结了十字军将奥斯曼人逐出欧洲的希望。",
+                "ru": "Разбил Яноша Хуньяди, положив конец надеждам крестоносцев изгнать османов из Европы.",
+                "es": "Derrotó a John Hunyadi, acabando con las esperanzas cruzadas de expulsar a los otomanos de Europa."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The crusade-breaker. Murad II destroyed the crusading armies at Varna and Kosovo, cementing Ottoman dominance in the Balkans and preparing the ground for the conquest of Constantinople.",
+            "tr": "Haçlı kıran. II. Murad, Varna ve Kosova'da Haçlı ordularını yok etti, Balkanlardaki Osmanlı üstünlüğünü pekiştirdi ve Konstantinopolis'in fethine zemin hazırladı.",
+            "zh": "十字军的粉碎者。穆拉德二世在瓦尔纳和科索沃摧毁了十字军，巩固了奥斯曼在巴尔干的霸权，为征服君士坦丁堡铺平了道路。",
+            "ru": "Сокрушитель крестовых походов. Мурад II уничтожил армии крестоносцев при Варне и на Косовом поле, упрочив господство османов на Балканах и подготовив почву для завоевания Константинополя.",
+            "es": "El rompedor de cruzadas. Murad II destruyó los ejércitos cruzados en Varna y Kosovo, cimentando el dominio otomano en los Balcanes y preparando el terreno para la conquista de Constantinopla."
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": {
+        "en": "The Age of Expansion & Zenith",
+        "tr": "Genişleme ve Zirve Çağı",
+        "zh": "扩张与鼎盛时代",
+        "ru": "Эпоха экспансии и расцвета",
+        "es": "La era de la expansión y el apogeo"
+      },
+      "years": "1451–1566",
+      "start_year": 1451,
+      "end_year": 1566,
+      "description": {
+        "en": "The conquest of Constantinople, the transfer of the Caliphate, and the empire at its magnificent peak.",
+        "tr": "Konstantinopolis'in fethi, Hilafet'in devri ve imparatorluğun muhteşem zirvesi.",
+        "zh": "君士坦丁堡的征服、哈里发位的转移，以及帝国辉煌的巅峰。",
+        "ru": "Завоевание Константинополя, передача халифата и империя на вершине своего величия.",
+        "es": "La conquista de Constantinopla, la transferencia del Califato y el imperio en su magnífico apogeo."
+      },
+      "sultans": [
+        {
+          "name": {
+            "en": "Mehmed II (Fatih the Conqueror)",
+            "tr": "Fatih Sultan Mehmed",
+            "zh": "穆罕默德二世（征服者法提赫）",
+            "ru": "Мехмед II Завоеватель (Фатих)",
+            "es": "Mehmed II (Fatih el Conquistador)"
+          },
+          "slug": "mehmed_ii",
+          "portrait": "res://assets/sultans/mehmed_ii.jpg",
+          "reign": "1451–1481",
+          "start_year": 1451,
+          "end_year": 1481,
+          "wives": [
+            "Gülbahar Hatun",
+            "Çiçek Hatun",
+            "Sittişah Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Fall of Constantinople (1453)",
+                "tr": "İstanbul'un Fethi (1453)",
+                "zh": "君士坦丁堡陷落（1453年）",
+                "ru": "Падение Константинополя (1453)",
+                "es": "Caída de Constantinopla (1453)"
+              },
+              "description": {
+                "en": "Conquered the Byzantine capital, ending a thousand-year empire and opening a new age.",
+                "tr": "Bizans başkentini fethederek bin yıllık bir imparatorluğa son verdi ve yeni bir çağ açtı.",
+                "zh": "征服了拜占庭首都，终结了千年帝国，开启了一个新时代。",
+                "ru": "Завоевал столицу Византии, положив конец тысячелетней империи и открыв новую эпоху.",
+                "es": "Conquistó la capital bizantina, poniendo fin a un imperio milenario y abriendo una nueva era."
+              }
+            },
+            {
+              "name": {
+                "en": "Siege of Belgrade (1456)",
+                "tr": "Belgrad Kuşatması (1456)",
+                "zh": "贝尔格莱德之围（1456年）",
+                "ru": "Осада Белграда (1456)",
+                "es": "Sitio de Belgrado (1456)"
+              },
+              "description": {
+                "en": "Repelled by John Hunyadi; a rare setback for the Conqueror.",
+                "tr": "Hunyadi Yanoş tarafından püskürtüldü; Fatih için nadir bir yenilgiydi.",
+                "zh": "被约翰·匈雅提击退；这是征服者少有的挫折。",
+                "ru": "Отбит Яношем Хуньяди; редкая неудача Завоевателя.",
+                "es": "Repelido por Juan Hunyadi; un raro revés para el Conquistador."
+              }
+            },
+            {
+              "name": {
+                "en": "Conquest of Trebizond (1461)",
+                "tr": "Trabzon'un Fethi (1461)",
+                "zh": "征服特拉布宗（1461年）",
+                "ru": "Завоевание Трапезунда (1461)",
+                "es": "Conquista de Trebisonda (1461)"
+              },
+              "description": {
+                "en": "Annexed the last Byzantine successor state on the Black Sea.",
+                "tr": "Karadeniz'deki son Bizans ardıl devletini ilhak etti.",
+                "zh": "吞并了黑海沿岸最后一个拜占庭继承国。",
+                "ru": "Присоединил последнее византийское государство-преемник на Чёрном море.",
+                "es": "Anexó el último estado sucesor bizantino del mar Negro."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "Murat Bardakçı & İlber Ortaylı – İstanbul'un Fethi ve Fatih",
+            "tr": "Murat Bardakçı & İlber Ortaylı – İstanbul'un Fethi ve Fatih",
+            "zh": "Murat Bardakçı & İlber Ortaylı – İstanbul'un Fethi ve Fatih",
+            "ru": "Murat Bardakçı & İlber Ortaylı – İstanbul'un Fethi ve Fatih",
+            "es": "Murat Bardakçı & İlber Ortaylı – İstanbul'un Fethi ve Fatih"
+          },
+          "summary": {
+            "en": "The Conqueror. At 21, Mehmed II took Constantinople in 1453, transforming the state into an empire. A legislator and patron of science, he reshaped the palace, law, and learning.",
+            "tr": "Fatih. Mehmed II, 21 yaşında Konstantinopolis'i alarak (1453) devleti bir imparatorluğa dönüştürdü. Bir kanun koyucu ve bilim hamisi olarak sarayı, hukuku ve ilmi yeniden şekillendirdi.",
+            "zh": "征服者。1453年，21岁的穆罕默德二世攻下君士坦丁堡，将国家转变为帝国。他身为立法者和科学的庇护者，重塑了宫廷、法律与学术。",
+            "ru": "Завоеватель. В 21 год Мехмед II взял Константинополь (1453), превратив государство в империю. Законодатель и покровитель наук, он преобразил дворец, право и учёность.",
+            "es": "El Conquistador. A los 21 años, Mehmed II tomó Constantinopla en 1453, transformando el estado en un imperio. Legislador y mecenas de la ciencia, remodeló el palacio, la ley y el saber."
+          }
+        },
+        {
+          "name": {
+            "en": "Bayezid II",
+            "tr": "II. Bayezid",
+            "zh": "巴耶济德二世",
+            "ru": "Баязид II",
+            "es": "Bayezid II"
+          },
+          "slug": "bayezid_ii",
+          "portrait": "res://assets/sultans/bayezid_ii.jpg",
+          "reign": "1481–1512",
+          "start_year": 1481,
+          "end_year": 1512,
+          "wives": [
+            "Gülbahar Hatun",
+            "Ayşe Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Rebellion of Cem Sultan",
+                "tr": "Cem Sultan İsyanı",
+                "zh": "杰姆苏丹叛乱",
+                "ru": "Восстание Джема-султана",
+                "es": "Rebelión del sultán Cem"
+              },
+              "description": {
+                "en": "His brother Cem contested the throne, then fled to Europe, becoming a lifelong diplomatic hostage.",
+                "tr": "Kardeşi Cem tahtı iddia etti, ardından Avrupa'ya kaçarak ömür boyu diplomatik bir rehineye dönüştü.",
+                "zh": "他的弟弟杰姆争夺王位，随后逃往欧洲，成为终身的政治人质。",
+                "ru": "Его брат Джем оспорил трон, затем бежал в Европу и стал пожизненным дипломатическим заложником.",
+                "es": "Su hermano Cem disputó el trono y luego huyó a Europa, convirtiéndose en rehén diplomático de por vida."
+              }
+            },
+            {
+              "name": {
+                "en": "Rescue of Iberian Jews (1492)",
+                "tr": "İber Yahudilerinin Kurtarılması (1492)",
+                "zh": "营救伊比利亚犹太人（1492年）",
+                "ru": "Спасение евреев Пиренеев (1492)",
+                "es": "Rescate de los judíos ibéricos (1492)"
+              },
+              "description": {
+                "en": "Sent the Ottoman navy to evacuate Jews expelled from Spain, settling them across the empire.",
+                "tr": "İspanya'dan kovulan Yahudileri tahliye etmek için Osmanlı donanmasını gönderdi ve onları imparatorluk geneline yerleştirdi.",
+                "zh": "派遣奥斯曼海军撤离被西班牙驱逐的犹太人，并将他们安置在帝国各地。",
+                "ru": "Отправил османский флот для эвакуации изгнанных из Испании евреев и расселил их по всей империи.",
+                "es": "Envió la armada otomana para evacuar a los judíos expulsados de España, asentándolos por todo el imperio."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The Saintly (Veli). Bayezid II ruled a consolidating empire, weathered the Cem Sultan crisis, and famously rescued the Jews expelled from Spain in 1492.",
+            "tr": "Veli (Sofu). II. Bayezid güçlenen bir imparatorluğu yönetti, Cem Sultan krizini atlattı ve 1492'de İspanya'dan kovulan Yahudileri kurtarmasıyla ünlendi.",
+            "zh": "圣者（维利）。巴耶济德二世统治着一个巩固中的帝国，度过了杰姆苏丹危机，并以1492年营救被西班牙驱逐的犹太人而闻名。",
+            "ru": "Святой (Вели). Баязид II правил укрепляющейся империей, пережил кризис с Джемом-султаном и прославился спасением евреев, изгнанных из Испании в 1492 году.",
+            "es": "El Santo (Veli). Bayezid II gobernó un imperio en consolidación, superó la crisis del sultán Cem y rescató célebremente a los judíos expulsados de España en 1492."
+          }
+        },
+        {
+          "name": {
+            "en": "Selim I (Yavuz the Grim)",
+            "tr": "Yavuz Sultan Selim",
+            "zh": "塞利姆一世（亚武兹，严酷者）",
+            "ru": "Селим I (Явуз Грозный)",
+            "es": "Selim I (Yavuz el Severo)"
+          },
+          "slug": "selim_i",
+          "portrait": "res://assets/sultans/selim_i.jpg",
+          "reign": "1512–1520",
+          "start_year": 1512,
+          "end_year": 1520,
+          "wives": [
+            "Ayşe Hafsa Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Chaldiran (1514)",
+                "tr": "Çaldıran Savaşı (1514)",
+                "zh": "查尔迪兰战役（1514年）",
+                "ru": "Битва при Чалдыране (1514)",
+                "es": "Batalla de Chaldirán (1514)"
+              },
+              "description": {
+                "en": "Defeated Shah Ismail of Safavid Persia, securing eastern Anatolia.",
+                "tr": "Safevi Şahı İsmail'i yenerek Doğu Anadolu'yu güvence altına aldı.",
+                "zh": "击败萨法维波斯的沙阿伊斯玛仪，确保了安纳托利亚东部。",
+                "ru": "Разгромил шаха Исмаила из сефевидской Персии, обезопасив восточную Анатолию.",
+                "es": "Derrotó al shah Ismail de la Persia safávida, asegurando Anatolia oriental."
+              }
+            },
+            {
+              "name": {
+                "en": "Battle of Marj Dabiq (1516)",
+                "tr": "Mercidabık Savaşı (1516)",
+                "zh": "马尔吉达比克战役（1516年）",
+                "ru": "Битва при Мардж-Дабике (1516)",
+                "es": "Batalla de Marj Dabiq (1516)"
+              },
+              "description": {
+                "en": "Destroyed the Mamluk army and opened the way into Syria and Egypt.",
+                "tr": "Memlük ordusunu yok etti ve Suriye ile Mısır'ın yolunu açtı.",
+                "zh": "摧毁了马穆鲁克军队，打开了通往叙利亚和埃及的道路。",
+                "ru": "Уничтожил мамлюкскую армию и открыл путь в Сирию и Египет.",
+                "es": "Destruyó el ejército mameluco y abrió el camino hacia Siria y Egipto."
+              }
+            },
+            {
+              "name": {
+                "en": "Battle of Ridaniya (1517)",
+                "tr": "Ridaniye Savaşı (1517)",
+                "zh": "里达尼亚战役（1517年）",
+                "ru": "Битва при Ридании (1517)",
+                "es": "Batalla de Ridaniya (1517)"
+              },
+              "description": {
+                "en": "Conquered Egypt; the Caliphate passed to the House of Osman.",
+                "tr": "Mısır'ı fethetti; Hilafet Osmanlı hanedanına geçti.",
+                "zh": "征服埃及；哈里发位转入奥斯曼家族。",
+                "ru": "Завоевал Египет; халифат перешёл к дому Османа.",
+                "es": "Conquistó Egipto; el Califato pasó a la Casa de Osmán."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The Grim. In eight short years Selim I doubled the empire: Chaldiran broke the Safavids, Marj Dabiq and Ridaniya destroyed the Mamluks, and the Caliphate came to Istanbul.",
+            "tr": "Yavuz. Sekiz kısa yılda I. Selim imparatorluğu ikiye katladı: Çaldıran Safevileri kırdı, Mercidabık ve Ridaniye Memlükleri yok etti ve Hilafet İstanbul'a geldi.",
+            "zh": "严酷者。短短八年间，塞利姆一世使帝国疆域翻倍：查尔迪兰击溃萨法维，马尔吉达比克和里达尼亚摧毁马穆鲁克，哈里发位归于伊斯坦布尔。",
+            "ru": "Грозный. За восемь коротких лет Селим I удвоил империю: Чалдыран сломил Сефевидов, Мардж-Дабик и Ридания уничтожили мамлюков, а халифат перешёл к Стамбулу.",
+            "es": "El Severo. En ocho cortos años Selim I duplicó el imperio: Chaldirán quebró a los safávidas, Marj Dabiq y Ridaniya destruyeron a los mamelucos, y el Califato llegó a Estambul."
+          }
+        },
+        {
+          "name": {
+            "en": "Suleiman I (The Magnificent / Kanuni)",
+            "tr": "Kanuni Sultan Süleyman",
+            "zh": "苏莱曼一世（壮丽者／立法者卡努尼）",
+            "ru": "Сулейман I (Великолепный / Кануни)",
+            "es": "Solimán el Magnífico (Kanuni)"
+          },
+          "slug": "suleiman_i",
+          "portrait": "res://assets/sultans/suleiman_i.jpg",
+          "reign": "1520–1566",
+          "start_year": 1520,
+          "end_year": 1566,
+          "wives": [
+            "Hürrem Sultan (Legal Wife)",
+            "Mahidevran Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Siege of Belgrade (1521)",
+                "tr": "Belgrad Kuşatması (1521)",
+                "zh": "贝尔格莱德之围（1521年）",
+                "ru": "Осада Белграда (1521)",
+                "es": "Sitio de Belgrado (1521)"
+              },
+              "description": {
+                "en": "Captured the key fortress of the Hungarian frontier.",
+                "tr": "Macar sınırının kilit kalesini ele geçirdi.",
+                "zh": "攻占了匈牙利边境的关键要塞。",
+                "ru": "Захватил ключевую крепость венгерской границы.",
+                "es": "Capturó la fortaleza clave de la frontera húngara."
+              }
+            },
+            {
+              "name": {
+                "en": "Battle of Mohács (1526)",
+                "tr": "Mohaç Savaşı (1526)",
+                "zh": "莫哈奇战役（1526年）",
+                "ru": "Битва при Мохаче (1526)",
+                "es": "Batalla de Mohács (1526)"
+              },
+              "description": {
+                "en": "Destroyed the Hungarian army in two hours, opening Central Europe.",
+                "tr": "Macar ordusunu iki saatte yok ederek Orta Avrupa'nın yolunu açtı.",
+                "zh": "两小时内歼灭匈牙利军队，打开了中欧的大门。",
+                "ru": "Уничтожил венгерскую армию за два часа, открыв Центральную Европу.",
+                "es": "Destruyó el ejército húngaro en dos horas, abriendo Europa Central."
+              }
+            },
+            {
+              "name": {
+                "en": "First Siege of Vienna (1529)",
+                "tr": "Birinci Viyana Kuşatması (1529)",
+                "zh": "第一次维也纳之围（1529年）",
+                "ru": "Первая осада Вены (1529)",
+                "es": "Primer sitio de Viena (1529)"
+              },
+              "description": {
+                "en": "Reached the walls of Vienna before winter forced a withdrawal.",
+                "tr": "Viyana surlarına ulaştı ancak kış geri çekilmeye zorladı.",
+                "zh": "兵临维也纳城下，但因冬季来临被迫撤军。",
+                "ru": "Дошёл до стен Вены, прежде чем зима вынудила отступить.",
+                "es": "Alcanzó las murallas de Viena antes de que el invierno forzara la retirada."
+              }
+            },
+            {
+              "name": {
+                "en": "Siege of Szigetvár (1566)",
+                "tr": "Zigetvar Kuşatması (1566)",
+                "zh": "锡盖特堡之围（1566年）",
+                "ru": "Осада Сигетвара (1566)",
+                "es": "Sitio de Szigetvár (1566)"
+              },
+              "description": {
+                "en": "His final campaign; Suleiman died in his tent on the eve of victory.",
+                "tr": "Son seferi; Süleyman, zaferin arifesinde çadırında vefat etti.",
+                "zh": "他的最后一次征战；苏莱曼在胜利前夜于营帐中去世。",
+                "ru": "Его последний поход; Сулейман умер в своём шатре накануне победы.",
+                "es": "Su última campaña; Solimán murió en su tienda en vísperas de la victoria."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "İlber Ortaylı – Muhteşem Süleyman Devri",
+            "tr": "İlber Ortaylı – Muhteşem Süleyman Devri",
+            "zh": "İlber Ortaylı – Muhteşem Süleyman Devri",
+            "ru": "İlber Ortaylı – Muhteşem Süleyman Devri",
+            "es": "İlber Ortaylı – Muhteşem Süleyman Devri"
+          },
+          "summary": {
+            "en": "The Lawgiver and the Magnificent. Suleiman's 46-year reign was the empire's zenith: Belgrade, Mohács, Vienna, the Mediterranean — and a legal code that bore his name. He died on campaign at Szigetvár.",
+            "tr": "Kanuni ve Muhteşem. Süleyman'ın 46 yıllık saltanatı imparatorluğun zirvesiydi: Belgrad, Mohaç, Viyana, Akdeniz — ve adını taşıyan bir kanun külliyatı. Zigetvar seferinde vefat etti.",
+            "zh": "立法者与壮丽者。苏莱曼46年的统治是帝国的鼎盛时期：贝尔格莱德、莫哈奇、维也纳、地中海——以及一部以他命名的法典。他在锡盖特堡的征途中去世。",
+            "ru": "Законодатель и Великолепный. 46-летнее правление Сулеймана стало зенитом империи: Белград, Мохач, Вена, Средиземноморье — и свод законов, носивший его имя. Он умер в походе под Сигетваром.",
+            "es": "El Legislador y el Magnífico. Los 46 años de reinado de Solimán fueron el apogeo del imperio: Belgrado, Mohács, Viena, el Mediterráneo — y un código legal que llevaba su nombre. Murió en campaña en Szigetvár."
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": {
+        "en": "Stagnation & Internal Transformations",
+        "tr": "Duraklama ve İç Dönüşümler",
+        "zh": "停滞与内部变革时期",
+        "ru": "Застой и внутренние преобразования",
+        "es": "Estancamiento y transformaciones internas"
+      },
+      "years": "1566–1683",
+      "start_year": 1566,
+      "end_year": 1683,
+      "description": {
+        "en": "Lepanto and Vienna, the Sultanate of Women, the end of fratricide, and the empire's struggle to adapt.",
+        "tr": "İnebahtı ve Viyana, Kadınlar Saltanatı, kardeş katlinin sonu ve imparatorluğun uyum sağlama mücadelesi.",
+        "zh": "勒班陀与维也纳、女权苏丹时期、弑兄制度的终结，以及帝国艰难求变的历程。",
+        "ru": "Лепанто и Вена, эпоха женского султаната, конец братоубийства и борьба империи за адаптацию к новым условиям.",
+        "es": "Lepanto y Viena, el Sultanato de las Mujeres, el fin del fratricidio y la lucha del imperio por adaptarse."
+      },
+      "sultans": [
+        {
+          "name": {
+            "en": "Selim II",
+            "tr": "II. Selim",
+            "zh": "塞利姆二世",
+            "ru": "Селим II",
+            "es": "Selim II"
+          },
+          "slug": "selim_ii",
+          "portrait": "res://assets/sultans/selim_ii.jpg",
+          "reign": "1566–1574",
+          "start_year": 1566,
+          "end_year": 1574,
+          "wives": [
+            "Nurbanu Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Conquest of Cyprus (1571)",
+                "tr": "Kıbrıs'ın Fethi (1571)",
+                "zh": "征服塞浦路斯（1571年）",
+                "ru": "Завоевание Кипра (1571)",
+                "es": "Conquista de Chipre (1571)"
+              },
+              "description": {
+                "en": "Took Cyprus from Venice, provoking the Holy League.",
+                "tr": "Kıbrıs'ı Venedik'ten aldı ve bu, Kutsal İttifak'ın oluşmasına yol açtı.",
+                "zh": "从威尼斯手中夺取塞浦路斯，引发了神圣同盟的反击。",
+                "ru": "Отвоевал Кипр у Венеции, что спровоцировало создание Священной лиги.",
+                "es": "Arrebató Chipre a Venecia, provocando la formación de la Liga Santa."
+              }
+            },
+            {
+              "name": {
+                "en": "Battle of Lepanto (1571)",
+                "tr": "İnebahtı Deniz Savaşı (1571)",
+                "zh": "勒班陀海战（1571年）",
+                "ru": "Битва при Лепанто (1571)",
+                "es": "Batalla de Lepanto (1571)"
+              },
+              "description": {
+                "en": "The Ottoman fleet was destroyed by the Holy League — a shock, though quickly rebuilt.",
+                "tr": "Osmanlı donanması Kutsal İttifak tarafından yok edildi — büyük bir şoktu, ancak donanma kısa sürede yeniden inşa edildi.",
+                "zh": "奥斯曼舰队被神圣同盟摧毁——虽是一场重创，但舰队很快得以重建。",
+                "ru": "Османский флот был уничтожен Священной лигой — тяжёлый удар, хотя флот быстро восстановили.",
+                "es": "La flota otomana fue destruida por la Liga Santa: un golpe durísimo, aunque pronto fue reconstruida."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Selim II, son of Suleiman and Hürrem, took Cyprus but suffered the fleet's destruction at Lepanto in 1571. Real power increasingly lay with his grand vizier Sokollu Mehmed Pasha.",
+            "tr": "Kanuni ile Hürrem'in oğlu II. Selim, Kıbrıs'ı fethetti ancak 1571'de İnebahtı'da donanmasının yok edilmesine tanık oldu. Gerçek güç giderek sadrazamı Sokollu Mehmed Paşa'nın eline geçti.",
+            "zh": "塞利姆二世是苏莱曼与许蕾姆之子，他夺取了塞浦路斯，却在1571年的勒班陀海战中遭遇舰队覆灭。实权日益落入大维齐尔索科卢·穆罕默德帕夏之手。",
+            "ru": "Селим II, сын Сулеймана и Хюррем, завоевал Кипр, но в 1571 году потерял флот при Лепанто. Реальная власть всё больше переходила к великому везиру Соколлу Мехмед-паше.",
+            "es": "Selim II, hijo de Solimán y Hürrem, conquistó Chipre pero sufrió la destrucción de su flota en Lepanto en 1571. El poder real recaía cada vez más en su gran visir Sokollu Mehmed Pasha."
+          }
+        },
+        {
+          "name": {
+            "en": "Murad III",
+            "tr": "III. Murad",
+            "zh": "穆拉德三世",
+            "ru": "Мурад III",
+            "es": "Murad III"
+          },
+          "slug": "murad_iii",
+          "portrait": "res://assets/sultans/murad_iii.jpg",
+          "reign": "1574–1595",
+          "start_year": 1574,
+          "end_year": 1595,
+          "wives": [
+            "Safiye Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Ottoman–Safavid War (1578–1590)",
+                "tr": "Osmanlı–Safevi Savaşı (1578–1590)",
+                "zh": "奥斯曼—萨法维战争（1578–1590年）",
+                "ru": "Османо-сефевидская война (1578–1590)",
+                "es": "Guerra otomano-safávida (1578–1590)"
+              },
+              "description": {
+                "en": "Long eastern war that brought the Caucasus and Azerbaijan under Ottoman control.",
+                "tr": "Kafkasya'yı ve Azerbaycan'ı Osmanlı egemenliğine sokan uzun doğu savaşı.",
+                "zh": "漫长的东方战争，使高加索和阿塞拜疆纳入奥斯曼帝国的控制。",
+                "ru": "Долгая восточная война, приведшая Кавказ и Азербайджан под власть Османской империи.",
+                "es": "Larga guerra oriental que puso el Cáucaso y Azerbaiyán bajo control otomano."
+              }
+            },
+            {
+              "name": {
+                "en": "Peak of the Sultanate of Women",
+                "tr": "Kadınlar Saltanatı'nın Zirvesi",
+                "zh": "女权苏丹时期的顶峰",
+                "ru": "Зенит женского султаната",
+                "es": "Apogeo del Sultanato de las Mujeres"
+              },
+              "description": {
+                "en": "Safiye Sultan and the palace women reached unprecedented political influence.",
+                "tr": "Safiye Sultan ve saray kadınları eşi görülmemiş bir siyasi nüfuza ulaştı.",
+                "zh": "萨菲耶苏丹与后宫女眷达到了前所未有的政治影响力。",
+                "ru": "Сафие-султан и женщины дворца достигли беспрецедентного политического влияния.",
+                "es": "Safiye Sultan y las mujeres del palacio alcanzaron una influencia política sin precedentes."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Murad III's reign saw the greatest eastern conquests since Selim I and the peak of the Sultanate of Women, with Safiye Sultan wielding enormous influence from the harem.",
+            "tr": "III. Murad dönemi, I. Selim'den bu yana en büyük doğu fetihlerine ve Kadınlar Saltanatı'nın zirvesine tanık oldu; Safiye Sultan haremden muazzam bir nüfuz kullanıyordu.",
+            "zh": "穆拉德三世在位期间见证了自塞利姆一世以来最大规模的东方征服，以及女权苏丹时期的顶峰，萨菲耶苏丹从后宫施加着巨大的影响力。",
+            "ru": "Правление Мурада III ознаменовалось крупнейшими восточными завоеваниями со времён Селима I и зенитом женского султаната: Сафие-султан обладала огромным влиянием из гарема.",
+            "es": "El reinado de Murad III vio las mayores conquistas orientales desde Selim I y el apogeo del Sultanato de las Mujeres, con Safiye Sultan ejerciendo una enorme influencia desde el harén."
+          }
+        },
+        {
+          "name": {
+            "en": "Mehmed III",
+            "tr": "III. Mehmed",
+            "zh": "穆罕默德三世",
+            "ru": "Мехмед III",
+            "es": "Mehmed III"
+          },
+          "slug": "mehmed_iii",
+          "portrait": "res://assets/sultans/mehmed_iii.jpg",
+          "reign": "1595–1603",
+          "start_year": 1595,
+          "end_year": 1603,
+          "wives": [
+            "Handan Sultan",
+            "Halime Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Keresztes (1596)",
+                "tr": "Haçova (Keresztes) Savaşı (1596)",
+                "zh": "克雷斯茨战役（1596年）",
+                "ru": "Битва при Керестесе (1596)",
+                "es": "Batalla de Keresztes (1596)"
+              },
+              "description": {
+                "en": "Hard-fought victory in Hungary; the last sultan to command the army in person for generations.",
+                "tr": "Macaristan'da zorlu bir zafer; uzun yıllar boyunca orduya bizzat komuta eden son padişah oldu.",
+                "zh": "在匈牙利取得的艰苦胜利；他是此后数代人中最后一位亲自指挥军队的苏丹。",
+                "ru": "Тяжёлая победа в Венгрии; на поколения вперёд последний султан, лично командовавший армией.",
+                "es": "Victoria muy reñida en Hungría; fue el último sultán en comandar el ejército en persona durante generaciones."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mehmed III was the last sultan of his era to lead the army in the field, winning the bloody Battle of Keresztes (Haçova) in 1596 during the Long Turkish War.",
+            "tr": "III. Mehmed, Uzun Türk Savaşı sırasında 1596'da kanlı Haçova (Keresztes) Savaşı'nı kazanarak, döneminin orduyu bizzat sefere götüren son padişahı oldu.",
+            "zh": "穆罕默德三世是其时代最后一位亲自率军出征的苏丹，在“长土耳其战争”期间于1596年赢得了惨烈的克雷斯茨（哈乔瓦）战役。",
+            "ru": "Мехмед III стал последним султаном своей эпохи, лично возглавившим армию в походе: он одержал победу в кровавой битве при Керестесе (Хачова) в 1596 году во время Долгой турецкой войны.",
+            "es": "Mehmed III fue el último sultán de su época en liderar el ejército en el campo de batalla, ganando la sangrienta batalla de Keresztes (Haçova) en 1596 durante la Larga Guerra Turca."
+          }
+        },
+        {
+          "name": {
+            "en": "Ahmed I",
+            "tr": "I. Ahmed",
+            "zh": "艾哈迈德一世",
+            "ru": "Ахмед I",
+            "es": "Ahmed I"
+          },
+          "slug": "ahmed_i",
+          "portrait": "res://assets/sultans/ahmed_i.jpg",
+          "reign": "1603–1617",
+          "start_year": 1603,
+          "end_year": 1617,
+          "wives": [
+            "Kösem Sultan",
+            "Mahfiruz Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Abolition of Fratricide",
+                "tr": "Kardeş Katlinin Kaldırılması",
+                "zh": "废除弑兄制度",
+                "ru": "Отмена братоубийства",
+                "es": "Abolición del fratricidio"
+              },
+              "description": {
+                "en": "Ended the legal practice of royal fratricide, replacing it with the Ekberiyet (seniority) system of succession.",
+                "tr": "Hanedan içi kardeş katli uygulamasına son verdi; yerine Ekberiyet (en yaşlının tahta çıkması) sistemini getirdi.",
+                "zh": "终结了王室弑兄的合法惯例，代之以“艾克贝利耶”（年长者继承）的继位制度。",
+                "ru": "Положил конец законной практике царского братоубийства, заменив её системой Экберият (наследование по старшинству).",
+                "es": "Puso fin a la práctica legal del fratricidio real, sustituyéndola por el sistema Ekberiyet de sucesión por antigüedad."
+              }
+            },
+            {
+              "name": {
+                "en": "Construction of the Blue Mosque",
+                "tr": "Sultanahmet Camii'nin İnşası",
+                "zh": "建造蓝色清真寺",
+                "ru": "Строительство Голубой мечети",
+                "es": "Construcción de la Mezquita Azul"
+              },
+              "description": {
+                "en": "Built the Sultan Ahmed Mosque (Blue Mosque), the iconic monument of Istanbul.",
+                "tr": "İstanbul'un simgesi hâline gelen Sultanahmet Camii'ni (Mavi Cami) yaptırdı.",
+                "zh": "修建了苏丹艾哈迈德清真寺（蓝色清真寺），成为伊斯坦布尔的标志性建筑。",
+                "ru": "Построил мечеть Султанахмет (Голубую мечеть) — символ Стамбула.",
+                "es": "Construyó la mezquita del Sultán Ahmed (Mezquita Azul), el monumento emblemático de Estambul."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Ahmed I changed Ottoman history without a battle: he abolished fratricide and introduced the Ekberiyet seniority system, and left Istanbul its most famous silhouette — the Blue Mosque.",
+            "tr": "I. Ahmed, savaşmadan Osmanlı tarihini değiştirdi: kardeş katlini kaldırıp Ekberiyet sistemini getirdi ve İstanbul'a en meşhur siluetini — Sultanahmet Camii'ni — bıraktı.",
+            "zh": "艾哈迈德一世不战而改写了奥斯曼历史：他废除了弑兄制度，引入“艾克贝利耶”年长者继承制，并为伊斯坦布尔留下了最著名的天际线——蓝色清真寺。",
+            "ru": "Ахмед I изменил османскую историю без единой битвы: отменил братоубийство, ввёл систему Экберият и оставил Стамбулу его самый знаменитый силуэт — Голубую мечеть.",
+            "es": "Ahmed I cambió la historia otomana sin librar batalla: abolió el fratricidio, introdujo el sistema Ekberiyet de sucesión por antigüedad y dejó a Estambul su silueta más famosa: la Mezquita Azul."
+          }
+        },
+        {
+          "name": {
+            "en": "Mustafa I",
+            "tr": "I. Mustafa",
+            "zh": "穆斯塔法一世",
+            "ru": "Мустафа I",
+            "es": "Mustafá I"
+          },
+          "slug": "mustafa_i",
+          "portrait": "res://assets/sultans/mustafa_i.jpg",
+          "reign": "1617–1618, 1622–1623",
+          "start_year": 1617,
+          "end_year": 1623,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Two Brief Reigns",
+                "tr": "İki Kısa Saltanat",
+                "zh": "两度短暂在位",
+                "ru": "Два коротких правления",
+                "es": "Dos breves reinados"
+              },
+              "description": {
+                "en": "Placed on the throne twice under the new seniority system, but deposed both times due to his fragile mental health.",
+                "tr": "Yeni Ekberiyet sistemi uyarınca iki kez tahta çıkarıldı, ancak kırılgan ruh sağlığı nedeniyle iki kez de tahttan indirildi.",
+                "zh": "在新的年长者继承制度下两次登基，但因精神状况脆弱而两次被废黜。",
+                "ru": "Дважды возводился на престол по новой системе старшинства, но оба раза был свергнут из-за нестабильного психического здоровья.",
+                "es": "Fue entronizado dos veces bajo el nuevo sistema de antigüedad, pero depuesto en ambas ocasiones debido a su frágil salud mental."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mustafa I was the first test of the new Ekberiyet system. His severe mental health problems led to two brief, troubled reigns, each ending in deposition.",
+            "tr": "I. Mustafa, yeni Ekberiyet sisteminin ilk sınavı oldu. Ağır ruh sağlığı sorunları, her biri tahttan indirilmeyle sonuçlanan iki kısa ve sıkıntılı saltanata yol açtı.",
+            "zh": "穆斯塔法一世是新“艾克贝利耶”制度的首次考验。严重的精神问题导致了两次短暂而动荡的统治，每一次都以被废黜告终。",
+            "ru": "Мустафа I стал первым испытанием новой системы Экберият. Тяжёлые психические проблемы привели к двум коротким, беспокойным правлениям, каждое из которых завершилось свержением.",
+            "es": "Mustafá I fue la primera prueba del nuevo sistema Ekberiyet. Sus graves problemas de salud mental dieron lugar a dos reinados breves y turbulentos, cada uno terminado en deposición."
+          }
+        },
+        {
+          "name": {
+            "en": "Osman II (Genç Osman)",
+            "tr": "II. Osman (Genç Osman)",
+            "zh": "奥斯曼二世（青年奥斯曼）",
+            "ru": "Осман II (Молодой Осман)",
+            "es": "Osmán II (el Joven)"
+          },
+          "slug": "osman_ii",
+          "portrait": "res://assets/sultans/osman_ii.jpg",
+          "reign": "1618–1622",
+          "start_year": 1618,
+          "end_year": 1622,
+          "wives": [
+            "Ayşe Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Janissary Revolt (1622)",
+                "tr": "Yeniçeri İsyanı (1622)",
+                "zh": "耶尼切里军团叛乱（1622年）",
+                "ru": "Янычарский бунт (1622)",
+                "es": "Revuelta de los jenízaros (1622)"
+              },
+              "description": {
+                "en": "His plan to curb the Janissaries and raise a new army provoked a revolt; he was deposed and tragically assassinated at Yedikule.",
+                "tr": "Yeniçerileri dizginleme ve yeni bir ordu kurma planı isyana yol açtı; tahttan indirildi ve Yedikule'de trajik şekilde öldürüldü.",
+                "zh": "他遏制禁卫军并组建新军的计划引发了叛乱；他被废黜，并在耶迪库勒（七塔堡）惨遭杀害。",
+                "ru": "Его план обуздать янычар и создать новую армию вызвал восстание; он был свергнут и трагически убит в Едикуле.",
+                "es": "Su plan de frenar a los jenízaros y crear un nuevo ejército provocó una revuelta; fue depuesto y trágicamente asesinado en Yedikule."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Genç Osman dreamed of reforming the army and the state. The Janissaries revolted in 1622, and the young sultan was deposed and murdered — the first regicide in Ottoman history.",
+            "tr": "Genç Osman, orduyu ve devleti ıslah etmeyi hayal ediyordu. 1622'de Yeniçeriler isyan etti ve genç padişah tahttan indirilip katledildi — Osmanlı tarihindeki ilk padişah cinayeti.",
+            "zh": "青年奥斯曼梦想改革军队与国家。1622年，耶尼切里禁卫军发动叛乱，年轻的苏丹被废黜并遭杀害——这是奥斯曼历史上首例弑君事件。",
+            "ru": "Молодой Осман мечтал реформировать армию и государство. В 1622 году янычары восстали, и юный султан был свергнут и убит — первое цареубийство в османской истории.",
+            "es": "Osmán el Joven soñaba con reformar el ejército y el estado. Los jenízaros se sublevaron en 1622, y el joven sultán fue depuesto y asesinado: el primer regicidio de la historia otomana."
+          }
+        },
+        {
+          "name": {
+            "en": "Murad IV",
+            "tr": "IV. Murad",
+            "zh": "穆拉德四世",
+            "ru": "Мурад IV",
+            "es": "Murad IV"
+          },
+          "slug": "murad_iv",
+          "portrait": "res://assets/sultans/murad_iv.jpg",
+          "reign": "1623–1640",
+          "start_year": 1623,
+          "end_year": 1640,
+          "wives": [
+            "Ayşe Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Recapture of Baghdad (1638)",
+                "tr": "Bağdat'ın Geri Alınması (1638)",
+                "zh": "收复巴格达（1638年）",
+                "ru": "Возвращение Багдада (1638)",
+                "es": "Recuperación de Bagdad (1638)"
+              },
+              "description": {
+                "en": "Personally led the campaign that retook Baghdad from the Safavids, confirmed by the Treaty of Zuhab (1639).",
+                "tr": "Bağdat'ı Safevilerden geri alan sefere bizzat önderlik etti; 1639 Kasr-ı Şirin (Zuhab) Antlaşması ile onaylandı.",
+                "zh": "亲自率军从萨法维王朝手中夺回巴格达，1639年《祖哈布条约》予以确认。",
+                "ru": "Лично возглавил поход, вернувший Багдад у сефевидов; закреплено Зухабским (Каср-и-Ширинским) договором 1639 года.",
+                "es": "Lideró personalmente la campaña que arrebató Bagdad a los safávidas, confirmada por el Tratado de Zuhab (1639)."
+              }
+            },
+            {
+              "name": {
+                "en": "Internal Stabilization Campaigns",
+                "tr": "İç İstikrar Seferleri",
+                "zh": "国内平乱行动",
+                "ru": "Кампании по внутренней стабилизации",
+                "es": "Campañas de estabilización interna"
+              },
+              "description": {
+                "en": "Crushed rebellions with iron discipline and restored central authority across Anatolia.",
+                "tr": "İsyanları demir disiplinle ezdi ve Anadolu'da merkezi otoriteyi yeniden tesis etti.",
+                "zh": "以铁腕纪律镇压叛乱，在安纳托利亚恢复了中央权威。",
+                "ru": "Железной дисциплиной подавил восстания и восстановил центральную власть по всей Анатолии.",
+                "es": "Aplastó las rebeliones con disciplina férrea y restauró la autoridad central en toda Anatolia."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Murad IV restored order with an iron fist, banned tobacco and coffee, and personally reconquered Baghdad in 1638 — the last great warrior-sultan of the classical mold.",
+            "tr": "IV. Murad, demir yumrukla düzeni yeniden sağladı, tütünü ve kahveyi yasakladı ve 1638'de Bağdat'ı bizzat geri aldı — klasik tarzın son büyük savaşçı padişahı.",
+            "zh": "穆拉德四世以铁腕恢复秩序，禁止烟草和咖啡，并于1638年亲自收复巴格达——古典时代最后一位伟大的武士苏丹。",
+            "ru": "Мурад IV железной рукой восстановил порядок, запретил табак и кофе и в 1638 году лично отвоевал Багдад — последний великий султан-воин классического образца.",
+            "es": "Murad IV restauró el orden con mano de hierro, prohibió el tabaco y el café, y reconquistó Bagdad personalmente en 1638: el último gran sultán guerrero del molde clásico."
+          }
+        },
+        {
+          "name": {
+            "en": "Ibrahim",
+            "tr": "Sultan İbrahim",
+            "zh": "易卜拉欣",
+            "ru": "Ибрагим I",
+            "es": "Ibrahim"
+          },
+          "slug": "ibrahim",
+          "portrait": "res://assets/sultans/ibrahim.jpg",
+          "reign": "1640–1648",
+          "start_year": 1640,
+          "end_year": 1648,
+          "wives": [
+            "Turhan Hatun"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Siege of Candia (Crete) begins (1645)",
+                "tr": "Kandiye (Girit) Kuşatması'nın Başlaması (1645)",
+                "zh": "干地亚（克里特）围城战开始（1645年）",
+                "ru": "Начало осады Кандии (Крит) (1645)",
+                "es": "Comienzo del sitio de Candía (Creta) (1645)"
+              },
+              "description": {
+                "en": "Launched the long Cretan War against Venice; the siege of Candia would last over two decades.",
+                "tr": "Venedik'e karşı uzun Girit Savaşı'nı başlattı; Kandiye kuşatması yirmi yıldan uzun sürecekti.",
+                "zh": "对威尼斯发动了漫长的克里特战争；干地亚围城战将持续二十多年。",
+                "ru": "Начал долгую Критскую войну против Венеции; осада Кандии продлилась более двух десятилетий.",
+                "es": "Inició la larga guerra de Creta contra Venecia; el asedio de Candía duraría más de dos décadas."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Ibrahim's unstable reign began the costly Cretan War with Venice. Palace intrigue and fiscal chaos mounted until he was deposed and executed in 1648.",
+            "tr": "Sultan İbrahim'in istikrarsız saltanatı, Venedik'le maliyetli Girit Savaşı'nı başlattı. Saray entrikaları ve mali kriz büyüdü; 1648'de tahttan indirildi ve idam edildi.",
+            "zh": "易卜拉欣动荡的统治开启了与威尼斯之间代价高昂的克里特战争。宫廷阴谋与财政混乱愈演愈烈，1648年他被废黜并处决。",
+            "ru": "Нестабильное правление Ибрагима положило начало затратной Критской войне с Венецией. Дворцовые интриги и финансовый хаос нарастали, пока в 1648 году его не свергли и не казнили.",
+            "es": "El inestable reinado de Ibrahim inició la costosa guerra de Creta con Venecia. Las intrigas palaciegas y el caos fiscal aumentaron hasta que fue depuesto y ejecutado en 1648."
+          }
+        },
+        {
+          "name": {
+            "en": "Mehmed IV (Avcı)",
+            "tr": "IV. Mehmed (Avcı)",
+            "zh": "穆罕默德四世（猎人）",
+            "ru": "Мехмед IV (Охотник)",
+            "es": "Mehmed IV (el Cazador)"
+          },
+          "slug": "mehmed_iv",
+          "portrait": "res://assets/sultans/mehmed_iv.jpg",
+          "reign": "1648–1687",
+          "start_year": 1648,
+          "end_year": 1687,
+          "wives": [
+            "Gülnuş Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "Siege of Candia (1669)",
+                "tr": "Kandiye Kuşatması (1669)",
+                "zh": "干地亚围城战（1669年）",
+                "ru": "Осада Кандии (1669)",
+                "es": "Sitio de Candía (1669)"
+              },
+              "description": {
+                "en": "Under the Köprülü grand viziers, Crete finally fell after the longest siege in history.",
+                "tr": "Köprülü sadrazamları döneminde, tarihin en uzun kuşatmasının ardından Girit nihayet düştü.",
+                "zh": "在科普鲁律家族大维齐尔的领导下，经过史上最长的围城战，克里特终于陷落。",
+                "ru": "При великих везирах из рода Кёпрюлю Крит наконец пал после самой долгой осады в истории.",
+                "es": "Bajo los grandes visires Köprülü, Creta cayó finalmente tras el asedio más largo de la historia."
+              }
+            },
+            {
+              "name": {
+                "en": "Second Siege of Vienna (1683)",
+                "tr": "II. Viyana Kuşatması (1683)",
+                "zh": "第二次维也纳之围（1683年）",
+                "ru": "Вторая осада Вены (1683)",
+                "es": "Segundo sitio de Viena (1683)"
+              },
+              "description": {
+                "en": "Grand Vizier Kara Mustafa Pasha's failed siege of Vienna turned the tide; the Holy League counterattacked and Mehmed IV was deposed.",
+                "tr": "Sadrazam Kara Mustafa Paşa'nın başarısız Viyana kuşatması gidişatı tersine çevirdi; Kutsal İttifak karşı saldırdı ve IV. Mehmed tahttan indirildi.",
+                "zh": "大维齐尔卡拉·穆斯塔法帕夏对维也纳的失败围攻扭转了战局；神圣同盟反攻，穆罕默德四世被废黜。",
+                "ru": "Неудачная осада Вены великим везиром Кара Мустафой-пашой переломила ход событий; Священная лига перешла в контрнаступление, и Мехмед IV был свергнут.",
+                "es": "El fallido asedio de Viena por el gran visir Kara Mustafa Pasha cambió el rumbo; la Liga Santa contraatacó y Mehmed IV fue depuesto."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "The Hunter. Mehmed IV's long reign saw the Köprülü restoration and the fall of Crete, but ended with catastrophe: the failed Second Siege of Vienna in 1683 and the loss of Hungary.",
+            "tr": "Avcı. IV. Mehmed'in uzun saltanatı Köprülü restorasyonuna ve Girit'in fethine tanık oldu, ancak felaketle son buldu: 1683'teki başarısız II. Viyana Kuşatması ve Macaristan'ın kaybı.",
+            "zh": "“猎人”穆罕默德四世漫长的统治见证了科普鲁律家族的复兴和克里特的陷落，却以灾难收场：1683年第二次维也纳之围的失败和匈牙利的丧失。",
+            "ru": "«Охотник». Долгое правление Мехмеда IV ознаменовалось восстановлением при Кёпрюлю и падением Крита, но завершилось катастрофой: неудачной второй осадой Вены в 1683 году и потерей Венгрии.",
+            "es": "El Cazador. El largo reinado de Mehmed IV vio la restauración de los Köprülü y la caída de Creta, pero terminó en catástrofe: el fallido segundo sitio de Viena en 1683 y la pérdida de Hungría."
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": {
+        "en": "The Decline, Wars of Survival & Reform",
+        "tr": "Gerileme, Varoluş Savaşları ve Islahat",
+        "zh": "衰落、生存战争与改革",
+        "ru": "Упадок, войны за выживание и реформы",
+        "es": "El Declive, Guerras de Supervivencia y Reforma"
+      },
+      "years": "1683–1839",
+      "start_year": 1683,
+      "end_year": 1839,
+      "description": {
+        "en": "Karlowitz, the Tulip Period, the printing press, and the long fight to reform the empire from within.",
+        "tr": "Karlofça, Lale Devri, matbaanın getirilişi ve imparatorluğu içeriden ıslah etme mücadelesi.",
+        "zh": "卡尔洛维茨条约、郁金香时期、印刷术的传入，以及帝国从内而外的改革斗争。",
+        "ru": "Карловицкий мир, эпоха тюльпанов, печатный станок и долгая борьба за реформы изнутри.",
+        "es": "Karlowitz, la Época del Tulipán, la imprenta y la larga lucha por reformar el imperio desde dentro."
+      },
+      "sultans": [
+        {
+          "name": {
+            "en": "Suleiman II",
+            "tr": "II. Süleyman",
+            "zh": "苏莱曼二世",
+            "ru": "Сулейман II",
+            "es": "Suleimán II"
+          },
+          "slug": "suleiman_ii",
+          "portrait": "res://assets/sultans/suleiman_ii.jpg",
+          "reign": "1687–1691",
+          "start_year": 1687,
+          "end_year": 1691,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "War of the Holy League",
+                "tr": "Kutsal İttifak Savaşı",
+                "zh": "神圣同盟战争",
+                "ru": "Война Священной лиги",
+                "es": "Guerra de la Liga Santa"
+              },
+              "description": {
+                "en": "Continued the desperate struggle against the Holy League formed after Vienna; Köprülü Fazıl Mustafa Pasha led a partial recovery.",
+                "tr": "Viyana sonrası kurulan Kutsal İttifak'a karşı verilen çetin mücadele devam etti; Köprülü Fazıl Mustafa Paşa kısmi bir toparlanma sağladı.",
+                "zh": "维也纳之后组成的神圣同盟继续苦战；科普鲁律·法兹尔·穆斯塔法帕夏带领帝国部分恢复元气。",
+                "ru": "Продолжалась отчаянная борьба со Священной лигой, созданной после Вены; Кёпрюлю Фазыл Мустафа-паша добился частичного восстановления.",
+                "es": "Continuó la lucha desesperada contra la Liga Santa formada tras Viena; Köprülü Fazıl Mustafa Pasha logró una recuperación parcial."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Suleiman II inherited the collapse after Vienna. With the Köprülü viziers he stabilized the front, but the empire remained locked in an exhausting war on all sides.",
+            "tr": "II. Süleyman, Viyana sonrası çöküşü devraldı. Köprülü vezirleriyle cepheleri stabilize etti, ancak imparatorluk her yönden yorucu bir savaşın içinde kaldı.",
+            "zh": "苏莱曼二世继承了维也纳之后的崩溃局面。在科普鲁律维齐尔的帮助下，他稳定了战线，但帝国仍四面受敌、苦战不休。",
+            "ru": "Сулейман II унаследовал крах после Вены. С визирями из рода Кёпрюлю он стабилизировал фронт, но империя оставалась втянутой в изнурительную войну на всех направлениях.",
+            "es": "Suleimán II heredó el colapso posterior a Viena. Con los visires Köprülü estabilizó el frente, pero el imperio permaneció atrapado en una guerra agotadora por todos lados."
+          }
+        },
+        {
+          "name": {
+            "en": "Ahmed II",
+            "tr": "II. Ahmed",
+            "zh": "艾哈迈德二世",
+            "ru": "Ахмед II",
+            "es": "Ahmed II"
+          },
+          "slug": "ahmed_ii",
+          "portrait": "res://assets/sultans/ahmed_ii.jpg",
+          "reign": "1691–1695",
+          "start_year": 1691,
+          "end_year": 1695,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Slankamen (1691)",
+                "tr": "Slankamen Savaşı (1691)",
+                "zh": "斯拉纳门战役（1691年）",
+                "ru": "Битва при Сланкамене (1691)",
+                "es": "Batalla de Slankamen (1691)"
+              },
+              "description": {
+                "en": "The able Köprülü Fazıl Mustafa Pasha was killed and the army driven back in Hungary.",
+                "tr": "Yetenekli Köprülü Fazıl Mustafa Paşa öldürüldü ve ordu Macaristan'da geri çekilmeye mecbur bırakıldı.",
+                "zh": "能干的科普鲁律·法兹尔·穆斯塔法帕夏阵亡，军队在匈牙利被迫后撤。",
+                "ru": "Способный Кёпрюлю Фазыл Мустафа-паша был убит, и армия отступила в Венгрии.",
+                "es": "El capaz Köprülü Fazıl Mustafa Pasha murió y el ejército fue rechazado en Hungría."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Ahmed II's short reign was consumed by the Holy League war; the death of Fazıl Mustafa Pasha at Slankamen was a blow from which the Hungarian front never recovered.",
+            "tr": "II. Ahmed'in kısa saltanatı Kutsal İttifak savaşıyla geçti; Fazıl Mustafa Paşa'nın Slankamen'de ölümü, Macaristan cephesinin bir daha toparlanamayacağı bir darbe oldu.",
+            "zh": "艾哈迈德二世的短暂统治被神圣同盟战争消耗殆尽；法兹尔·穆斯塔法帕夏在斯拉纳门阵亡，匈牙利战线从此一蹶不振。",
+            "ru": "Краткое правление Ахмеда II прошло в войне со Священной лигой; гибель Фазыл Мустафа-паши при Сланкамене стала ударом, с которого венгерский фронт так и не оправился.",
+            "es": "El breve reinado de Ahmed II se consumió en la guerra de la Liga Santa; la muerte de Fazıl Mustafa Pasha en Slankamen fue un golpe del que el frente húngaro nunca se recuperó."
+          }
+        },
+        {
+          "name": {
+            "en": "Mustafa II",
+            "tr": "II. Mustafa",
+            "zh": "穆斯塔法二世",
+            "ru": "Мустафа II",
+            "es": "Mustafá II"
+          },
+          "slug": "mustafa_ii",
+          "portrait": "res://assets/sultans/mustafa_ii.jpg",
+          "reign": "1695–1703",
+          "start_year": 1695,
+          "end_year": 1703,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Zenta (1697)",
+                "tr": "Zenta Savaşı (1697)",
+                "zh": "森塔战役（1697年）",
+                "ru": "Битва при Зенте (1697)",
+                "es": "Batalla de Zenta (1697)"
+              },
+              "description": {
+                "en": "Catastrophic defeat by Prince Eugene of Savoy while the army crossed the Tisza river.",
+                "tr": "Ordu Tuna nehrini geçerken Savoy Prensi Eugen tarafından ağır bir yenilgiye uğratıldı.",
+                "zh": "军队渡蒂萨河时遭萨伏依的欧根亲王毁灭性打击。",
+                "ru": "Катастрофическое поражение от принца Евгения Савойского, когда армия переправлялась через Тису.",
+                "es": "Derrota catastrófica por el príncipe Eugenio de Saboya mientras el ejército cruzaba el río Tisza."
+              }
+            },
+            {
+              "name": {
+                "en": "Treaty of Karlowitz (1699)",
+                "tr": "Karlofça Antlaşması (1699)",
+                "zh": "卡尔洛维茨条约（1699年）",
+                "ru": "Карловицкий мир (1699)",
+                "es": "Tratado de Karlowitz (1699)"
+              },
+              "description": {
+                "en": "The first major loss of territory: Hungary, Transylvania and Morea were ceded — the empire's first great retreat.",
+                "tr": "İlk büyük toprak kaybı: Macaristan, Erdel ve Mora teslim edildi — imparatorluğun ilk büyük geri çekilişiydi.",
+                "zh": "第一次重大领土丧失：匈牙利、特兰西瓦尼亚和摩里亚被割让——帝国的首次大撤退。",
+                "ru": "Первая крупная территориальная потеря: Венгрия, Трансильвания и Морея были уступлены — первое великое отступление империи.",
+                "es": "La primera gran pérdida territorial: Hungría, Transilvania y Morea fueron cedidas — el primer gran retroceso del imperio."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mustafa II personally campaigned to recover Hungary but was crushed at Zenta. The Treaty of Karlowitz (1699) marked the empire's first major territorial loss, and the Edirne Incident deposed him.",
+            "tr": "II. Mustafa bizzat Macaristan'ı geri almak için sefere çıktı ancak Zenta'da paramparça edildi. Karlofça Antlaşması (1699) imparatorluğun ilk büyük toprak kaybını simgeledi ve Edirne Vak'ası tahttan indirdi.",
+            "zh": "穆斯塔法二世亲征试图收复匈牙利，却在森塔惨败。卡尔洛维茨条约（1699年）标志着帝国首次重大领土损失，埃迪尔内事件最终让他下台。",
+            "ru": "Мустафа II лично вёл кампанию за возвращение Венгрии, но был разгромлен при Зенте. Карловицкий мир (1699) ознаменовал первую крупную территориальную потерю, а Эдирнское событие свергло его.",
+            "es": "Mustafá II hizo campaña personalmente para recuperar Hungría, pero fue aplastado en Zenta. El Tratado de Karlowitz (1699) marcó la primera gran pérdida territorial, y el Incidente de Edirne lo depuso."
+          }
+        },
+        {
+          "name": {
+            "en": "Ahmed III",
+            "tr": "III. Ahmed",
+            "zh": "艾哈迈德三世",
+            "ru": "Ахмед III",
+            "es": "Ahmed III"
+          },
+          "slug": "ahmed_iii",
+          "portrait": "res://assets/sultans/ahmed_iii.jpg",
+          "reign": "1703–1730",
+          "start_year": 1703,
+          "end_year": 1730,
+          "wives": [
+            "Emetullah Kadın"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "The Tulip Period (Lale Devri)",
+                "tr": "Lale Devri",
+                "zh": "郁金香时期",
+                "ru": "Эпоха тюльпанов",
+                "es": "Época del Tulipán"
+              },
+              "description": {
+                "en": "An era of peace, art, and the first Ottoman printing press (İbrahim Müteferrika, 1727).",
+                "tr": "Barış, sanat ve ilk Osmanlı matbaasının kurulduğu dönem (İbrahim Müteferrika, 1727).",
+                "zh": "和平、艺术与第一部奥斯曼印刷机的时代（易卜拉欣·米泰费里卡，1727年）。",
+                "ru": "Эпоха мира, искусства и первой османской печатни (Ибрахим Мютеферрика, 1727).",
+                "es": "Una era de paz, arte y la primera imprenta otomana (İbrahim Müteferrika, 1727)."
+              }
+            },
+            {
+              "name": {
+                "en": "Patrona Halil Rebellion (1730)",
+                "tr": "Patrona Halil Ayaklanması (1730)",
+                "zh": "帕特罗纳·哈利勒起义（1730年）",
+                "ru": "Восстание Патрона Халиля (1730)",
+                "es": "Rebelión de Patrona Halil (1730)"
+              },
+              "description": {
+                "en": "A Janissary-backed revolt ended the Tulip Period and forced Ahmed III to abdicate.",
+                "tr": "Yeniçeri destekli bir isyan Lale Devri'ni sona erdirdi ve III. Ahmed'i tahttan çekilmeye zorladı.",
+                "zh": "一场得到耶尼切里支持的起义终结了郁金香时期，迫使艾哈迈德三世退位。",
+                "ru": "Поддержанное янычарами восстание положило конец Эпохе тюльпанов и вынудило Ахмеда III отречься.",
+                "es": "Una revuelta respaldada por los jenízaros terminó la Época del Tulipán y forzó la abdicación de Ahmed III."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Ahmed III presided over the Tulip Period — a flowering of culture, the first Muslim Turkish printing press under İbrahim Müteferrika, and early Western-style reforms — until the Patrona Halil Rebellion ended it all.",
+            "tr": "III. Ahmed, Lale Devri'nin başındaydı — kültürün çiçek açtığı, İbrahim Müteferrika önderliğinde ilk Müslüman Türk matbaasının kurulduğu ve erken Batı tarzı ıslahatların yapıldığı dönem — ta ki Patrona Halil Ayaklanması her şeyi sona erdirinceye kadar.",
+            "zh": "艾哈迈德三世主政郁金香时期——文化繁荣、易卜拉欣·米泰费里卡建立了第一部穆斯林土耳其印刷机、早期西式改革——直到帕特罗纳·哈利勒起义终结了这一切。",
+            "ru": "Ахмед III возглавлял Эпоху тюльпанов — расцвет культуры, первую мусульманскую турецкую печатню при Ибрахиме Мютеферрике и ранние реформы западного образца — пока восстание Патрона Халиля не положило этому конец.",
+            "es": "Ahmed III presidió la Época del Tulipán — una floración cultural, la primera imprenta turco-musulmana bajo İbrahim Müteferrika y tempranas reformas de estilo occidental — hasta que la Rebelión de Patrona Halil lo terminó todo."
+          }
+        },
+        {
+          "name": {
+            "en": "Mahmud I",
+            "tr": "I. Mahmud",
+            "zh": "马哈茂德一世",
+            "ru": "Махмуд I",
+            "es": "Mahmud I"
+          },
+          "slug": "mahmud_i",
+          "portrait": "res://assets/sultans/mahmud_i.jpg",
+          "reign": "1730–1754",
+          "start_year": 1730,
+          "end_year": 1754,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Treaty of Belgrade (1739)",
+                "tr": "Belgrad Antlaşması (1739)",
+                "zh": "贝尔格莱德条约（1739年）",
+                "ru": "Белградский мир (1739)",
+                "es": "Tratado de Belgrado (1739)"
+              },
+              "description": {
+                "en": "Stunning diplomatic victory: recovered Belgrade and Serbia from Austria — the last great Ottoman triumph in the Balkans.",
+                "tr": "Çarpıcı bir diplomatik zafer: Belgrad ve Sırbistan Avusturya'dan geri alındı — Balkanlar'daki son büyük Osmanlı zaferi.",
+                "zh": "惊人的外交胜利：从奥地利手中收回贝尔格莱德和塞尔维亚——奥斯曼在巴尔干的最后一次大胜。",
+                "ru": "Ошеломляющая дипломатическая победа: Белград и Сербия возвращены у Австрии — последний великий османский триумф на Балканах.",
+                "es": "Victoria diplomática asombrosa: se recuperaron Belgrado y Serbia de Austria — el último gran triunfo otomano en los Balcanes."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mahmud I restored order after the Patrona revolt and won the Treaty of Belgrade (1739), the empire's last major military-diplomatic victory, while beginning cautious military modernization.",
+            "tr": "I. Mahmud, Patrona isyanından sonra düzeni yeniden tesis etti ve imparatorluğun son büyük askeri-diplomatik zaferi olan Belgrad Antlaşması'nı (1739) kazandı; bu arada temkinli askeri modernizasyona başladı.",
+            "zh": "马哈茂德一世在帕特罗纳起义后恢复秩序，赢得了贝尔格莱德条约（1739年）——帝国最后一次重大军事外交胜利，同时开始了谨慎的军事现代化。",
+            "ru": "Махмуд I восстановил порядок после восстания Патрона Халиля и одержал победу Белградским миром (1739) — последней крупной военно-дипломатической победой империи, — начав осторожную военную модернизацию.",
+            "es": "Mahmud I restauró el orden tras la revuelta de Patrona y ganó el Tratado de Belgrado (1739), la última gran victoria militar-diplomática del imperio, mientras iniciaba una cautelosa modernización militar."
+          }
+        },
+        {
+          "name": {
+            "en": "Osman III",
+            "tr": "III. Osman",
+            "zh": "奥斯曼三世",
+            "ru": "Осман III",
+            "es": "Osman III"
+          },
+          "slug": "osman_iii",
+          "portrait": "res://assets/sultans/osman_iii.jpg",
+          "reign": "1754–1757",
+          "start_year": 1754,
+          "end_year": 1757,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Nuruosmaniye Mosque completed",
+                "tr": "Nuruosmaniye Camii tamamlandı",
+                "zh": "努鲁奥斯曼尼耶清真寺完工",
+                "ru": "Завершение мечети Нуруосмание",
+                "es": "Finalización de la mezquita Nuruosmaniye"
+              },
+              "description": {
+                "en": "The first great Baroque mosque of Istanbul was finished in his short reign.",
+                "tr": "İstanbul'un ilk büyük Barok camisi, onun kısa saltanatında tamamlandı.",
+                "zh": "伊斯坦布尔第一座宏伟的巴洛克清真寺在他短暂的统治期间完工。",
+                "ru": "Первая великая барочная мечеть Стамбула была завершена при его кратком правлении.",
+                "es": "La primera gran mezquita barroca de Estambul se terminó durante su breve reinado."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Osman III's brief, reclusive reign is remembered chiefly for the completion of the Nuruosmaniye Mosque and continued quiet decline of central authority.",
+            "tr": "III. Osman'ın kısa ve münzevi saltanatı, başta Nuruosmaniye Camii'nin tamamlanması olmak üzere, merkezi otoritenin sessiz gerilemesiyle hatırlanır.",
+            "zh": "奥斯曼三世短暂而深居简出的统治，主要因努鲁奥斯曼尼耶清真寺的完工和中央权威持续静默衰落而被铭记。",
+            "ru": "Краткое и затворническое правление Османа III помнят прежде всего завершением мечети Нуруосмание и продолжавшимся тихим упадком центральной власти.",
+            "es": "El breve y recluido reinado de Osman III se recuerda principalmente por la finalización de la mezquita Nuruosmaniye y la continua declinación del autoridad central."
+          }
+        },
+        {
+          "name": {
+            "en": "Mustafa III",
+            "tr": "III. Mustafa",
+            "zh": "穆斯塔法三世",
+            "ru": "Мустафа III",
+            "es": "Mustafá III"
+          },
+          "slug": "mustafa_iii",
+          "portrait": "res://assets/sultans/mustafa_iii.jpg",
+          "reign": "1757–1774",
+          "start_year": 1757,
+          "end_year": 1774,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Battle of Chesma (1770)",
+                "tr": "Çeşme Deniz Savaşı (1770)",
+                "zh": "切什梅海战（1770年）",
+                "ru": "Чесменское сражение (1770)",
+                "es": "Batalla naval de Çeşme (1770)"
+              },
+              "description": {
+                "en": "The Russian fleet burned the Ottoman navy at anchor — a humiliation of the Russo-Turkish War of 1768–1774.",
+                "tr": "Rus donanması demirlemiş Osmanlı filosunu yaktı — 1768–1774 Rus-Türk Savaşı'nın büyük bir hezimetiydi.",
+                "zh": "俄国舰队焚毁了停泊中的奥斯曼海军——1768–1774年俄土战争中的奇耻大辱。",
+                "ru": "Русский флот сжёг стоящую на якоре османскую эскадру — унижение Русско-турецкой войны 1768–1774.",
+                "es": "La flota rusa quemó la armada otomana anclada — una humillación de la guerra ruso-turca de 1768–1774."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mustafa III was an energetic reformer of the navy and artillery, but his reign was dominated by the disastrous war with Russia and the burning of the fleet at Chesma.",
+            "tr": "III. Mustafa, donanma ve topçu konusunda enerjik bir ıslahatçıydı, ancak saltanatı Rusya ile felaket savaş ve Çeşme'de filonun yakılmasıyla anıldı.",
+            "zh": "穆斯塔法三世是海军和炮兵改革的积极推动者，但他的统治因与俄罗斯的灾难性战争和切什梅舰队被焚而蒙上阴影。",
+            "ru": "Мустафа III был энергичным реформатором флота и артиллерии, но его правление прошло под знаком катастрофической войны с Россией и сожжения флота при Чесме.",
+            "es": "Mustafá III fue un enérgico reformador de la marina y la artillería, pero su reinado estuvo dominado por la desastrosa guerra con Rusia y la quema de la flota en Çeşme."
+          }
+        },
+        {
+          "name": {
+            "en": "Abdulhamid I",
+            "tr": "I. Abdülhamid",
+            "zh": "阿卜杜勒-哈米德一世",
+            "ru": "Абдул-Хамид I",
+            "es": "Abdul Hamid I"
+          },
+          "slug": "abdulhamid_i",
+          "portrait": "res://assets/sultans/abdulhamid_i.jpg",
+          "reign": "1774–1789",
+          "start_year": 1774,
+          "end_year": 1789,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Treaty of Küçük Kaynarca (1774)",
+                "tr": "Küçük Kaynarca Antlaşması (1774)",
+                "zh": "库楚克·凯纳吉条约（1774年）",
+                "ru": "Кючук-Кайнарджийский мир (1774)",
+                "es": "Tratado de Küçük Kaynarca (1774)"
+              },
+              "description": {
+                "en": "One of the most humiliating treaties in Ottoman history: Russia gained the Black Sea steppe and claimed protection over Orthodox subjects; Crimea was lost soon after.",
+                "tr": "Osmanlı tarihinin en ağır antlaşmalarından biri: Rusya Karadeniz bozkırlarını kazandı, Ortodoksların hamiliğini ilan etti; Kırım kısa süre sonra kaybedildi.",
+                "zh": "奥斯曼历史上最屈辱的条约之一：俄国获得黑海草原，并宣称保护东正教臣民；克里米亚随后不久丢失。",
+                "ru": "Один из самых унизительных договоров в османской истории: Россия получила Причерноморские степи и провозгласила защиту православных подданных; Крым был потерян вскоре после этого.",
+                "es": "Uno de los tratados más humillantes de la historia otomana: Rusia ganó la estepa del Mar Negro y reclamó protección sobre súbditos ortodoxos; Crimea se perdió poco después."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Abdulhamid I signed the Treaty of Küçük Kaynarca (1774), a deep humiliation that cost Crimea and opened the Eastern Question. He responded with serious military and technical reforms.",
+            "tr": "I. Abdülhamid, 1774 Küçük Kaynarca Antlaşması'nı imzaladı; Kırım'ın kaybına ve Doğu Sorunu'nun açılmasına yol açan bu ağır yenilgiye karşılık ciddi askeri ve teknik ıslahatlara girişti.",
+            "zh": "阿卜杜勒-哈米德一世签署了1774年库楚克·凯纳吉条约，这一奇耻大辱导致克里米亚丧失并开启了东方问题。他以认真的军事和技术改革作为回应。",
+            "ru": "Абдул-Хамид I подписал Кючук-Кайнарджийский мир (1774) — глубокое унижение, стоившее Крыма и открывшее Восточный вопрос. В ответ он начал серьёзные военные и технические реформы.",
+            "es": "Abdul Hamid I firmó el Tratado de Küçük Kaynarca (1774), una profunda humillación que costó Crimea y abrió la Cuestión de Oriente. Respondió con serias reformas militares y técnicas."
+          }
+        },
+        {
+          "name": {
+            "en": "Selim III",
+            "tr": "III. Selim",
+            "zh": "塞利姆三世",
+            "ru": "Селим III",
+            "es": "Selim III"
+          },
+          "slug": "selim_iii",
+          "portrait": "res://assets/sultans/selim_iii.jpg",
+          "reign": "1789–1807",
+          "start_year": 1789,
+          "end_year": 1807,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Nizam-ı Cedid Army",
+                "tr": "Nizam-ı Cedid Ordusu",
+                "zh": "新军（尼扎姆-伊·杰迪德）",
+                "ru": "Армия «Низам-и Джедид»",
+                "es": "Ejército del Nizam-ı Cedid"
+              },
+              "description": {
+                "en": "Created a modern, European-style 'New Order' army alongside sweeping administrative reform.",
+                "tr": "Kapsamlı idari reformların yanı sıra modern, Avrupa tarzı bir 'Nizam-ı Cedid' ordusu kurdu.",
+                "zh": "在大刀阔斧的行政改革同时，建立了一支现代欧式“新秩序”军队。",
+                "ru": "Создана современная европейского образца армия «Новый порядок» на фоне масштабных административных реформ.",
+                "es": "Creó un ejército moderno de estilo europeo, el 'Nuevo Orden', junto a amplias reformas administrativas."
+              }
+            },
+            {
+              "name": {
+                "en": "Kabakçı Mustafa Revolt (1807)",
+                "tr": "Kabakçı Mustafa Ayaklanması (1807)",
+                "zh": "卡巴克奇·穆斯塔法起义（1807年）",
+                "ru": "Восстание Кабакчы Мустафы (1807)",
+                "es": "Rebelión de Kabakçı Mustafa (1807)"
+              },
+              "description": {
+                "en": "A Janissary-conservative revolt against the new army deposed Selim III and halted reform.",
+                "tr": "Yeniçeri-muhafazakâr bir ayaklanma yeni orduya karşı çıktı, III. Selim'i tahttan indirdi ve ıslahatları durdurdu.",
+                "zh": "一场耶尼切里-保守派叛乱反对新军，废黜了塞利姆三世，改革戛然而止。",
+                "ru": "Янычарско-консервативное восстание против новой армии свергло Селима III и остановило реформы.",
+                "es": "Una revuelta jenicaria-conservadora contra el nuevo ejército depuso a Selim III y detuvo la reforma."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Selim III launched the Nizam-ı Cedid — the 'New Order' — the first systematic Western-style modernization of army and state, until the Kabakçı Mustafa revolt deposed him in 1807.",
+            "tr": "III. Selim, ordunun ve devletin ilk sistemli Batı tarzı modernizasyonu olan Nizam-ı Cedid'i başlattı; ancak 1807'de Kabakçı Mustafa isyanı tahttan indirdi.",
+            "zh": "塞利姆三世发起了“新秩序”（尼扎姆-伊·杰迪德）——军队与国家首次系统的西式现代化，直到1807年卡巴克奇·穆斯塔法起义将他废黜。",
+            "ru": "Селим III начал «Низам-и Джедид» — «Новый порядок» — первую системную модернизацию армии и государства по западному образцу, пока восстание Кабакчы Мустафы не свергло его в 1807 году.",
+            "es": "Selim III lanzó el Nizam-ı Cedid — el 'Nuevo Orden' — la primera modernización sistemática de estilo occidental del ejército y el estado, hasta que la rebelión de Kabakçı Mustafa lo depuso en 1807."
+          }
+        },
+        {
+          "name": {
+            "en": "Mahmud II",
+            "tr": "II. Mahmud",
+            "zh": "马哈茂德二世",
+            "ru": "Махмуд II",
+            "es": "Mahmud II"
+          },
+          "slug": "mahmud_ii",
+          "portrait": "res://assets/sultans/mahmud_ii.jpg",
+          "reign": "1808–1839",
+          "start_year": 1808,
+          "end_year": 1839,
+          "wives": [
+            "Bezmiâlem Sultan",
+            "Pertevniyal Sultan"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "The Auspicious Incident (Vaka-i Hayriye, 1826)",
+                "tr": "Vaka-i Hayriye (1826)",
+                "zh": "吉祥事件（1826年）",
+                "ru": "Счастливое происшествие (1826)",
+                "es": "El Incidente Propicio (1826)"
+              },
+              "description": {
+                "en": "Destroyed the Janissary Corps after centuries, clearing the path for a modern army and centralized state.",
+                "tr": "Yüzyıllardır var olan Yeniçeri Ocağı yok edildi; modern orduya ve merkezileşmiş devlete giden yol açıldı.",
+                "zh": "延续数个世纪的耶尼切里军团被消灭，为现代军队和中央集权国家扫清了道路。",
+                "ru": "Янычарский корпус, существовавший веками, был уничтожен, проложив путь современной армии и централизованному государству.",
+                "es": "Se destruyó el Cuerpo de Jenízaros tras siglos, abriendo el camino a un ejército moderno y un estado centralizado."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mahmud II did in 1826 what sultans had dreamed of for a century: he annihilated the Janissaries in the 'Auspicious Incident' and built a modern army, ministries, and civil dress reform.",
+            "tr": "II. Mahmud, sultanların bir asırdır hayalini kurduğunu 1826'da gerçekleştirdi: Vaka-i Hayriye ile Yeniçerileri ortadan kaldırdı, modern ordu, bakanlıklar ve sivil kıyafet reformu inşa etti.",
+            "zh": "马哈茂德二世在1826年实现了苏丹们一个世纪以来的梦想：在“吉祥事件”中消灭耶尼切里，建立现代军队、各部以及文官服饰改革。",
+            "ru": "Махмуд II в 1826 году осуществил то, о чём султаны мечтали столетие: уничтожил янычар в «Счастливом происшествии» и построил современную армию, министерства и реформу гражданской одежды.",
+            "es": "Mahmud II hizo en 1826 lo que los sultanes habían soñado durante un siglo: aniquiló a los jenízaros en el 'Incidente Propicio' y construyó un ejército moderno, ministerios y la reforma del vestido civil."
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": {
+        "en": "The Late Modern Era & Dissolution",
+        "tr": "Geç Modern Dönem ve Dağılma",
+        "zh": "近代晚期与解体",
+        "ru": "Поздняя новая эра и роспуск",
+        "es": "La Era Tardomoderna y la Disolución"
+      },
+      "years": "1839–1922",
+      "start_year": 1839,
+      "end_year": 1922,
+      "description": {
+        "en": "Tanzimat, constitutions, world war, and the final curtain of the 600-year dynasty.",
+        "tr": "Tanzimat, anayasalar, dünya savaşı ve 600 yıllık hanedanın son perdesi.",
+        "zh": "坦志麦特、宪法、世界大战，以及六百年王朝的终幕。",
+        "ru": "Танзимат, конституции, мировая война и финальный занавес 600-летней династии.",
+        "es": "Tanzimat, constituciones, guerra mundial y el telón final de la dinastía de 600 años."
+      },
+      "sultans": [
+        {
+          "name": {
+            "en": "Abdulmejid I",
+            "tr": "Abdülmecid",
+            "zh": "阿卜杜勒-迈吉德一世",
+            "ru": "Абдул-Меджид I",
+            "es": "Abdulmejid I"
+          },
+          "slug": "abdulmejid_i",
+          "portrait": "res://assets/sultans/abdulmejid_i.jpg",
+          "reign": "1839–1861",
+          "start_year": 1839,
+          "end_year": 1861,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Tanzimat Edict (1839)",
+                "tr": "Tanzimat Fermanı (1839)",
+                "zh": "坦志麦特法令（1839年）",
+                "ru": "Танзиматский хатишериф (1839)",
+                "es": "Edicto de Tanzimat (1839)"
+              },
+              "description": {
+                "en": "The Gülhane Edict launched the Tanzimat era: legal equality, security of life and property, and modern governance.",
+                "tr": "Gülhane Hatt-ı Hümayunu Tanzimat dönemini başlattı: hukuki eşitlik, can ve mal güvenliği ve modern yönetim.",
+                "zh": "花厅御诏开启了坦志麦特时代：法律平等、生命与财产安全、现代治理。",
+                "ru": "Гюльханский хатишериф открыл эпоху Танзимата: правовое равенство, неприкосновенность жизни и собственности, современное управление.",
+                "es": "El Edicto de Gülhane lanzó la era del Tanzimat: igualdad legal, seguridad de vida y propiedad, y gobernanza moderna."
+              }
+            },
+            {
+              "name": {
+                "en": "Edict of Reform (1856)",
+                "tr": "Islahat Fermanı (1856)",
+                "zh": "改革法令（1856年）",
+                "ru": "Хати-хумаюн 1856",
+                "es": "Edicto de Reforma (1856)"
+              },
+              "description": {
+                "en": "Extended full equality to non-Muslim subjects under European pressure.",
+                "tr": "Avrupa baskısıyla gayrimüslim tebaaya tam eşitlik genişletildi.",
+                "zh": "在欧洲压力下将完全平等扩展至非穆斯林臣民。",
+                "ru": "Под давлением Европы не мусульманским подданным была расширена полная равноправность.",
+                "es": "Extendió la igualdad plena a los súbditos no musulmanes bajo presión europea."
+              }
+            },
+            {
+              "name": {
+                "en": "Crimean War (1853–1856)",
+                "tr": "Kırım Savaşı (1853–1856)",
+                "zh": "克里米亚战争（1853–1856年）",
+                "ru": "Крымская война (1853–1856)",
+                "es": "Guerra de Crimea (1853–1856)"
+              },
+              "description": {
+                "en": "Fought alongside Britain and France against Russia; the empire entered the European concert and its first foreign debt.",
+                "tr": "Britanya ve Fransa ile birlikte Rusya'ya karşı savaşıldı; imparatorluk Avrupa konserine girdi ve ilk dış borcunu aldı.",
+                "zh": "与英国、法国并肩对俄作战；帝国进入欧洲协奏曲体系，并背上了第一笔外债。",
+                "ru": "Воевала вместе с Британией и Францией против России; империя вошла в европейский концерт и взяла первый внешний долг.",
+                "es": "Combatió junto a Gran Bretaña y Francia contra Rusia; el imperio entró en el concierto europeo y contrajo su primera deuda externa."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Abdulmejid I opened the Tanzimat age with the Gülhane Edict (1839), moved the court to Dolmabahçe Palace, fought the Crimean War, and took the empire's first foreign loans.",
+            "tr": "Abdülmecid, Gülhane Hatt-ı Hümayunu (1839) ile Tanzimat çağını açtı, sarayı Dolmabahçe Sarayı'na taşıdı, Kırım Savaşı'na girdi ve imparatorluğun ilk dış borçlarını aldı.",
+            "zh": "阿卜杜勒-迈吉德一世以1839年花厅御诏开启坦志麦特时代，将宫廷迁至多尔玛巴赫切宫，参加克里米亚战争，并让帝国背上了第一笔外债。",
+            "ru": "Абдул-Меджид I открыл эпоху Танзимата Гюльханским хатишерифом (1839), перенёс двор в Долмабахче, вёл Крымскую войну и взял первые внешние займы империи.",
+            "es": "Abdulmejid I abrió la era del Tanzimat con el Edicto de Gülhane (1839), trasladó la corte al palacio de Dolmabahçe, libró la Guerra de Crimea y contrajo los primeros préstamos extranjeros del imperio."
+          }
+        },
+        {
+          "name": {
+            "en": "Abdulaziz",
+            "tr": "Abdülaziz",
+            "zh": "阿卜杜勒-阿齐兹",
+            "ru": "Абдул-Азиз",
+            "es": "Abdulaziz"
+          },
+          "slug": "abdulaziz",
+          "portrait": "res://assets/sultans/abdulaziz.jpg",
+          "reign": "1861–1876",
+          "start_year": 1861,
+          "end_year": 1876,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "First European Royal Tours (1867)",
+                "tr": "İlk Avrupa Kraliyet Gezileri (1867)",
+                "zh": "首次欧洲王室出访（1867年）",
+                "ru": "Первые европейские королевские туры (1867)",
+                "es": "Primeras giras reales europeas (1867)"
+              },
+              "description": {
+                "en": "The first Ottoman sultan to visit Western Europe as a guest of France and Britain.",
+                "tr": "Fransa ve Britanya'nın konuğu olarak Batı Avrupa'yı ziyaret eden ilk Osmanlı sultanı.",
+                "zh": "首位以法国和英国客人身份访问西欧的奥斯曼苏丹。",
+                "ru": "Первый османский султан, посетивший Западную Европу в качестве гостя Франции и Британии.",
+                "es": "El primer sultán otomano en visitar Europa Occidental como invitado de Francia y Gran Bretaña."
+              }
+            },
+            {
+              "name": {
+                "en": "Massive Naval Expansion",
+                "tr": "Büyük Donanma Genişlemesi",
+                "zh": "大规模海军扩张",
+                "ru": "Масштабное расширение флота",
+                "es": "Gran expansión naval"
+              },
+              "description": {
+                "en": "Built the world's third-largest navy — while the treasury slid toward bankruptcy (1875).",
+                "tr": "Dünyanın üçüncü büyük donanmasını inşa etti — ancak hazine 1875'te iflasa doğru sürüklendi.",
+                "zh": "建立了世界第三大海军——同时国库在1875年走向破产。",
+                "ru": "Построил третий по величине флот в мире — в то время как казна катилась к банкротству (1875).",
+                "es": "Construyó la tercera armada más grande del mundo — mientras el tesoro se deslizaba hacia la bancarrota (1875)."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Abdulaziz modernized the navy into one of the world's largest and became the first sultan to tour Europe, but reckless spending led to the 1875 bankruptcy and his deposition — and mysterious death days later.",
+            "tr": "Abdülaziz, donanmayı dünyanın en büyüklerinden biri haline getirdi ve Avrupa'yı gezen ilk sultan oldu; ancak savurgan harcamalar 1875 iflasına ve tahttan indirilmesine yol açtı — ardından gizemli bir ölüm geldi.",
+            "zh": "阿卜杜勒-阿齐兹将海军建设成世界最大之一，并成为首位巡游欧洲的苏丹；但挥霍无度导致1875年破产和废黜——数天后他神秘死亡。",
+            "ru": "Абдул-Азиз модернизировал флот, сделав его одним из крупнейших в мире, и стал первым султаном, побывавшим в Европе, но беспечные траты привели к банкротству 1875 года и низложению — а затем к загадочной смерти.",
+            "es": "Abdulaziz modernizó la marina hasta convertirla en una de las más grandes del mundo y fue el primer sultán en viajar por Europa, pero el gasto imprudente llevó a la bancarrota de 1875 y su deposición — y a una muerte misteriosa días después."
+          }
+        },
+        {
+          "name": {
+            "en": "Murad V",
+            "tr": "V. Murad",
+            "zh": "穆拉德五世",
+            "ru": "Мурад V",
+            "es": "Murad V"
+          },
+          "slug": "murad_v",
+          "portrait": "res://assets/sultans/murad_v.jpg",
+          "reign": "1876",
+          "start_year": 1876,
+          "end_year": 1876,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "The 93-Day Reign",
+                "tr": "93 Günlük Saltanat",
+                "zh": "93天在位",
+                "ru": "93-дневное правление",
+                "es": "Reinado de 93 días"
+              },
+              "description": {
+                "en": "Shattered by the shock of his uncle's deposition and death, Murad V suffered a mental collapse and was deposed after just 93 days — the shortest reign in Ottoman history.",
+                "tr": "Amcası Abdülaziz'in tahttan indirilmesi ve ölümü şokuyla sarsılan V. Murad, akıl sağlığı bozuldu ve sadece 93 gün sonra tahttan indirildi — Osmanlı tarihinin en kısa saltanatı.",
+                "zh": "因叔父被废黜与去世的打击而崩溃，穆拉德五世精神失常，仅在位93天就被废黜——奥斯曼历史上最短的统治。",
+                "ru": "Сломленный шоком от низложения и смерти дяди, Мурад V пережил душевный срыв и был свергнут всего через 93 дня — самое короткое правление в османской истории.",
+                "es": "Afectado por el shock de la deposición y muerte de su tío, Murad V sufrió un colapso mental y fue depuesto tras solo 93 días — el reinado más corto de la historia otomana."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Murad V, the hope of the Young Ottomans, reigned only 93 days. A mental health crisis forced his deposition — the shortest reign of the dynasty.",
+            "tr": "Yeni Osmanlıların umudu olan V. Murad, sadece 93 gün saltanat sürdü. Akıl sağlığı krizi onu tahttan indirmeye zorladı — hanedanın en kısa saltanatı.",
+            "zh": "作为青年奥斯曼人希望的穆拉德五世仅统治了93天。精神健康危机迫使他退位——这是王朝最短的统治。",
+            "ru": "Мурад V, надежда младотурок, царствовал всего 93 дня. Кризис психического здоровья вынудил его к низложению — самое короткое правление династии.",
+            "es": "Murad V, la esperanza de los Jóvenes Otomanos, reinó solo 93 días. Una crisis de salud mental forzó su deposición — el reinado más corto de la dinastía."
+          }
+        },
+        {
+          "name": {
+            "en": "Abdulhamid II",
+            "tr": "II. Abdülhamid",
+            "zh": "阿卜杜勒-哈米德二世",
+            "ru": "Абдул-Хамид II",
+            "es": "Abdul Hamid II"
+          },
+          "slug": "abdulhamid_ii",
+          "portrait": "res://assets/sultans/abdulhamid_ii.jpg",
+          "reign": "1876–1909",
+          "start_year": 1876,
+          "end_year": 1909,
+          "wives": [
+            "Bedrifelek Kadın",
+            "Bidar Kadın"
+          ],
+          "battles": [
+            {
+              "name": {
+                "en": "First Constitutional Era (1876)",
+                "tr": "Birinci Meşrutiyet (1876)",
+                "zh": "第一宪政时期（1876年）",
+                "ru": "Первая конституционная эпоха (1876)",
+                "es": "Primera Era Constitucional (1876)"
+              },
+              "description": {
+                "en": "Proclaimed the Kanun-ı Esasi, the first Ottoman constitution, and opened the first parliament — suspended in 1878.",
+                "tr": "İlk Osmanlı anayasası olan Kanun-ı Esasi ilan edildi ve ilk meclis açıldı — 1878'de askıya alındı.",
+                "zh": "颁布第一部奥斯曼宪法《基本法》，召开首届议会——1878年被中止。",
+                "ru": "Провозглашён Канун-и Эсаси — первая османская конституция, открыт первый парламент — приостановлен в 1878 году.",
+                "es": "Proclamó el Kanun-ı Esasi, la primera constitución otomana, e inauguró el primer parlamento — suspendido en 1878."
+              }
+            },
+            {
+              "name": {
+                "en": "Russo-Turkish War (1877–1878)",
+                "tr": "93 Harbi (1877–1878)",
+                "zh": "俄土战争（1877–1878年）",
+                "ru": "Русско-турецкая война (1877–1878)",
+                "es": "Guerra Ruso-Turca (1877–1878)"
+              },
+              "description": {
+                "en": "The disastrous '93 Harbi' ended with the Treaty of Berlin and vast losses in the Balkans and Caucasus.",
+                "tr": "Felaket 93 Harbi, Berlin Antlaşması ile sonuçlandı; Balkanlar ve Kafkasya'da büyük toprak kayıpları yaşandı.",
+                "zh": "灾难性的“93战争”以柏林条约告终，巴尔干和高加索地区丧失大片领土。",
+                "ru": "Катастрофическая «93-я война» завершилась Берлинским трактатом и огромными потерями на Балканах и Кавказе.",
+                "es": "La desastrosa '93 Harbi' terminó con el Tratado de Berlín y vastas pérdidas en los Balcanes y el Cáucaso."
+              }
+            },
+            {
+              "name": {
+                "en": "Hijaz Railway",
+                "tr": "Hicaz Demiryolu",
+                "zh": "汉志铁路",
+                "ru": "Хиджазская железная дорога",
+                "es": "Ferrocarril del Hiyaz"
+              },
+              "description": {
+                "en": "Built the Damascus–Medina railway, a landmark of his Pan-Islamic modernization policy.",
+                "tr": "Şam–Medine demiryolunu inşa etti; Pan-İslamist modernleşme politikasının simgesi oldu.",
+                "zh": "修建了大马士革至麦地那的铁路，这是其泛伊斯兰现代化政策的标志性工程。",
+                "ru": "Построена железная дорога Дамаск–Медина — веха его панисламской политики модернизации.",
+                "es": "Construyó el ferrocarril Damasco–Medina, un hito de su política de modernización panislamista."
+              }
+            },
+            {
+              "name": {
+                "en": "Young Turk Revolution (1908)",
+                "tr": "Jön Türk Devrimi (1908)",
+                "zh": "青年土耳其革命（1908年）",
+                "ru": "Молодотурецкая революция (1908)",
+                "es": "Revolución de los Jóvenes Turcos (1908)"
+              },
+              "description": {
+                "en": "The Committee of Union and Progress forced the restoration of the constitution; he was deposed in 1909 after the 31 March Incident.",
+                "tr": "İttihat ve Terakki Cemiyeti anayasanın yeniden yürürlüğe girmesini sağladı; 31 Mart Vakası sonrası 1909'da tahttan indirildi.",
+                "zh": "统一与进步委员会迫使恢复宪法；1909年“三三一事件”后他被废黜。",
+                "ru": "Комитет единства и прогресса вынудил восстановить конституцию; в 1909 году, после инцидента 31 марта, он был свергнут.",
+                "es": "El Comité de Unión y Progreso forzó la restauración de la constitución; fue depuesto en 1909 tras el Incidente del 31 de marzo."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "Murat Bardakçı – Sultan Abdülhamid Dönemi Gerçekleri",
+            "tr": "Murat Bardakçı – Sultan Abdülhamid Dönemi Gerçekleri",
+            "zh": "Murat Bardakçı – Sultan Abdülhamid Dönemi Gerçekleri",
+            "ru": "Murat Bardakçı – Sultan Abdülhamid Dönemi Gerçekleri",
+            "es": "Murat Bardakçı – Sultan Abdülhamid Dönemi Gerçekleri"
+          },
+          "summary": {
+            "en": "Abdulhamid II ruled 33 years: the first constitution and parliament, the catastrophic 1877–78 war, the Hijaz Railway, schools and telegraphs — and finally the 1908 Young Turk Revolution that ended his autocracy.",
+            "tr": "II. Abdülhamid 33 yıl hüküm sürdü: ilk anayasa ve meclis, felaket 1877–78 savaşı, Hicaz Demiryolu, okullar ve telgraf hatları — ve sonunda 1908 Jön Türk Devrimi ile otokrasinin sonu.",
+            "zh": "阿卜杜勒-哈米德二世统治了33年：第一部宪法和议会、灾难性的1877–78年战争、汉志铁路、学校和电报——最终1908年青年土耳其革命终结了他的专制。",
+            "ru": "Абдул-Хамид II правил 33 года: первая конституция и парламент, катастрофическая война 1877–78, Хиджазская железная дорога, школы и телеграф — и наконец Младотурецкая революция 1908 года, положившая конец его автократии.",
+            "es": "Abdul Hamid II gobernó 33 años: la primera constitución y parlamento, la catastrófica guerra de 1877–78, el Ferrocarril del Hiyaz, escuelas y telégrafos — y finalmente la Revolución de los Jóvenes Turcos de 1908 que puso fin a su autocracia."
+          }
+        },
+        {
+          "name": {
+            "en": "Mehmed V (Reşad)",
+            "tr": "V. Mehmed (Reşad)",
+            "zh": "穆罕默德五世（雷沙德）",
+            "ru": "Мехмед V (Решад)",
+            "es": "Mehmed V (Reşad)"
+          },
+          "slug": "mehmed_v",
+          "portrait": "res://assets/sultans/mehmed_v.jpg",
+          "reign": "1909–1918",
+          "start_year": 1909,
+          "end_year": 1918,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Italo-Turkish War (1911–1912)",
+                "tr": "Trablusgarp Savaşı (1911–1912)",
+                "zh": "意土战争（1911–1912年）",
+                "ru": "Итало-турецкая война (1911–1912)",
+                "es": "Guerra Ítalo-Turca (1911–1912)"
+              },
+              "description": {
+                "en": "Italy invaded Libya; the empire lost its last North African province.",
+                "tr": "İtalya Libya'yı işgal etti; imparatorluk son Kuzey Afrika vilayetini kaybetti.",
+                "zh": "意大利入侵利比亚；帝国失去了最后一个北非省份。",
+                "ru": "Италия вторглась в Ливию; империя потеряла своё последнее североафриканское владение.",
+                "es": "Italia invadió Libia; el imperio perdió su última provincia norte-africana."
+              }
+            },
+            {
+              "name": {
+                "en": "Balkan Wars (1912–1913)",
+                "tr": "Balkan Savaşları (1912–1913)",
+                "zh": "巴尔干战争（1912–1913年）",
+                "ru": "Балканские войны (1912–1913)",
+                "es": "Guerras Balcánicas (1912–1913)"
+              },
+              "description": {
+                "en": "The Balkan League drove the empire almost entirely out of Europe; Edirne was briefly lost and recovered.",
+                "tr": "Balkan İttifakı imparatorluğu neredeyse tamamen Avrupa dışına sürdü; Edirne kısa süreliğine kaybedildi ve geri alındı.",
+                "zh": "巴尔干同盟几乎把帝国完全赶出欧洲；埃迪尔内一度失守又被收复。",
+                "ru": "Балканский союз вытеснил империю почти полностью из Европы; Эдирне ненадолго был потерян и возвращён.",
+                "es": "La Liga Balcánica expulsó al imperio casi por completo de Europa; Edirne se perdió brevemente y se recuperó."
+              }
+            },
+            {
+              "name": {
+                "en": "Gallipoli Campaign (1915)",
+                "tr": "Çanakkale Savaşı (1915)",
+                "zh": "加里波利战役（1915年）",
+                "ru": "Галлиполийская кампания (1915)",
+                "es": "Campaña de Galípoli (1915)"
+              },
+              "description": {
+                "en": "The empire's greatest WWI victory: the Allied landings at Gallipoli were repelled at terrible cost.",
+                "tr": "İmparatorluğun en büyük I. Dünya Savaşı zaferi: Çanakkale'deki İtilaf çıkarmaları ağır bir bedelle püskürtüldü.",
+                "zh": "帝国在一战中最大的胜利：协约国在加里波利的登陆被以惨重代价击退。",
+                "ru": "Величайшая победа империи в Первой мировой войне: союзный десант на Галлиполи был отбит с тяжёлыми потерями.",
+                "es": "La mayor victoria del imperio en la Primera Guerra Mundial: los desembarcos aliados en Galípoli fueron rechazados a un costo terrible."
+              }
+            },
+            {
+              "name": {
+                "en": "Siege of Kut Al Amara (1916)",
+                "tr": "Kut'ül-Amare Kuşatması (1916)",
+                "zh": "库特阿马拉围城战（1916年）",
+                "ru": "Осада Эль-Кута (1916)",
+                "es": "Sitio de Kut al-Amara (1916)"
+              },
+              "description": {
+                "en": "Encircled and captured a British-Indian army in Mesopotamia — a stunning triumph.",
+                "tr": "Mezopotamya'da bir İngiliz-Hint ordusunu kuşatıp esir aldı — çarpıcı bir zafer.",
+                "zh": "在美索不达米亚包围并俘虏了一支英印军队——一场辉煌的胜利。",
+                "ru": "Окружила и захватила британско-индийскую армию в Месопотамии — ошеломляющий триумф.",
+                "es": "Rodeó y capturó un ejército británico-indio en Mesopotamia — un triunfo asombroso."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mehmed V Reşad, a constitutional figurehead under the Young Turks, reigned through the loss of Libya, the Balkan Wars, and World War I — including the great victories of Gallipoli and Kut Al Amara.",
+            "tr": "Jön Türkler döneminde anayasal sembol bir padişah olan V. Mehmed Reşad, Libya'nın kaybı, Balkan Savaşları ve I. Dünya Savaşı — Çanakkale ve Kut'ül-Amare zaferleri dahil — döneminde saltanat sürdü.",
+            "zh": "穆罕默德五世雷沙德是青年土耳其人时期的名义立宪君主，他的统治经历了利比亚的丧失、巴尔干战争和第一次世界大战——包括加里波利和库特阿马拉的大胜。",
+            "ru": "Мехмед V Решад был конституционной фигурой при младотурках, его правление прошло через потерю Ливии, Балканские войны и Первую мировую войну — включая великие победы при Галлиполи и Эль-Куте.",
+            "es": "Mehmed V Reşad, una figura constitucional bajo los Jóvenes Turcos, reinó durante la pérdida de Libia, las Guerras Balcánicas y la Primera Guerra Mundial — incluyendo las grandes victorias de Galípoli y Kut al-Amara."
+          }
+        },
+        {
+          "name": {
+            "en": "Mehmed VI (Vahdeddin)",
+            "tr": "VI. Mehmed (Vahdeddin)",
+            "zh": "穆罕默德六世（瓦希德丁）",
+            "ru": "Мехмед VI (Вахидеддин)",
+            "es": "Mehmed VI (Vahdeddin)"
+          },
+          "slug": "mehmed_vi",
+          "portrait": "res://assets/sultans/mehmed_vi.jpg",
+          "reign": "1918–1922",
+          "start_year": 1918,
+          "end_year": 1922,
+          "wives": [],
+          "battles": [
+            {
+              "name": {
+                "en": "Occupation of Istanbul",
+                "tr": "İstanbul'un İşgali",
+                "zh": "伊斯坦布尔被占领",
+                "ru": "Оккупация Константинополя",
+                "es": "Ocupación de Estambul"
+              },
+              "description": {
+                "en": "After the Armistice of Mudros (1918), Allied forces occupied the capital and partitioned the empire by the Treaty of Sèvres.",
+                "tr": "Mondros Mütarekesi (1918) sonrası İtilaf kuvvetleri başkenti işgal etti ve Sevr Antlaşması ile imparatorluğu paylaştırdı.",
+                "zh": "穆德洛斯停战协定（1918年）后，协约国军队占领首都，《色佛尔条约》瓜分了帝国。",
+                "ru": "После Мудросского перемирия (1918) союзные силы оккупировали столицу и разделили империю по Севрскому договору.",
+                "es": "Tras el Armisticio de Mudros (1918), las fuerzas aliadas ocuparon la capital y dividieron el imperio mediante el Tratado de Sèvres."
+              }
+            },
+            {
+              "name": {
+                "en": "Abolition of the Sultanate (1922)",
+                "tr": "Saltanatın Kaldırılması (1922)",
+                "zh": "苏丹制废除（1922年）",
+                "ru": "Упразднение султаната (1922)",
+                "es": "Abolición del Sultanato (1922)"
+              },
+              "description": {
+                "en": "The Grand National Assembly in Ankara abolished the sultanate on 1 November 1922; the last sultan departed into exile, ending 623 years of the House of Osman.",
+                "tr": "Ankara'daki Büyük Millet Meclisi, 1 Kasım 1922'de saltanatı kaldırdı; son padişah sürgüne gitti ve Osmanlı Hanedanı'nın 623 yıllık tarihi sona erdi.",
+                "zh": "安卡拉大国民议会于1922年11月1日废除苏丹制；最后一位苏丹流亡海外，奥斯曼王朝623年的历史落下帷幕。",
+                "ru": "Великое национальное собрание в Анкаре упразднило султанат 1 ноября 1922 года; последний султан отправился в изгнание, положив конец 623 годам Дома Османа.",
+                "es": "La Gran Asamblea Nacional de Ankara abolió el sultanato el 1 de noviembre de 1922; el último sultán partió al exilio, terminando 623 años de la Casa de Osman."
+              }
+            }
+          ],
+          "video_id": "",
+          "video_title": {
+            "en": "",
+            "tr": "",
+            "zh": "",
+            "ru": "",
+            "es": ""
+          },
+          "summary": {
+            "en": "Mehmed VI Vahdeddin was the last sultan. With Istanbul under Allied occupation and the empire partitioned, the Ankara assembly abolished the sultanate on 1 November 1922 — the end of 623 years of the House of Osman.",
+            "tr": "VI. Mehmed Vahdeddin son padişahtı. İstanbul İtilaf kuvvetleri tarafından işgal edilmiş ve imparatorluk paylaştırılmışken, Ankara meclisi 1 Kasım 1922'de saltanatı kaldırdı — Osmanlı Hanedanı'nın 623 yıllık sonuydu.",
+            "zh": "穆罕默德六世瓦希德丁是最后一位苏丹。在伊斯坦布尔被协约国占领、帝国被瓜分的背景下，安卡拉议会于1922年11月1日废除苏丹制——奥斯曼王朝623年的终结。",
+            "ru": "Мехмед VI Вахидеддин был последним султаном. Пока Стамбул находился под оккупацией союзников, а империя была разделена, Анкарское собрание упразднило султанат 1 ноября 1922 года — конец 623 лет Дома Османа.",
+            "es": "Mehmed VI Vahdeddin fue el último sultán. Con Estambul bajo ocupación aliada y el imperio dividido, la asamblea de Ankara abolió el sultanato el 1 de noviembre de 1922 — el fin de 623 años de la Casa de Osman."
+          }
+        }
+      ]
+    }
+  ]
+}

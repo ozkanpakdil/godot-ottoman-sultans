@@ -1,0 +1,53 @@
+keys,en,tr,zh,ru,es
+UI_APP_NAME,Chronicles of the House of Osman,Osmanlı Hanedanı'nın Kronikleri,奥斯曼王朝纪事,Хроники Дома Османа,Crónicas de la Casa de Osman
+UI_SUBTITLE,An Interactive Timeline · 1299 – 1922,İnteraktif Bir Zaman Çizgisi · 1299 – 1922,交互式时间轴 · 1299 – 1922,Интерактивная хронология · 1299 – 1922,Una línea de tiempo interactiva · 1299 – 1922
+UI_CONTINUE,Continue the Journey,Yolculuğa Devam Et,继续旅程,Продолжить путешествие,Continuar el viaje
+UI_OR_BEGIN_CHAPTER,Or begin a chapter:,Veya bir bölüm seç:,或选择章节：,Или выберите главу:,O comience un capítulo:
+UI_LEADERBOARD_PROGRESS,Leaderboard & Progress,Lider Tablosu ve İlerleme,排行榜与进度,Таблица лидеров и прогресс,Marcador y progreso
+UI_SCORE_TIME,Score: %d    Study time: %s,Puan: %d    Çalışma süresi: %s,分数：%d    学习时间：%s,Очки: %d    Время обучения: %s,Puntuación: %d    Tiempo de estudio: %s
+UI_MENU,☰ Menu,☰ Menü,☰ 菜单,☰ Меню,☰ Menú
+UI_BACK,← Back,← Geri,← 返回,← Назад,← Atrás
+UI_FORWARD,Forward →,İleri →,前进 →,Вперёд →,Adelante →
+UI_TAKE_CHAPTER_TEST,Take Chapter Test,Bölüm Testini Çöz,进行章节测试,Пройти тест главы,Hacer prueba del capítulo
+UI_WATCH,▶ Watch: %s,▶ İzle: %s,▶ 观看：%s,▶ Смотреть: %s,▶ Ver: %s
+UI_SPOUSES,Spouses,Eşler,配偶,Супруги,Cónyuges
+UI_KEY_EVENTS,Key Events & Battles,Önemli Olaylar ve Savaşlar,重大事件与战役,Ключевые события и сражения,Eventos y batallas clave
+UI_CHAPTER_TITLE,Chapter %d: %s (%s),Bölüm %d: %s (%s),第 %d 章：%s（%s）,Глава %d: %s (%s),Capítulo %d: %s (%s)
+UI_CHAPTER_EVAL,Chapter %d Evaluation: %s,Bölüm %d Değerlendirmesi: %s,第 %d 章测评：%s,Оценка главы %d: %s,Evaluación del capítulo %d: %s
+UI_QUESTION_X_OF_Y,"Question %d of %d
+
+%s","Soru %d / %d
+
+%s","第 %d / %d 题
+
+%s","Вопрос %d из %d
+
+%s","Pregunta %d de %d
+
+%s"
+UI_NOT_QUITE,Not quite — review this passage:,Tam değil — bu pasajı tekrar gözden geçirin:,不太对——请回顾这段内容：,Не совсем — перечитайте этот отрывок:,No exactamente — revise este pasaje:
+UI_CHAPTER_COMPLETE,Chapter complete!,Bölüm tamamlandı!,章节完成！,Глава завершена!,¡Capítulo completado!
+UI_ANSWERED_CORRECTLY,You answered %d of %d correctly. Bonus: +%d points.,%d sorudan %d doğru cevap verdiniz. Bonus: +%d puan.,您答对了 %d / %d 题。奖励：+%d 分。,Вы ответили правильно на %d из %d. Бонус: +%d очков.,Respondió %d de %d correctamente. Bono: +%d puntos.
+UI_CONTINUE_TO_CHAPTER,Continue to Chapter %d,%d. Bölüme Devam Et,继续第 %d 章,Продолжить главу %d,Continuar al capítulo %d
+UI_FINISH_JOURNEY,Finish the Journey,Yolculuğu Bitir,结束旅程,Завершить путешествие,Terminar el viaje
+UI_LEADERBOARD_TITLE,Leaderboard & Progress,Lider Tablosu ve İlerleme,排行榜与进度,Таблица лидеров и прогресс,Marcador y progreso
+UI_TOTAL_SCORE,Total Score: %d,Toplam Puan: %d,总分：%d,Общий счёт: %d,Puntuación total: %d
+UI_TOTAL_TIME,Total Study Time: %s,Toplam Çalışma Süresi: %s,总学习时间：%s,Общее время обучения: %s,Tiempo total de estudio: %s
+UI_TEST_NOT_COMPLETED,test not completed,test çözülmedi,测试未完成,тест не пройден,prueba no completada
+UI_X_OF_Y_CORRECT,%d/%d correct,%d/%d doğru,答对 %d/%d,%d/%d правильно,%d/%d correctas
+UI_JOURNEY_COMPLETE,Congratulations — you completed the entire 623-year journey!,Tebrikler — 623 yıllık yolculuğu tamamladınız!,恭喜——您完成了623年的完整旅程！,Поздравляем — вы завершили 623-летнее путешествие!,¡Felicidades — completaste el viaje de 623 años!
+UI_OPEN_NATIVE_LEADERBOARD,Open Game Center / Play Games Leaderboard,Game Center / Play Games Lider Tablosunu Aç,打开 Game Center / Play Games 排行榜,Открыть таблицу лидеров Game Center / Play Games,Abrir marcador de Game Center / Play Games
+UI_BACK_TO_MENU,Back to Menu,Menüye Dön,返回菜单,Вернуться в меню,Volver al menú
+UI_MUSIC_NOW_PLAYING,Now playing,Şimdi çalıyor,正在播放,Сейчас играет,Reproduciendo
+UI_MUSIC_PLAY,Play,Çal,播放,Играть,Reproducir
+UI_MUSIC_PAUSE,Pause,Duraklat,暂停,Пауза,Pausa
+UI_MUSIC_NEXT,Next,Sonraki,下一首,Следующий,Siguiente
+UI_LANGUAGE,Language,Dil,语言,Язык,Idioma
+UI_CHOOSE_LANGUAGE,Choose language:,Dil seçin:,选择语言：,Выберите язык:,Elija idioma:
+UI_CHRONOLOGY,Chronology,Kronoloji,纪年,Хронология,Cronología
+UI_QUIZ_WHEN_DID_REIGN,When did %s reign?,%s ne zaman hüküm sürdü?,%s 在何时统治？,Когда правил %s?,¿Cuándo reinó %s?
+UI_QUIZ_WHICH_EVENT,Which event is associated with %s?,%s ile ilişkili olay hangisidir?,与 %s 相关的事件是哪一个？,Какое событие связано с %s?,¿Qué evento se asocia con %s?
+UI_QUIZ_WHICH_SULTAN_IN_ERA,"Which of the following sultans belonged to the era ""%s""?","Aşağıdaki sultanlardan hangisi ""%s"" dönemine aittir?",以下哪位苏丹属于“%s”时代？,Какой из следующих султанов относится к эпохе «%s»?,"¿Cuál de los siguientes sultanes pertenecía a la era ""%s""?"
+UI_QUIZ_CONTEXT_REIGNED,%s reigned %s.,"%s, %s tarihleri arasında hüküm sürdü.",%s 统治于 %s。,%s правил в %s.,%s reinó %s.
+UI_QUIZ_CONTEXT_PART_OF,%s was part of %s.,"%s, %s döneminin bir parçasıydı.",%s 是 %s 的一部分。,%s был частью %s.,%s fue parte de %s.
+UI_YEAR_PROGRESS,%d →,%d →,%d →,%d →,%d →

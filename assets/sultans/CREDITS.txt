@@ -1,0 +1,37 @@
+Sultan portraits downloaded from Wikipedia/Wikimedia Commons (public domain artworks).
+
+ahmed_i.jpg  <-  (already downloaded)
+ahmed_ii.jpg  <-  (already downloaded)
+ahmed_iii.jpg  <-  (already downloaded)
+abdulaziz.jpg  <-  (already downloaded)
+abdulhamid_i.jpg  <-  (already downloaded)
+bayezid_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_accession_of_Sultan_Bayezid_I_%28enthroned%29._Ahmed%C3%AE%2C_Iskendername%2C_VBNM%2C_circa_1460.%2C_Cod._Or._XC_%2857%29%2C_y._240b.jpg/500px-The_accession_of_Sultan_Bayezid_I_%28enthroned%29._Ahmed%C3%AE%2C_Iskendername%2C_VBNM%2C_circa_1460.%2C_Cod._Or._XC_%2857%29%2C_y._240b.jpg
+bayezid_ii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Portrait_of_Bayezid_II_from_a_16th_century_Ottoman_miniature.jpg/500px-Portrait_of_Bayezid_II_from_a_16th_century_Ottoman_miniature.jpg
+mehmed_ii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Bellini%2C_Gentile_-_Sultan_Mehmet_II.jpg/500px-Bellini%2C_Gentile_-_Sultan_Mehmet_II.jpg
+murad_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Fol._254a._The_murder_of_Sultan_Murad_I%2C_Iskender-name_by_Ahmedi%2C_late_15th_century_%28National_Library_of_Russia%2C_C133%29.jpg/500px-Fol._254a._The_murder_of_Sultan_Murad_I%2C_Iskender-name_by_Ahmedi%2C_late_15th_century_%28National_Library_of_Russia%2C_C133%29.jpg
+mehmed_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Mehmet_I_honoraries_miniature.jpg/500px-Mehmet_I_honoraries_miniature.jpg
+murad_ii.jpg  <-  (already downloaded)
+murad_iii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/The_reception_of_the_Persian_ambassador_Maksud_by_Sultan_Murad_III_%28detail%29_and_his_entourage_%2824b%29._Manuscript_miniature_ms._TSMK_B.200_%E2%80%9CSehinsahname%E2%80%9D.jpg/500px-The_reception_of_the_Persian_ambassador_Maksud_by_Sultan_Murad_III_%28detail%29_and_his_entourage_%2824b%29._Manuscript_miniature_ms._TSMK_B.200_%E2%80%9CSehinsahname%E2%80%9D.jpg
+mehmed_iii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Sultan_Mehmed_III_%28detail%29_at_the_reception_of_the_commanders_of_E%C4%9Fri_Castle._E%C4%9Fri_Fetihnamesi%2C_1598_%28TSMK%2C_H.1609%29.jpg/500px-Sultan_Mehmed_III_%28detail%29_at_the_reception_of_the_commanders_of_E%C4%9Fri_Castle._E%C4%9Fri_Fetihnamesi%2C_1598_%28TSMK%2C_H.1609%29.jpg
+mustafa_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Ottoman_portrait_of_Sultan_Mustafa_I_%28r._1617%E2%80%9318%3B_1622%E2%80%9323%29%2C_late_17th%E2%80%93early_18th_century._Metropolitan_Museum_of_Art.jpg/500px-Ottoman_portrait_of_Sultan_Mustafa_I_%28r._1617%E2%80%9318%3B_1622%E2%80%9323%29%2C_late_17th%E2%80%93early_18th_century._Metropolitan_Museum_of_Art.jpg
+murad_iv.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/7/7f/IV_Murat.jpg
+osman_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/4/4a/I_Osman.jpg
+orhan.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/6/65/Metehanzade_orhangazi.jpg
+osman_ii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Osman_II_at_his_coronation_in_1618%2C_Istanbul.jpg/500px-Osman_II_at_his_coronation_in_1618%2C_Istanbul.jpg
+suleiman_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/EmperorSuleiman.jpg/500px-EmperorSuleiman.jpg
+selim_ii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Portrait_of_Selim_II_by_Nakka%C5%9F_Osman%2C_%C5%9Eem%C3%A2%27iln%C3%A2me%2C_1579%2C_Istanbul%2C_Topkap%C4%B1_Saray%C4%B1_M%C3%BCzesi%2C_%D0%9D._1563.jpg/500px-Portrait_of_Selim_II_by_Nakka%C5%9F_Osman%2C_%C5%9Eem%C3%A2%27iln%C3%A2me%2C_1579%2C_Istanbul%2C_Topkap%C4%B1_Saray%C4%B1_M%C3%BCzesi%2C_%D0%9D._1563.jpg
+mehmed_vi.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Sultan_Mehmed_VI_of_the_Ottoman_Empire.jpg/500px-Sultan_Mehmed_VI_of_the_Ottoman_Empire.jpg
+mustafa_ii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Mustafa_II_dressed_in_full_armour.JPG/500px-Mustafa_II_dressed_in_full_armour.JPG
+murad_v.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Portrait_of_Murad_V.jpg/500px-Portrait_of_Murad_V.jpg
+mehmed_iv.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Sultan_Mehmed_IV_%282%29.jpg/500px-Sultan_Mehmed_IV_%282%29.jpg
+mahmud_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Sultan_Mahmud_I_%E2%80%93_Jean_Baptiste_Vanmour.jpg/500px-Sultan_Mahmud_I_%E2%80%93_Jean_Baptiste_Vanmour.jpg
+osman_iii.png  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/III.Osman.webp/500px-III.Osman.webp.png
+mustafa_iii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sultan_Mustafa_III.jpg/500px-Sultan_Mustafa_III.jpg
+selim_iii.jpg  <-  (already downloaded)
+mahmud_ii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Mahmud_II.jpg/500px-Mahmud_II.jpg
+mehmed_v.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Sultan_Muhammed_Chan_V.%2C_Kaiser_der_Osmanen_1915_C._Pietzner.jpg/500px-Sultan_Muhammed_Chan_V.%2C_Kaiser_der_Osmanen_1915_C._Pietzner.jpg
+abdulhamid_ii.png  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sultan_Gazi_Abd%C3%BCl_Hamid_II_-_%D8%A7%D9%84%D8%B3%D9%84%D8%B7%D8%A7%D9%86_%D8%A7%D9%84%D8%BA%D8%A7%D8%B2%D9%8A_%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D8%AD%D9%85%D9%8A%D8%AF_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.png/500px-Sultan_Gazi_Abd%C3%BCl_Hamid_II_-_%D8%A7%D9%84%D8%B3%D9%84%D8%B7%D8%A7%D9%86_%D8%A7%D9%84%D8%BA%D8%A7%D8%B2%D9%8A_%D8%B9%D8%A8%D8%AF_%D8%A7%D9%84%D8%AD%D9%85%D9%8A%D8%AF_%D8%A7%D9%84%D8%AB%D8%A7%D9%86%D9%8A.png
+selim_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Nakka%C5%9F_Selim.jpg/500px-Nakka%C5%9F_Selim.jpg
+ibrahim.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Ibrahim_I.jpg/500px-Ibrahim_I.jpg
+suleiman_ii.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/a/ae/II_Suleyman.jpg
+abdulmejid_i.jpg  <-  https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Sultan_Abd%C3%BClmecid%27in_%C5%9Fehzadelik_zamanlar%C4%B1.jpg/500px-Sultan_Abd%C3%BClmecid%27in_%C5%9Fehzadelik_zamanlar%C4%B1.jpg
