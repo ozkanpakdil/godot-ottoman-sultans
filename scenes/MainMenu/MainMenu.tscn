@@ -24,13 +24,18 @@ anchor_bottom = 1.0
 theme_override_constants/margin_left = 48
 theme_override_constants/margin_top = 64
 theme_override_constants/margin_right = 48
-theme_override_constants/margin_bottom = 96
+theme_override_constants/margin_bottom = 120
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
 layout_mode = 2
-theme_override_constants/separation = 18
+horizontal_scroll_mode = 0
 
-[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 14
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85, 0.7, 0.35, 1)
@@ -39,7 +44,7 @@ text = "Chronicles of the House of Osman"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="SubtitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="SubtitleLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.65, 0.65, 0.7, 1)
@@ -47,7 +52,7 @@ theme_override_font_sizes/font_size = 22
 text = "An Interactive Timeline · 1299 – 1922"
 horizontal_alignment = 1
 
-[node name="LanguageLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="LanguageLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.85, 0.7, 0.35, 1)
@@ -55,14 +60,14 @@ theme_override_font_sizes/font_size = 18
 text = "Choose language:"
 horizontal_alignment = 1
 
-[node name="LanguageSelect" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+[node name="LanguageSelect" type="OptionButton" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 18
 
-[node name="StatsLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="StatsLabel" type="Label" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.55, 0.75, 0.6, 1)
@@ -70,46 +75,46 @@ theme_override_font_sizes/font_size = 18
 text = "Score: 0    Study time: 00:00"
 horizontal_alignment = 1
 
-[node name="Spacer" type="Control" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 24)
+[node name="Spacer" type="Control" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 16)
 layout_mode = 2
 
-[node name="ContinueButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ContinueButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 64)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "Continue the Journey"
 
-[node name="ChapterPromptLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+[node name="MapButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
-theme_override_colors/font_color = Color(0.85, 0.7, 0.35, 1)
 theme_override_font_sizes/font_size = 20
-text = "Or begin a chapter:"
-horizontal_alignment = 1
+text = "Ottoman Map"
 
-[node name="ChapterList" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="KnowledgeButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 8
+theme_override_font_sizes/font_size = 20
+text = "Knowledge Library"
 
-[node name="LeaderboardButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="LeaderboardButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 56)
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Leaderboard & Progress"
 
-[node name="MusicMuteButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="MusicMuteButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "🔊 Music"
 
-[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2

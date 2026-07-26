@@ -1,6 +1,5 @@
 extends Control
 
-@onready var chapter_list: VBoxContainer = %ChapterList
 @onready var stats_label: Label = %StatsLabel
 @onready var continue_button: Button = %ContinueButton
 @onready var language_select: OptionButton = %LanguageSelect
@@ -19,15 +18,18 @@ func _ready() -> void:
 	title_label.text = tr("UI_APP_NAME")
 	subtitle_label.text = tr("UI_SUBTITLE")
 	continue_button.text = tr("UI_CONTINUE")
+	%MapButton.text = tr("UI_MAP")
+	%KnowledgeButton.text = tr("UI_KNOWLEDGE_LIBRARY")
 	%LeaderboardButton.text = tr("UI_LEADERBOARD_PROGRESS")
 	%ExitButton.text = tr("UI_EXIT")
-	%ChapterPromptLabel.text = tr("UI_OR_BEGIN_CHAPTER")
+	%ExitButton.disabled = false
 	%LanguageLabel.text = tr("UI_CHOOSE_LANGUAGE")
 
 	_build_language_select()
-	_build_chapter_list()
 	_update_stats()
 	continue_button.pressed.connect(_on_continue_pressed)
+	%MapButton.pressed.connect(_on_map_pressed)
+	%KnowledgeButton.pressed.connect(_on_knowledge_pressed)
 	%LeaderboardButton.pressed.connect(_on_leaderboard_pressed)
 	%ExitButton.pressed.connect(_on_exit_pressed)
 	language_select.item_selected.connect(_on_language_selected)
@@ -43,25 +45,6 @@ func _build_language_select() -> void:
 		language_select.add_item(LOCALE_LABELS.get(code, code))
 	language_select.selected = locales.find(GameManager.locale)
 
-func _build_chapter_list() -> void:
-	for chapter in HistoricalData.get_chapters():
-		var b := Button.new()
-		b.text = tr("UI_CHAPTER_TITLE") % [chapter["id"], HistoricalData.localize(chapter["title"]), chapter["years"]]
-		b.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		b.custom_minimum_size = Vector2(0, 96)
-		b.icon_alignment = HORIZONTAL_ALIGNMENT_LEFT
-		b.vertical_icon_alignment = VERTICAL_ALIGNMENT_CENTER
-		b.expand_icon = true
-		b.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		# Portrait of the chapter's first sultan as a visual cue
-		var sultans: Array = chapter.get("sultans", [])
-		if sultans.size() > 0:
-			var p: String = sultans[0].get("portrait", "")
-			if p != "" and ResourceLoader.exists(p):
-				b.icon = load(p)
-		b.pressed.connect(_on_chapter_pressed.bind(chapter["id"] - 1))
-		chapter_list.add_child(b)
-
 func _update_stats() -> void:
 	stats_label.text = tr("UI_SCORE_TIME") % [GameManager.score, TimeTracker.format_time(GameManager.total_study_time)]
 
@@ -73,9 +56,11 @@ func _on_language_selected(index: int) -> void:
 func _on_continue_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
 
-func _on_chapter_pressed(chapter_index: int) -> void:
-	GameManager.set_progress(chapter_index, 0)
-	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+func _on_map_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")
+
+func _on_knowledge_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/KnowledgeLibrary/KnowledgeLibrary.tscn")
 
 func _on_leaderboard_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Leaderboard/Leaderboard.tscn")

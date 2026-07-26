@@ -1,0 +1,11 @@
+Earth texture:
+assets/UI/earth_map.jpg
+NASA Blue Marble: Next Generation, July 2004.
+Source: NASA Visible Earth / EOSDIS - https://visibleearth.nasa.gov/images/74092/world-200407
+Public domain.
+
+Historical map texture:
+assets/UI/ottoman_map.jpg
+"The Ottoman Empire, 1481-1683" by William R. Shepherd, from The Historical Atlas, 1923.
+Source: Wikimedia Commons - https://commons.wikimedia.org/wiki/File:Ottoman_empire_1481-1683.jpg
+Public domain.

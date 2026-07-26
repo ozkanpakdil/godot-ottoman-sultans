@@ -2342,5 +2342,169 @@
         }
       ]
     }
+  ],
+  "cities": [
+    {
+      "slug": "sogut",
+      "name": {
+        "en": "Söğüt",
+        "tr": "Söğüt",
+        "zh": "瑟于特",
+        "ru": "Сёгют",
+        "es": "Söğüt"
+      },
+      "latitude": 40.0,
+      "longitude": 30.2,
+      "capital_periods": [
+        {
+          "start": 1299,
+          "end": 1326,
+          "sultan_slugs": ["osman_i"]
+        }
+      ],
+      "events": [
+        {
+          "year": 1299,
+          "name_key": "EVENT_SOGUT_FOUNDING",
+          "description_key": "EVENT_SOGUT_FOUNDING_DESC",
+          "sultan_slug": "osman_i"
+        }
+      ],
+      "chapter_index": 0,
+      "description_key": "CITY_SOGUT_DESC"
+    },
+    {
+      "slug": "bursa",
+      "name": {
+        "en": "Bursa",
+        "tr": "Bursa",
+        "zh": "布尔萨",
+        "ru": "Бурса",
+        "es": "Bursa"
+      },
+      "latitude": 40.2,
+      "longitude": 29.1,
+      "capital_periods": [
+        {
+          "start": 1326,
+          "end": 1365,
+          "sultan_slugs": ["orhan", "murad_i"]
+        }
+      ],
+      "events": [
+        {
+          "year": 1326,
+          "name_key": "EVENT_BURSA_CAPITAL",
+          "description_key": "EVENT_BURSA_CAPITAL_DESC",
+          "sultan_slug": "orhan"
+        }
+      ],
+      "chapter_index": 0,
+      "description_key": "CITY_BURSA_DESC"
+    },
+    {
+      "slug": "edirne",
+      "name": {
+        "en": "Edirne",
+        "tr": "Edirne",
+        "zh": "埃迪尔内",
+        "ru": "Эдирне",
+        "es": "Edirne"
+      },
+      "latitude": 41.7,
+      "longitude": 26.5,
+      "capital_periods": [
+        {
+          "start": 1365,
+          "end": 1453,
+          "sultan_slugs": ["murad_i", "bayezid_i", "mehmed_i", "murad_ii", "mehmed_ii"]
+        }
+      ],
+      "events": [
+        {
+          "year": 1365,
+          "name_key": "EVENT_EDIRNE_CAPITAL",
+          "description_key": "EVENT_EDIRNE_CAPITAL_DESC",
+          "sultan_slug": "murad_i"
+        }
+      ],
+      "chapter_index": 0,
+      "description_key": "CITY_EDIRNE_DESC"
+    },
+    {
+      "slug": "istanbul",
+      "name": {
+        "en": "Istanbul",
+        "tr": "İstanbul",
+        "zh": "伊斯坦布尔",
+        "ru": "Стамбул",
+        "es": "Estambul"
+      },
+      "latitude": 41.0,
+      "longitude": 28.9,
+      "capital_periods": [
+        {
+          "start": 1453,
+          "end": 1922,
+          "sultan_slugs": ["mehmed_ii", "bayezid_ii", "selim_i", "suleiman_i", "selim_ii", "murad_iii", "mehmed_iii", "ahmed_i", "mustafa_i", "osman_ii", "murad_iv", "ibrahim", "mehmed_iv", "suleiman_ii", "ahmed_ii", "mustafa_ii", "ahmed_iii", "mahmud_i", "osman_iii", "mustafa_iii", "abdulhamid_i", "selim_iii", "mahmud_ii", "abdulmejid_i", "abdulaziz", "murad_v", "abdulhamid_ii", "mehmed_v", "mehmed_vi"]
+        }
+      ],
+      "events": [
+        {
+          "year": 1453,
+          "name_key": "EVENT_ISTANBUL_CONQUEST",
+          "description_key": "EVENT_ISTANBUL_CONQUEST_DESC",
+          "sultan_slug": "mehmed_ii"
+        }
+      ],
+      "chapter_index": 1,
+      "description_key": "CITY_ISTANBUL_DESC"
+    },
+    {
+      "slug": "cairo",
+      "name": {
+        "en": "Cairo",
+        "tr": "Kahire",
+        "zh": "开罗",
+        "ru": "Каир",
+        "es": "El Cairo"
+      },
+      "latitude": 30.0,
+      "longitude": 31.2,
+      "capital_periods": [],
+      "events": [
+        {
+          "year": 1517,
+          "name_key": "EVENT_CAIRO_CONQUEST",
+          "description_key": "EVENT_CAIRO_CONQUEST_DESC",
+          "sultan_slug": "selim_i"
+        }
+      ],
+      "chapter_index": 1,
+      "description_key": "CITY_CAIRO_DESC"
+    },
+    {
+      "slug": "baghdad",
+      "name": {
+        "en": "Baghdad",
+        "tr": "Bağdat",
+        "zh": "巴格达",
+        "ru": "Багдад",
+        "es": "Bagdad"
+      },
+      "latitude": 33.3,
+      "longitude": 44.4,
+      "capital_periods": [],
+      "events": [
+        {
+          "year": 1534,
+          "name_key": "EVENT_BAGHDAD_CONQUEST",
+          "description_key": "EVENT_BAGHDAD_CONQUEST_DESC",
+          "sultan_slug": "suleiman_i"
+        }
+      ],
+      "chapter_index": 1,
+      "description_key": "CITY_BAGHDAD_DESC"
+    }
   ]
 }

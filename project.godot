@@ -35,16 +35,17 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-textures/vram_compression/import_etc2_astc=true
-
 [gui]
 
 theme/custom_font="res://assets/fonts/default_font.tres"
 
 [internationalization]
+
 locale_fallback="en"
 locale="en"
 translations=PackedStringArray("res://assets/i18n/ui_translations.en.translation", "res://assets/i18n/ui_translations.tr.translation", "res://assets/i18n/ui_translations.zh.translation", "res://assets/i18n/ui_translations.ru.translation", "res://assets/i18n/ui_translations.es.translation")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

@@ -41,6 +41,13 @@ func get_sultan(chapter_index: int, sultan_index: int) -> Dictionary:
 		return sultans[sultan_index] as Dictionary
 	return {}
 
+func get_sultan_by_slug(slug: String) -> Dictionary:
+	for chapter in get_chapters():
+		for sultan in chapter.get("sultans", []):
+			if sultan.get("slug", "") == slug:
+				return sultan as Dictionary
+	return {}
+
 func get_all_sultans() -> Array:
 	var result: Array = []
 	for chapter in get_chapters():
@@ -75,6 +82,27 @@ func _current_lang() -> String:
 	if parts.size() > 0 and parts[0] in _LOCALES:
 		return parts[0]
 	return "en"
+
+func get_cities() -> Array:
+	return _data.get("cities", []) as Array
+
+func get_city(index: int) -> Dictionary:
+	var cities := get_cities()
+	if index >= 0 and index < cities.size():
+		return cities[index] as Dictionary
+	return {}
+
+func get_city_by_slug(slug: String) -> Dictionary:
+	for city in get_cities():
+		if city.get("slug", "") == slug:
+			return city as Dictionary
+	return {}
+
+func localize_event(event: Dictionary) -> Dictionary:
+	return {
+		"name": localize(event.get("name_key", "")),
+		"description": localize(event.get("description_key", ""))
+	}
 
 func get_supported_locales() -> PackedStringArray:
 	return PackedStringArray(_LOCALES)

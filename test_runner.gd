@@ -128,7 +128,7 @@ func _ready() -> void:
 	# UI translation check: make sure project translations are registered so exported
 	# builds show human-readable labels instead of raw keys like UI_EXIT.
 	TranslationServer.set_locale("en")
-	var ui_keys := ["UI_EXIT", "UI_CONTINUE", "UI_BACK", "UI_FORWARD"]
+	var ui_keys := ["UI_EXIT", "UI_CONTINUE", "UI_BACK", "UI_FORWARD", "UI_MAP", "UI_GO_TO_SULTAN", "UI_KNOWLEDGE_LIBRARY"]
 	for key in ui_keys:
 		var translated: String = tr(key)
 		if translated == key or translated.is_empty():
