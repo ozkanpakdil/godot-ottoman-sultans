@@ -50,6 +50,15 @@ func _ready() -> void:
 	_animate_initial_zoom()
 	_hide_detail()
 
+func _process(_delta: float) -> void:
+	_update_hotspot_scales()
+
+func _update_hotspot_scales() -> void:
+	# Keep markers at a roughly constant screen size as the orthographic camera zooms.
+	var scale := clampf(sqrt(camera.size / ZOOM_START_SIZE), 0.1, 1.0)
+	for hotspot in hotspots.get_children():
+		hotspot.scale = Vector3(scale, scale, scale)
+
 func _build_hotspots() -> void:
 	var cities := HistoricalData.get_cities()
 	for i in cities.size():
@@ -86,7 +95,7 @@ func _create_hotspot(index: int, city: Dictionary) -> Area3D:
 		var portrait_path: String = sultan.get("portrait", "")
 		if not portrait_path.is_empty() and ResourceLoader.exists(portrait_path):
 			var portrait := _create_portrait_billboard(portrait_path)
-			portrait.position.y = 0.18
+			portrait.position.y = 0.1
 			area.add_child(portrait)
 
 	# Collision for raycasting.
@@ -117,7 +126,7 @@ func _first_sultan_slug(city: Dictionary) -> String:
 func _create_portrait_billboard(portrait_path: String) -> MeshInstance3D:
 	var mesh := MeshInstance3D.new()
 	var quad := QuadMesh.new()
-	quad.size = Vector2(0.25, 0.25)
+	quad.size = Vector2(0.06, 0.06)
 	mesh.mesh = quad
 
 	var material := StandardMaterial3D.new()
@@ -245,8 +254,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		_rotate_globe(delta)
 
 func _rotate_globe(delta: Vector2) -> void:
-	globe.rotate_y(delta.x * ROTATION_SENSITIVITY)
-	globe.rotate_x(delta.y * ROTATION_SENSITIVITY)
+	# Scale rotation speed by zoom level so dragging feels consistent whether
+	# zoomed in or out.
+	var sensitivity := ROTATION_SENSITIVITY * (camera.size / ZOOM_START_SIZE)
+	globe.rotate_y(delta.x * sensitivity)
+	globe.rotate_x(delta.y * sensitivity)
 
 func _zoom(amount: float) -> void:
 	camera.size = clampf(camera.size + amount, ZOOM_SIZE_MIN, ZOOM_SIZE_MAX)

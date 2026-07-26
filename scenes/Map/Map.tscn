@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3]
+[gd_scene format=3 uid="uid://cl0v2hragcl1q"]
 
-[ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1"]
+[ext_resource type="Script" uid="uid://u42x2pgq8q07" path="res://scenes/Map/Map.gd" id="1"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_earth"]
 radius = 3.0
@@ -22,17 +22,16 @@ font_size = 22
 font_color = Color(0.85, 0.7, 0.35, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_body"]
-font_size = 16
 font_color = Color(0.9, 0.9, 0.9, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_small"]
 font_size = 14
 font_color = Color(0.75, 0.75, 0.8, 1)
 
-[node name="Map" type="Node3D"]
+[node name="Map" type="Node3D" unique_id=385289928]
 script = ExtResource("1")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=187612949]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
 projection = 1
@@ -40,27 +39,27 @@ size = 5.0
 near = 0.1
 far = 100.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=363049329]
 transform = Transform3D(0.707107, -0.5, 0.5, 0, 0.707107, 0.707107, -0.707107, -0.5, 0.5, 0, 8, 0)
 shadow_enabled = true
 
-[node name="Globe" type="Node3D" parent="."]
+[node name="Globe" type="Node3D" parent="." unique_id=1639441769]
 unique_name_in_owner = true
 
-[node name="Earth" type="MeshInstance3D" parent="Globe"]
+[node name="Earth" type="MeshInstance3D" parent="Globe" unique_id=1639257163]
 unique_name_in_owner = true
 
-[node name="EarthBody" type="StaticBody3D" parent="Globe"]
+[node name="EarthBody" type="StaticBody3D" parent="Globe" unique_id=150002445]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Globe/EarthBody"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Globe/EarthBody" unique_id=391360304]
 shape = SubResource("SphereShape3D_earth")
 
-[node name="Hotspots" type="Node3D" parent="Globe"]
+[node name="Hotspots" type="Node3D" parent="Globe" unique_id=44010073]
 unique_name_in_owner = true
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1702559617]
 
-[node name="BackButton" type="Button" parent="CanvasLayer"]
+[node name="BackButton" type="Button" parent="CanvasLayer" unique_id=849556455]
 unique_name_in_owner = true
 offset_left = 24.0
 offset_top = 24.0
@@ -69,7 +68,7 @@ offset_bottom = 72.0
 theme_override_font_sizes/font_size = 18
 text = "Back"
 
-[node name="HintLabel" type="Label" parent="CanvasLayer"]
+[node name="HintLabel" type="Label" parent="CanvasLayer" unique_id=630835096]
 unique_name_in_owner = true
 anchors_preset = 5
 anchor_left = 0.5
@@ -84,73 +83,72 @@ text = "Drag to rotate the globe. Click a city to explore."
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="DetailPanel" type="PanelContainer" parent="CanvasLayer"]
+[node name="DetailPanel" type="PanelContainer" parent="CanvasLayer" unique_id=986864056]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(300, 0)
-anchors_preset = 0
+clip_contents = true
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DetailPanel"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DetailPanel" unique_id=295533242]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DetailPanel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DetailPanel/MarginContainer" unique_id=316228483]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="PortraitTextureRect" type="TextureRect" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer"]
+[node name="PortraitTextureRect" type="TextureRect" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer" unique_id=1200608872]
 unique_name_in_owner = true
-layout_mode = 2
 custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
 expand_mode = 3
 stretch_mode = 5
 
-[node name="CityNameLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer"]
+[node name="CityNameLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer" unique_id=2081818111]
 unique_name_in_owner = true
 layout_mode = 2
 text = "City Name"
 label_settings = SubResource("LabelSettings_title")
 autowrap_mode = 3
 
-[node name="YearsLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer"]
+[node name="YearsLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer" unique_id=446062900]
 unique_name_in_owner = true
 layout_mode = 2
 text = "1299 – 1453"
 label_settings = SubResource("LabelSettings_body")
 
-[node name="CityDescLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer"]
+[node name="CityDescLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer" unique_id=264826273]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
 text = "City description goes here."
 label_settings = SubResource("LabelSettings_body")
 autowrap_mode = 3
 
-[node name="SultansLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer"]
+[node name="SultansLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer" unique_id=52073853]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Sultans"
 label_settings = SubResource("LabelSettings_small")
 autowrap_mode = 3
 
-[node name="EventsLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer"]
+[node name="EventsLabel" type="Label" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer" unique_id=2074893014]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Events"
 label_settings = SubResource("LabelSettings_small")
 autowrap_mode = 3
 
-[node name="GoButton" type="Button" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer"]
+[node name="GoButton" type="Button" parent="CanvasLayer/DetailPanel/MarginContainer/VBoxContainer" unique_id=38099057]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
 text = "Go to Sultan"
 
-[node name="ZoomBar" type="PanelContainer" parent="CanvasLayer"]
+[node name="ZoomBar" type="PanelContainer" parent="CanvasLayer" unique_id=1105598567]
 unique_name_in_owner = true
 anchors_preset = 7
 anchor_left = 0.5
@@ -165,34 +163,32 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
 
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ZoomBar"]
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/ZoomBar" unique_id=547513134]
 layout_mode = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ZoomBar/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ZoomBar/MarginContainer" unique_id=284309174]
 layout_mode = 2
 theme_override_constants/separation = 8
 
-[node name="ZoomOutButton" type="Button" parent="CanvasLayer/ZoomBar/MarginContainer/HBoxContainer"]
+[node name="ZoomOutButton" type="Button" parent="CanvasLayer/ZoomBar/MarginContainer/HBoxContainer" unique_id=1137591287]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "−"
 
-[node name="ZoomSlider" type="HSlider" parent="CanvasLayer/ZoomBar/MarginContainer/HBoxContainer"]
+[node name="ZoomSlider" type="HSlider" parent="CanvasLayer/ZoomBar/MarginContainer/HBoxContainer" unique_id=1782288204]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 0.0
-max_value = 100.0
 value = 50.0
 
-[node name="ZoomInButton" type="Button" parent="CanvasLayer/ZoomBar/MarginContainer/HBoxContainer"]
+[node name="ZoomInButton" type="Button" parent="CanvasLayer/ZoomBar/MarginContainer/HBoxContainer" unique_id=1899033681]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
