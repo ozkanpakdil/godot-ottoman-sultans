@@ -56,18 +56,19 @@ func get_all_sultans() -> Array:
 
 # Resolve a localized value. Accepts either a locale dictionary or a plain string.
 func localize(value: Variant) -> String:
+	if value is String:
+		return value
 	if value is Dictionary:
 		var locale := _current_lang()
 		if value.has(locale) and not str(value[locale]).is_empty():
 			return str(value[locale])
-	# Fallback chain: English -> first non-empty
-	if value.has("en") and not str(value["en"]).is_empty():
-		return str(value["en"])
-	for k in _LOCALES:
-		if value.has(k) and not str(value[k]).is_empty():
-			return str(value[k])
+		# Fallback chain: English -> first non-empty
+		if value.has("en") and not str(value["en"]).is_empty():
+			return str(value["en"])
+		for k in _LOCALES:
+			if value.has(k) and not str(value[k]).is_empty():
+				return str(value[k])
 	return ""
-	return str(value)
 
 # Localize a battle/event entry, returning a new dictionary with plain strings.
 func localize_battle(battle: Dictionary) -> Dictionary:
@@ -99,9 +100,11 @@ func get_city_by_slug(slug: String) -> Dictionary:
 	return {}
 
 func localize_event(event: Dictionary) -> Dictionary:
+	var name_key: String = event.get("name_key", "")
+	var desc_key: String = event.get("description_key", "")
 	return {
-		"name": localize(event.get("name_key", "")),
-		"description": localize(event.get("description_key", ""))
+		"name": tr(name_key) if not name_key.is_empty() else "",
+		"description": tr(desc_key) if not desc_key.is_empty() else ""
 	}
 
 func get_supported_locales() -> PackedStringArray:

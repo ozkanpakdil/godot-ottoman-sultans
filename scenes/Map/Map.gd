@@ -14,12 +14,16 @@ extends Node3D
 @onready var globe: Node3D = %Globe
 @onready var earth: MeshInstance3D = %Earth
 @onready var portrait_texture_rect: TextureRect = %PortraitTextureRect
+@onready var zoom_slider: HSlider = %ZoomSlider
+@onready var zoom_in_button: Button = %ZoomInButton
+@onready var zoom_out_button: Button = %ZoomOutButton
 
 const GLOBE_RADIUS := 3.0
 const ROTATION_SENSITIVITY := 0.005
-const ZOOM_MIN := 5.0
-const ZOOM_MAX := 14.0
-const ZOOM_SENSITIVITY := 0.2
+const ZOOM_SIZE_MIN := 0.25
+const ZOOM_SIZE_MAX := 24.0
+const ZOOM_START_SIZE := 3.5
+const ZOOM_SENSITIVITY := 1.0
 const DRAG_THRESHOLD := 4.0
 
 var _selected_chapter_index: int = -1
@@ -36,10 +40,14 @@ func _ready() -> void:
 
 	back_button.pressed.connect(_on_back_pressed)
 	go_button.pressed.connect(_on_go_pressed)
+	zoom_in_button.pressed.connect(_on_zoom_in_pressed)
+	zoom_out_button.pressed.connect(_on_zoom_out_pressed)
+	zoom_slider.value_changed.connect(_on_zoom_slider_changed)
 
 	_build_earth_mesh()
 	_build_hotspots()
 	_center_globe_on_turkey()
+	_animate_initial_zoom()
 	_hide_detail()
 
 func _build_hotspots() -> void:
@@ -60,8 +68,8 @@ func _create_hotspot(index: int, city: Dictionary) -> Area3D:
 	# Visual marker: glowing sphere with city color.
 	var mesh := MeshInstance3D.new()
 	var sphere := SphereMesh.new()
-	sphere.radius = 0.08
-	sphere.height = 0.16
+	sphere.radius = 0.06
+	sphere.height = 0.12
 	mesh.mesh = sphere
 	var material := StandardMaterial3D.new()
 	material.albedo_color = Color(0.85, 0.7, 0.35)
@@ -78,19 +86,19 @@ func _create_hotspot(index: int, city: Dictionary) -> Area3D:
 		var portrait_path: String = sultan.get("portrait", "")
 		if not portrait_path.is_empty() and ResourceLoader.exists(portrait_path):
 			var portrait := _create_portrait_billboard(portrait_path)
-			portrait.position.y = 0.22
+			portrait.position.y = 0.18
 			area.add_child(portrait)
 
 	# Collision for raycasting.
 	var collision := CollisionShape3D.new()
 	var shape := SphereShape3D.new()
-	shape.radius = 0.12
+	shape.radius = 0.09
 	collision.shape = shape
 	area.add_child(collision)
 
 	# Subtle bob animation.
 	var tween := create_tween().set_loops()
-	tween.tween_property(mesh, "position:y", 0.04, 0.8).from(0.0)
+	tween.tween_property(mesh, "position:y", 0.03, 0.8).from(0.0)
 	tween.tween_property(mesh, "position:y", 0.0, 0.8)
 
 	return area
@@ -109,7 +117,7 @@ func _first_sultan_slug(city: Dictionary) -> String:
 func _create_portrait_billboard(portrait_path: String) -> MeshInstance3D:
 	var mesh := MeshInstance3D.new()
 	var quad := QuadMesh.new()
-	quad.size = Vector2(0.35, 0.35)
+	quad.size = Vector2(0.25, 0.25)
 	mesh.mesh = quad
 
 	var material := StandardMaterial3D.new()
@@ -128,7 +136,27 @@ func _center_globe_on_turkey() -> void:
 	var yaw := atan2(center.x, center.z)
 	var pitch := atan2(center.y, sqrt(center.x * center.x + center.z * center.z))
 	globe.rotate_y(-yaw)
-	globe.rotate_x(-pitch)
+	globe.rotate_x(pitch)
+
+func _animate_initial_zoom() -> void:
+	camera.size = ZOOM_SIZE_MAX
+	var tween := create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.tween_property(camera, "size", ZOOM_START_SIZE, 1.5)
+	tween.finished.connect(_update_zoom_slider)
+
+func _update_zoom_slider() -> void:
+	var t := (ZOOM_SIZE_MAX - camera.size) / (ZOOM_SIZE_MAX - ZOOM_SIZE_MIN)
+	zoom_slider.set_value_no_signal(clampf(t * 100.0, 0.0, 100.0))
+
+func _on_zoom_slider_changed(value: float) -> void:
+	var t := value / 100.0
+	camera.size = ZOOM_SIZE_MAX - t * (ZOOM_SIZE_MAX - ZOOM_SIZE_MIN)
+
+func _on_zoom_in_pressed() -> void:
+	_zoom(-1.0)
+
+func _on_zoom_out_pressed() -> void:
+	_zoom(1.0)
 
 func _build_earth_mesh() -> void:
 	# Build a custom sphere with equirectangular UVs so the NASA texture and
@@ -186,6 +214,16 @@ func _lat_lon_to_position(lat: float, lon: float) -> Vector3:
 	var z := GLOBE_RADIUS * cos(lat_rad) * cos(lon_rad)
 	return Vector3(x, y, z)
 
+func _input(event: InputEvent) -> void:
+	# Handle zoom in _input so it works even when _unhandled_input is not reached.
+	if event is InputEventMouseButton and event.pressed:
+		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
+			_zoom(-ZOOM_SENSITIVITY)
+			get_viewport().set_input_as_handled()
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
+			_zoom(ZOOM_SENSITIVITY)
+			get_viewport().set_input_as_handled()
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
@@ -198,10 +236,6 @@ func _unhandled_input(event: InputEvent) -> void:
 				_dragging = false
 				if not _has_dragged:
 					_raycast_select(event.position)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
-			_zoom(-ZOOM_SENSITIVITY)
-		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
-			_zoom(ZOOM_SENSITIVITY)
 	elif event is InputEventMouseMotion and _dragging:
 		var motion := event as InputEventMouseMotion
 		var delta: Vector2 = motion.position - _last_mouse_pos
@@ -215,8 +249,8 @@ func _rotate_globe(delta: Vector2) -> void:
 	globe.rotate_x(delta.y * ROTATION_SENSITIVITY)
 
 func _zoom(amount: float) -> void:
-	var new_z := clampf(camera.position.z + amount, ZOOM_MIN, ZOOM_MAX)
-	camera.position.z = new_z
+	camera.size = clampf(camera.size + amount, ZOOM_SIZE_MIN, ZOOM_SIZE_MAX)
+	_update_zoom_slider()
 
 func _raycast_select(screen_pos: Vector2) -> void:
 	var viewport := get_viewport()

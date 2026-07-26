@@ -72,10 +72,12 @@ func set_locale(code: String) -> void:
 		SaveManager.save_progress()
 
 func _apply_locale() -> void:
+	# Always fall back to English for invalid/missing saved locales so the game
+	# never switches to an unintended language on its own.
 	if not (locale in SUPPORTED_LOCALES):
-		var os_lang := OS.get_locale_language()
-		locale = os_lang if os_lang in SUPPORTED_LOCALES else "en"
+		locale = "en"
 	TranslationServer.set_locale(locale)
+	SaveManager.save_progress()
 
 func set_progress(chapter_index: int, sultan_index: int) -> void:
 	current_chapter_index = chapter_index

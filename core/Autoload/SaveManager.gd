@@ -30,4 +30,5 @@ func load_progress() -> void:
 			GameManager.total_study_time = data.get("total_study_time", 0.0)
 			GameManager.score = data.get("score", 0)
 			GameManager.completed_quizzes = data.get("completed_quizzes", {})
-			GameManager.locale = data.get("locale", "en")
+			var loaded_locale: String = data.get("locale", "en")
+			GameManager.locale = loaded_locale if loaded_locale in GameManager.SUPPORTED_LOCALES else "en"
