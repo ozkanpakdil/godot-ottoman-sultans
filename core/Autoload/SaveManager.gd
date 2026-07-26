@@ -12,7 +12,9 @@ func save_progress() -> void:
 			"total_study_time": GameManager.total_study_time,
 			"score": GameManager.score,
 			"completed_quizzes": GameManager.completed_quizzes,
-			"locale": GameManager.locale
+			"locale": GameManager.locale,
+			"locale_user_set": GameManager.locale_user_set,
+			"music_muted": GameManager.music_muted
 		}
 		file.store_var(data)
 		file.close()
@@ -32,3 +34,5 @@ func load_progress() -> void:
 			GameManager.completed_quizzes = data.get("completed_quizzes", {})
 			var loaded_locale: String = data.get("locale", "en")
 			GameManager.locale = loaded_locale if loaded_locale in GameManager.SUPPORTED_LOCALES else "en"
+			GameManager.locale_user_set = data.get("locale_user_set", false)
+			GameManager.music_muted = data.get("music_muted", false)

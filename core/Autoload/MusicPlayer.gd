@@ -16,6 +16,9 @@ func _ready() -> void:
 	audio_player.finished.connect(_on_track_finished)
 	GameManager.locale_changed.connect(_on_locale_changed)
 
+	# Apply the mute preference saved from the previous session.
+	set_muted(GameManager.music_muted)
+
 	if not tracks.is_empty():
 		_load_track(0)
 		# Don't autoplay audio in headless/CI runs; the bottom bar would still try to
@@ -100,3 +103,5 @@ func is_muted() -> bool:
 
 func toggle_mute() -> void:
 	set_muted(not is_muted())
+	GameManager.music_muted = is_muted()
+	SaveManager.save_progress()

@@ -110,4 +110,4 @@ func _on_video_pressed() -> void:
 
 func _on_menu_pressed() -> void:
 	SaveManager.save_progress()
-	get_tree().change_scene_to_file("res://scenes/MainMenu/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")

@@ -145,7 +145,11 @@ func _ready() -> void:
 	else:
 		print("OK: MusicPlayer tracks: %d" % MusicPlayer.tracks.size())
 
-	# Reset locale for clean exit state
+	# Reset locale for clean exit state and wipe any test-only side effects so
+	# normal play never inherits the Chinese locale used in the round-trip test.
+	GameManager.locale = "en"
+	GameManager.locale_user_set = false
+	SaveManager.save_progress()
 	TranslationServer.set_locale("en")
 
 	if failures == 0:

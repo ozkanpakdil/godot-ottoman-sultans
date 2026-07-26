@@ -7,7 +7,6 @@ extends Node3D
 @onready var sultans_label: Label = %SultansLabel
 @onready var events_label: Label = %EventsLabel
 @onready var go_button: Button = %GoButton
-@onready var back_button: Button = %BackButton
 @onready var hint_label: Label = %HintLabel
 @onready var camera: Camera3D = %Camera3D
 @onready var hotspots: Node3D = %Hotspots
@@ -18,6 +17,16 @@ extends Node3D
 @onready var zoom_in_button: Button = %ZoomInButton
 @onready var zoom_out_button: Button = %ZoomOutButton
 
+# Menu bar
+@onready var menu_button: Button = %MenuButton
+@onready var menu_panel: PanelContainer = %MenuPanel
+@onready var continue_button: Button = %ContinueButton
+@onready var knowledge_button: Button = %KnowledgeButton
+@onready var leaderboard_button: Button = %LeaderboardButton
+@onready var language_select: OptionButton = %LanguageSelect
+@onready var music_mute_button: Button = %MusicMuteButton
+@onready var exit_button: Button = %ExitButton
+
 const GLOBE_RADIUS := 3.0
 const ROTATION_SENSITIVITY := 0.005
 const ZOOM_SIZE_MIN := 0.25
@@ -25,6 +34,14 @@ const ZOOM_SIZE_MAX := 24.0
 const ZOOM_START_SIZE := 3.5
 const ZOOM_SENSITIVITY := 1.0
 const DRAG_THRESHOLD := 4.0
+
+const LOCALE_LABELS := {
+	"en": "English",
+	"tr": "Türkçe",
+	"zh": "中文",
+	"ru": "Русский",
+	"es": "Español"
+}
 
 var _selected_chapter_index: int = -1
 
@@ -34,16 +51,30 @@ var _drag_start_pos := Vector2.ZERO
 var _last_mouse_pos := Vector2.ZERO
 
 func _ready() -> void:
-	back_button.text = tr("UI_MAP_BACK")
 	go_button.text = tr("UI_GO_TO_SULTAN")
 	hint_label.text = tr("UI_MAP_HINT")
 
-	back_button.pressed.connect(_on_back_pressed)
+	continue_button.text = tr("UI_CONTINUE")
+	knowledge_button.text = tr("UI_KNOWLEDGE_LIBRARY")
+	leaderboard_button.text = tr("UI_LEADERBOARD_PROGRESS")
+	exit_button.text = tr("UI_EXIT")
+	_update_music_mute_button()
+
 	go_button.pressed.connect(_on_go_pressed)
 	zoom_in_button.pressed.connect(_on_zoom_in_pressed)
 	zoom_out_button.pressed.connect(_on_zoom_out_pressed)
 	zoom_slider.value_changed.connect(_on_zoom_slider_changed)
 
+	menu_button.pressed.connect(_on_menu_button_pressed)
+	continue_button.pressed.connect(_on_continue_pressed)
+	knowledge_button.pressed.connect(_on_knowledge_pressed)
+	leaderboard_button.pressed.connect(_on_leaderboard_pressed)
+	language_select.item_selected.connect(_on_language_selected)
+	music_mute_button.pressed.connect(_on_music_mute_pressed)
+	exit_button.pressed.connect(_on_exit_pressed)
+
+	menu_panel.visible = false
+	_build_language_select()
 	_build_earth_mesh()
 	_build_hotspots()
 	_center_globe_on_turkey()
@@ -384,8 +415,38 @@ func _hide_detail() -> void:
 	detail_panel.visible = false
 	_selected_chapter_index = -1
 
-func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/MainMenu/MainMenu.tscn")
+func _build_language_select() -> void:
+	var locales := HistoricalData.get_supported_locales()
+	for code in locales:
+		language_select.add_item(LOCALE_LABELS.get(code, code))
+	language_select.selected = locales.find(GameManager.locale)
+
+func _update_music_mute_button() -> void:
+	music_mute_button.text = "🔇" if MusicPlayer.is_muted() else "🔊"
+
+func _on_menu_button_pressed() -> void:
+	menu_panel.visible = not menu_panel.visible
+
+func _on_continue_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+
+func _on_knowledge_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/KnowledgeLibrary/KnowledgeLibrary.tscn")
+
+func _on_leaderboard_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/Leaderboard/Leaderboard.tscn")
+
+func _on_language_selected(index: int) -> void:
+	var locales := HistoricalData.get_supported_locales()
+	GameManager.set_locale(locales[index])
+	get_tree().reload_current_scene()
+
+func _on_music_mute_pressed() -> void:
+	MusicPlayer.toggle_mute()
+	_update_music_mute_button()
+
+func _on_exit_pressed() -> void:
+	get_tree().quit()
 
 func _on_go_pressed() -> void:
 	if _selected_chapter_index < 0:

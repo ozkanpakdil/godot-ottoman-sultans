@@ -11,7 +11,11 @@ var completed_quizzes: Dictionary = {}
 
 # i18n
 var locale: String = "en"
+var locale_user_set: bool = false
 const SUPPORTED_LOCALES := ["en", "tr", "zh", "ru", "es"]
+
+# Audio
+var music_muted: bool = false
 
 # Quiz bonus constants
 const CORRECT_ANSWER_BONUS: int = 50
@@ -27,7 +31,13 @@ signal locale_changed(new_locale: String)
 func _ready() -> void:
 	_load_translation_resources()
 	SaveManager.load_progress()
+	# Never inherit a non-English locale from an old/corrupt save unless the user
+	# explicitly chose it. This prevents the game from auto-switching to Chinese
+	# or any other language on startup.
+	if not locale_user_set:
+		locale = "en"
 	_apply_locale()
+	print("Locale resolved: %s (user_set=%s)" % [locale, locale_user_set])
 	_configure_desktop_display()
 
 func _load_translation_resources() -> void:
@@ -67,6 +77,7 @@ func set_locale(code: String) -> void:
 	var lang := code.split("_")[0]
 	if lang in SUPPORTED_LOCALES:
 		locale = lang
+		locale_user_set = true
 		TranslationServer.set_locale(lang)
 		locale_changed.emit(lang)
 		SaveManager.save_progress()

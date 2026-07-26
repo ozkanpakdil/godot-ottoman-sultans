@@ -44,4 +44,4 @@ func _on_native_board_pressed() -> void:
 			pgs.leaderboards_show("com.ottoman.timeline.highscore")
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/MainMenu/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")
