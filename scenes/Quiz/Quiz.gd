@@ -48,23 +48,42 @@ func _show_question() -> void:
 
 func _on_choice_pressed(choice_index: int) -> void:
 	var q: Dictionary = questions[current_index]
-	if choice_index == q["correct_index"]:
+	var is_correct: bool = choice_index == q["correct_index"]
+	GameManager.record_category_answer(q.get("category", ""), is_correct)
+	if is_correct:
 		correct_count += 1
 		current_index += 1
 		_show_question()
 	else:
-		# Non-punitive rule: point the player back to the passage instead of failing them.
+		# Non-punitive rule: show the explanation, then move on anyway.
 		context_label.text = tr("UI_NOT_QUITE") + "\n" + q["context"]
 		context_label.visible = true
+		_disable_choice_buttons()
+		await get_tree().create_timer(1.5).timeout
+		current_index += 1
+		_show_question()
+
+func _disable_choice_buttons() -> void:
+	for child in choices_box.get_children():
+		if child is Button:
+			child.disabled = true
 
 func _finish() -> void:
 	var chapter := GameManager.get_current_chapter()
 	GameManager.mark_quiz_completed(chapter.get("id", 0), correct_count, questions.size())
+	var new_badges: Array = GameManager.check_and_award_badges()
 	for child in choices_box.get_children():
 		child.queue_free()
 	context_label.visible = false
 	question_label.text = tr("UI_CHAPTER_COMPLETE")
 	result_label.text = tr("UI_ANSWERED_CORRECTLY") % [correct_count, questions.size(), correct_count * GameManager.CORRECT_ANSWER_BONUS]
+
+	if not new_badges.is_empty():
+		var badge_lines: Array = []
+		for badge_id in new_badges:
+			badge_lines.append("🏅 " + GameManager.get_badge_display_name(badge_id))
+		result_label.text += "\n\n" + tr("UI_NEW_BADGES") + "\n" + "\n".join(badge_lines)
+
 	continue_button.visible = true
 	if GameManager.current_chapter_index + 1 < HistoricalData.get_chapters().size():
 		continue_button.text = tr("UI_CONTINUE_TO_CHAPTER") % (chapter.get("id", 0) + 1)

@@ -87,3 +87,36 @@ EVENT_CAIRO_CONQUEST,Conquest of Egypt,Mısır'ın fethi,埃及的征服,Зав�
 EVENT_CAIRO_CONQUEST_DESC,"Selim I defeated the Mamluks and brought Egypt, Syria, and the Hejaz under Ottoman rule.","I. Selim Memlükleri yenerek Mısır, Suriye ve Hicaz'ı Osmanlı hakimiyetine aldı.",塞利姆一世击败马穆鲁克，将埃及、叙利亚和汉志纳入奥斯曼统治。,Селим I разгромил мамлюков и присоединил Египет Сирию и Хиджаз к Османской империи.,Selim I derrotó a los mamelucos y trajo Egipto Siria y el Hiyaz bajo el dominio otomano.
 EVENT_BAGHDAD_CONQUEST,Conquest of Baghdad,Bağdat'ın fethi,巴格达的征服,Завоевание Багдада,Conquista de Bagdad
 EVENT_BAGHDAD_CONQUEST_DESC,"Suleiman I captured Baghdad, securing Ottoman control over Mesopotamia.",I. Süleyman Bağdat'ı alarak Mezopotamya üzerindeki Osmanlı kontrolünü sağladı.,苏莱曼一世攻占巴格达，确立了奥斯曼对美索不达米亚的控制。,Сулейман I захватил Багдад обеспечив османский контроль над Месопотамией.,Suleimán I capturó Bagdad asegurando el control otomano sobre Mesopotamia.
+
+UI_CATEGORY_WAR,War,Savaş,战争,Война,Guerra
+UI_CATEGORY_DIPLOMACY,Diplomacy,Diplomasi,外交,Дипломатия,Diplomacia
+UI_CATEGORY_FAMILY,Family,Aile,家族,Семья,Familia
+UI_CATEGORY_CHRONOLOGY,Chronology,Kronoloji,纪年,Хронология,Cronología
+UI_BADGE_WAR_1,War Scout,Savaş Kesfi,战争侦察员,Разведчик войны,Explorador de guerra
+UI_BADGE_WAR_2,Soldier,Asker,士兵,Солдат,Soldado
+UI_BADGE_WAR_3,Commander,Kumandan,指挥官,Командир,Comandante
+UI_BADGE_WAR_4,War Master,Savaş Ustası,战争大师,Мастер войны,Maestro de guerra
+UI_BADGE_DIPLOMACY_1,Envoy,Elçi,使者,Посол,Enviado
+UI_BADGE_DIPLOMACY_2,Ambassador,Büyükelçi,大使,Посол,Ambassador
+UI_BADGE_DIPLOMACY_3,Negotiator,Müzakereci,谈判专家,Переговорщик,Negociador
+UI_BADGE_DIPLOMACY_4,Diplomat Master,Diplomasi Ustası,外交大师,Мастер дипломатии,Maestro diplomático
+UI_BADGE_FAMILY_1,Genealogist,Soybilimci,家谱学者,Генеалог,Genealogista
+UI_BADGE_FAMILY_2,Dynasty Scholar,Hanedan Bilgini,王朝学者,Знаток династии,Erudito de la dinastía
+UI_BADGE_FAMILY_3,House Expert,Saray Uzmanı,宫廷专家,Эксперт по дому,Experto de la casa
+UI_BADGE_FAMILY_4,Family Master,Aile Ustası,家族大师,Мастер семьи,Maestro de familia
+UI_BADGE_CHRONOLOGY_1,Timekeeper,Zaman Bekçisi,计时员,Хранитель времени,Cronometrador
+UI_BADGE_CHRONOLOGY_2,Chronicler,Kronikçi,编年史家,Летописец,Cronista
+UI_BADGE_CHRONOLOGY_3,Era Sage,Devir Bilgesi,时代贤者,Мудрец эпохи,Sabio de la era
+UI_BADGE_CHRONOLOGY_4,Chronology Master,Kronoloji Ustası,纪年大师,Мастер хронологии,Maestro de cronología
+UI_NEW_BADGES,New badges earned!,Yeni rozetler kazanıldı!,获得新徽章！,Получены новые значки!,¡Nuevas insignias ganadas!
+UI_CATEGORY_STATS,%d / %d correct,%d / %d doğru,答对 %d / %d,%d / %d правильно,%d / %d correctas
+UI_CURRENT_BADGE,Current badge: %s,Mevcut rozet: %s,当前徽章：%s,Текущий значок: %s,Insignia actual: %s
+UI_NO_BADGE_YET,No badge yet — keep answering!,Henüz rozet yok — cevaplamaya devam et!,还没有徽章——继续答题！,Пока нет значка — продолжайте отвечать!,¡Aún no hay insignia — sigue respondiendo!
+UI_NO_BADGES_YET,No badges earned yet.,Henüz rozet kazanılmadı.,尚未获得徽章。,Пока нет заработанных значков.,Aún no se han ganado insignias.
+UI_ACHIEVEMENTS_TITLE,Achievements,Başarımlar,成就,Достижения,Logros
+UI_BACK_TO_MAP,Back to Map,Haritaya Dön,返回地图,Назад к карте,Volver al mapa
+UI_QUIZ_FAMILY_CHILD,Who was a child of %s?,%s'nin çocuğu kimdi?,谁是 %s 的孩子？,Кто был ребёнком %s?,¿Quién fue hijo de %s?
+UI_QUIZ_FAMILY_CHILD_CONTEXT,%s was a child of %s.,"%s, %s'nin çocuğuydu.",%s 是 %s 的孩子。,%s был ребёнком %s.,%s fue hijo de %s.
+UI_QUIZ_FAMILY_WIFE,Who was a wife of %s?,%s'nin eşi kimdi?,谁是 %s 的妻子？,Кто была женой %s?,¿Quién fue esposa de %s?
+UI_QUIZ_FAMILY_WIFE_CONTEXT,%s was married to %s.,"%s, %s ile evliydi.",%s 嫁给了 %s。,%s была замужем за %s.,%s estuvo casada con %s.
+UI_QUIZ_DIPLOMACY,Which treaty or agreement is associated with %s?,%s ile ilişkili antlaşma veya anlaşma hangisidir?,与 %s 相关的条约或协议是哪一个？,Какой договор или соглашение связано с %s?,¿Qué tratado o acuerdo se asocia con %s?

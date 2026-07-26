@@ -109,3 +109,15 @@ func localize_event(event: Dictionary) -> Dictionary:
 
 func get_supported_locales() -> PackedStringArray:
 	return PackedStringArray(_LOCALES)
+
+func get_diplomatic_events() -> Array:
+	return _data.get("diplomatic_events", []) as Array
+
+func get_sultan_children(sultan: Dictionary) -> Array:
+	return sultan.get("children", []) as Array
+
+func localize_diplomatic_event(event: Dictionary) -> Dictionary:
+	return {
+		"name": localize(event.get("name", "")),
+		"description": localize(event.get("description", ""))
+	}

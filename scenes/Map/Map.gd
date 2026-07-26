@@ -23,6 +23,7 @@ extends Node3D
 @onready var continue_button: Button = %ContinueButton
 @onready var knowledge_button: Button = %KnowledgeButton
 @onready var leaderboard_button: Button = %LeaderboardButton
+@onready var achievements_button: Button = %AchievementsButton
 @onready var language_select: OptionButton = %LanguageSelect
 @onready var music_mute_button: Button = %MusicMuteButton
 @onready var exit_button: Button = %ExitButton
@@ -57,6 +58,7 @@ func _ready() -> void:
 	continue_button.text = tr("UI_CONTINUE")
 	knowledge_button.text = tr("UI_KNOWLEDGE_LIBRARY")
 	leaderboard_button.text = tr("UI_LEADERBOARD_PROGRESS")
+	achievements_button.text = tr("UI_ACHIEVEMENTS_TITLE")
 	exit_button.text = tr("UI_EXIT")
 	_update_music_mute_button()
 
@@ -69,6 +71,7 @@ func _ready() -> void:
 	continue_button.pressed.connect(_on_continue_pressed)
 	knowledge_button.pressed.connect(_on_knowledge_pressed)
 	leaderboard_button.pressed.connect(_on_leaderboard_pressed)
+	achievements_button.pressed.connect(_on_achievements_pressed)
 	language_select.item_selected.connect(_on_language_selected)
 	music_mute_button.pressed.connect(_on_music_mute_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
@@ -435,6 +438,9 @@ func _on_knowledge_pressed() -> void:
 
 func _on_leaderboard_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/Leaderboard/Leaderboard.tscn")
+
+func _on_achievements_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/Achievements/Achievements.tscn")
 
 func _on_language_selected(index: int) -> void:
 	var locales := HistoricalData.get_supported_locales()

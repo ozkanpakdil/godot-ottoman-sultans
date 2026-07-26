@@ -85,7 +85,11 @@
             "zh": "帝国梦想的奠基人。奥斯曼将边陲贝伊国改造成一个有组织的国家，在巴菲乌斯击败拜占庭人并围困布尔萨，但他未能亲眼看到该城的陷落。",
             "ru": "Основатель мечты, ставшей империей. Осман превратил пограничный бейлик в организованное государство, разбил византийцев при Бафее и осадил Бурсу, завоевания которой не дожил.",
             "es": "Fundador del sueño que se convirtió en imperio. Osmán transformó un beylik fronterizo en un estado organizado, derrotó a los bizantinos en Bafeo y sitió Bursa, cuya conquista no llegó a ver."
-          }
+          },
+          "children": [
+            "Orhan",
+            "Alaeddin Pasha"
+          ]
         },
         {
           "name": {
@@ -153,7 +157,13 @@
             "zh": "国家的缔造者。奥尔汗攻占布尔萨并定都于此，夺取伊兹尼克，在佩莱卡农击败拜占庭人，建立了第一批正规的奥斯曼制度与军团。",
             "ru": "Созидатель государства. Орхан захватил Бурсу и сделал её столицей, взял Изник, разбил византийцев при Пелеканоне и создал первые регулярные османские институты и армейские корпуса.",
             "es": "El constructor del Estado. Orhan capturó Bursa y la convirtió en capital, tomó İznik, derrotó a los bizantinos en Pelecanon y organizó las primeras instituciones regulares y cuerpos de ejército otomanos."
-          }
+          },
+          "children": [
+            "Murad I",
+            "Süleyman Pasha",
+            "İbrahim",
+            "Halil"
+          ]
         },
         {
           "name": {
@@ -220,7 +230,12 @@
             "zh": "鲁米利亚的征服者。穆拉德一世将国家带入巴尔干，创立了近卫军（耶尼切里军团），在马里查获胜，并在赢得科索沃战役后殉难于战场。",
             "ru": "Завоеватель Румелии. Мурад I перенёс государство на Балканы, основал корпус янычар, победил на Марице и пал мучеником на Косовом поле после одержанной победы.",
             "es": "El conquistador de Rumelia. Murad I llevó el Estado a los Balcanes, fundó el cuerpo de jenízaros, venció en el Maritsa y cayó mártir en el campo de Kosovo tras ganar la batalla."
-          }
+          },
+          "children": [
+            "Bayezid I",
+            "Yakub Çelebi",
+            "Savcı Bey"
+          ]
         },
         {
           "name": {
@@ -287,7 +302,14 @@
             "zh": "雷霆苏丹。巴耶济德一世在尼科波利斯粉碎十字军并围困君士坦丁堡，但1402年在安卡拉被帖木儿击败并俘虏，国家分崩离析，引发了大空位时期。",
             "ru": "Молния. Баязид I сокрушил крестоносцев при Никополе и осаждал Константинополь, но его поражение и плен от Тимура под Анкарой в 1402 году разбили государство и вызвали междуцарствие.",
             "es": "El Rayo. Bayezid I aplastó a los cruzados en Nicópolis y sitió Constantinopla, pero su derrota y captura a manos de Timur en Ankara en 1402 destrozó el Estado y desencadenó el Interregno."
-          }
+          },
+          "children": [
+            "Süleyman Çelebi",
+            "İsa Çelebi",
+            "Mehmed I",
+            "Musa Çelebi",
+            "Mustafa Çelebi"
+          ]
         },
         {
           "name": {
@@ -337,7 +359,13 @@
             "zh": "第二奠基者。在巴耶济德诸子之间的大空位内战后，穆罕默德一世重建了中央集权，将国家从灰烬中复兴。",
             "ru": "Второй основатель. После гражданской войны междуцарствия (Фетрет Деври) между сыновьями Баязида Мехмед I восстановил центральную власть и возродил государство из пепла.",
             "es": "El segundo fundador. Tras la guerra civil del Interregno (Fetret Devri) entre los hijos de Bayezid, Mehmed I restauró la autoridad centralizada y reconstruyó el Estado de sus cenizas."
-          }
+          },
+          "children": [
+            "Murad II",
+            "Mustafa Çelebi",
+            "Yusuf Çelebi",
+            "Mahmud Çelebi"
+          ]
         },
         {
           "name": {
@@ -404,7 +432,13 @@
             "zh": "十字军的粉碎者。穆拉德二世在瓦尔纳和科索沃摧毁了十字军，巩固了奥斯曼在巴尔干的霸权，为征服君士坦丁堡铺平了道路。",
             "ru": "Сокрушитель крестовых походов. Мурад II уничтожил армии крестоносцев при Варне и на Косовом поле, упрочив господство османов на Балканах и подготовив почву для завоевания Константинополя.",
             "es": "El rompedor de cruzadas. Murad II destruyó los ejércitos cruzados en Varna y Kosovo, cimentando el dominio otomano en los Balcanes y preparando el terreno para la conquista de Constantinopla."
-          }
+          },
+          "children": [
+            "Mehmed II",
+            "Ahmed",
+            "Alaeddin Ali Çelebi",
+            "Orhan"
+          ]
         }
       ]
     },
@@ -510,7 +544,12 @@
             "zh": "征服者。1453年，21岁的穆罕默德二世攻下君士坦丁堡，将国家转变为帝国。他身为立法者和科学的庇护者，重塑了宫廷、法律与学术。",
             "ru": "Завоеватель. В 21 год Мехмед II взял Константинополь (1453), превратив государство в империю. Законодатель и покровитель наук, он преобразил дворец, право и учёность.",
             "es": "El Conquistador. A los 21 años, Mehmed II tomó Constantinopla en 1453, transformando el estado en un imperio. Legislador y mecenas de la ciencia, remodeló el palacio, la ley y el saber."
-          }
+          },
+          "children": [
+            "Bayezid II",
+            "Mustafa",
+            "Cem Sultan"
+          ]
         },
         {
           "name": {
@@ -577,7 +616,13 @@
             "zh": "圣者（维利）。巴耶济德二世统治着一个巩固中的帝国，度过了杰姆苏丹危机，并以1492年营救被西班牙驱逐的犹太人而闻名。",
             "ru": "Святой (Вели). Баязид II правил укрепляющейся империей, пережил кризис с Джемом-султаном и прославился спасением евреев, изгнанных из Испании в 1492 году.",
             "es": "El Santo (Veli). Bayezid II gobernó un imperio en consolidación, superó la crisis del sultán Cem y rescató célebremente a los judíos expulsados de España en 1492."
-          }
+          },
+          "children": [
+            "Selim I",
+            "Ahmet",
+            "Korkut",
+            "Şehzade Abdullah"
+          ]
         },
         {
           "name": {
@@ -659,7 +704,12 @@
             "zh": "严酷者。短短八年间，塞利姆一世使帝国疆域翻倍：查尔迪兰击溃萨法维，马尔吉达比克和里达尼亚摧毁马穆鲁克，哈里发位归于伊斯坦布尔。",
             "ru": "Грозный. За восемь коротких лет Селим I удвоил империю: Чалдыран сломил Сефевидов, Мардж-Дабик и Ридания уничтожили мамлюков, а халифат перешёл к Стамбулу.",
             "es": "El Severo. En ocho cortos años Selim I duplicó el imperio: Chaldirán quebró a los safávidas, Marj Dabiq y Ridaniya destruyeron a los mamelucos, y el Califato llegó a Estambul."
-          }
+          },
+          "children": [
+            "Süleyman I",
+            "Şehzade Mustafa",
+            "Şehzade Orhan"
+          ]
         },
         {
           "name": {
@@ -758,7 +808,15 @@
             "zh": "立法者与壮丽者。苏莱曼46年的统治是帝国的鼎盛时期：贝尔格莱德、莫哈奇、维也纳、地中海——以及一部以他命名的法典。他在锡盖特堡的征途中去世。",
             "ru": "Законодатель и Великолепный. 46-летнее правление Сулеймана стало зенитом империи: Белград, Мохач, Вена, Средиземноморье — и свод законов, носивший его имя. Он умер в походе под Сигетваром.",
             "es": "El Legislador y el Magnífico. Los 46 años de reinado de Solimán fueron el apogeo del imperio: Belgrado, Mohács, Viena, el Mediterráneo — y un código legal que llevaba su nombre. Murió en campaña en Szigetvár."
-          }
+          },
+          "children": [
+            "Mustafa",
+            "Mehmed",
+            "Selim II",
+            "Bayezid",
+            "Cihangir",
+            "Mihrimah Sultan"
+          ]
         }
       ]
     },
@@ -846,7 +904,14 @@
             "zh": "塞利姆二世是苏莱曼与许蕾姆之子，他夺取了塞浦路斯，却在1571年的勒班陀海战中遭遇舰队覆灭。实权日益落入大维齐尔索科卢·穆罕默德帕夏之手。",
             "ru": "Селим II, сын Сулеймана и Хюррем, завоевал Кипр, но в 1571 году потерял флот при Лепанто. Реальная власть всё больше переходила к великому везиру Соколлу Мехмед-паше.",
             "es": "Selim II, hijo de Solimán y Hürrem, conquistó Chipre pero sufrió la destrucción de su flota en Lepanto en 1571. El poder real recaía cada vez más en su gran visir Sokollu Mehmed Pasha."
-          }
+          },
+          "children": [
+            "Murad III",
+            "Mustafa",
+            "Osman",
+            "Hatice Sultan",
+            "Esma Sultan"
+          ]
         },
         {
           "name": {
@@ -2359,7 +2424,9 @@
         {
           "start": 1299,
           "end": 1326,
-          "sultan_slugs": ["osman_i"]
+          "sultan_slugs": [
+            "osman_i"
+          ]
         }
       ],
       "events": [
@@ -2388,7 +2455,10 @@
         {
           "start": 1326,
           "end": 1365,
-          "sultan_slugs": ["orhan", "murad_i"]
+          "sultan_slugs": [
+            "orhan",
+            "murad_i"
+          ]
         }
       ],
       "events": [
@@ -2417,7 +2487,13 @@
         {
           "start": 1365,
           "end": 1453,
-          "sultan_slugs": ["murad_i", "bayezid_i", "mehmed_i", "murad_ii", "mehmed_ii"]
+          "sultan_slugs": [
+            "murad_i",
+            "bayezid_i",
+            "mehmed_i",
+            "murad_ii",
+            "mehmed_ii"
+          ]
         }
       ],
       "events": [
@@ -2446,7 +2522,37 @@
         {
           "start": 1453,
           "end": 1922,
-          "sultan_slugs": ["mehmed_ii", "bayezid_ii", "selim_i", "suleiman_i", "selim_ii", "murad_iii", "mehmed_iii", "ahmed_i", "mustafa_i", "osman_ii", "murad_iv", "ibrahim", "mehmed_iv", "suleiman_ii", "ahmed_ii", "mustafa_ii", "ahmed_iii", "mahmud_i", "osman_iii", "mustafa_iii", "abdulhamid_i", "selim_iii", "mahmud_ii", "abdulmejid_i", "abdulaziz", "murad_v", "abdulhamid_ii", "mehmed_v", "mehmed_vi"]
+          "sultan_slugs": [
+            "mehmed_ii",
+            "bayezid_ii",
+            "selim_i",
+            "suleiman_i",
+            "selim_ii",
+            "murad_iii",
+            "mehmed_iii",
+            "ahmed_i",
+            "mustafa_i",
+            "osman_ii",
+            "murad_iv",
+            "ibrahim",
+            "mehmed_iv",
+            "suleiman_ii",
+            "ahmed_ii",
+            "mustafa_ii",
+            "ahmed_iii",
+            "mahmud_i",
+            "osman_iii",
+            "mustafa_iii",
+            "abdulhamid_i",
+            "selim_iii",
+            "mahmud_ii",
+            "abdulmejid_i",
+            "abdulaziz",
+            "murad_v",
+            "abdulhamid_ii",
+            "mehmed_v",
+            "mehmed_vi"
+          ]
         }
       ],
       "events": [
@@ -2505,6 +2611,224 @@
       ],
       "chapter_index": 1,
       "description_key": "CITY_BAGHDAD_DESC"
+    }
+  ],
+  "diplomatic_events": [
+    {
+      "year": 1499,
+      "sultan_slug": "bayezid_ii",
+      "name": {
+        "en": "Treaty of Venice",
+        "tr": "Venedik Antlaşması",
+        "zh": "威尼斯条约",
+        "ru": "Венецианский договор",
+        "es": "Tratado de Venecia"
+      },
+      "description": {
+        "en": "Peace treaty ending the Ottoman-Venetian War of 1499–1503, confirming Ottoman naval dominance in the eastern Mediterranean.",
+        "tr": "1499-1503 Osmanlı-Venedik Savaşı'nı sona erdiren ve Osmanlı'nın doğu Akdeniz'deki deniz üstünlüğünü doğrulayan barış antlaşması.",
+        "zh": "结束1499-1503年奥斯曼-威尼斯战争的和平条约，确认了奥斯曼在东地中海的海上优势。",
+        "ru": "Мирный договор, завершивший Османо-венецианскую войну 1499–1503 годов и подтвердивший османское морское превосходство в восточном Средиземноморье.",
+        "es": "Tratado de paz que puso fin a la Guerra Otomano-Veneciana de 1499-1503, confirmando el dominio naval otomano en el Mediterráneo oriental."
+      }
+    },
+    {
+      "year": 1533,
+      "sultan_slug": "suleiman_i",
+      "name": {
+        "en": "Treaty of Constantinople",
+        "tr": "Konstantinopolis Antlaşması",
+        "zh": "君士坦丁堡条约",
+        "ru": "Константинопольский договор",
+        "es": "Tratado de Constantinopla"
+      },
+      "description": {
+        "en": "Agreement between the Ottoman Empire and the Habsburgs ending hostilities in Hungary and recognizing Ottoman territorial gains.",
+        "tr": "Osmanlı İmparatorluğu ile Habsburglar arasında Macaristan'daki çatışmaları sona erdiren ve Osmanlı toprak kazanımlarını tanıyan antlaşma.",
+        "zh": "奥斯曼帝国与哈布斯堡王朝之间结束匈牙利敌对状态并承认奥斯曼领土收益的协议。",
+        "ru": "Соглашение между Османской империей и Габсбургами, прекратившее военные действия в Венгрии и признавшее османские территориальные приобретения.",
+        "es": "Acuerdo entre el Imperio Otomano y los Habsburgo que puso fin a las hostilidades en Hungría y reconoció las ganancias territoriales otomanas."
+      }
+    },
+    {
+      "year": 1536,
+      "sultan_slug": "suleiman_i",
+      "name": {
+        "en": "Franco-Ottoman Alliance",
+        "tr": "Fransız-Osmanlı İttifakı",
+        "zh": "法奥同盟",
+        "ru": "Франко-османский альянс",
+        "es": "Alianza Franco-Otomana"
+      },
+      "description": {
+        "en": "Diplomatic and military alliance between Francis I of France and Suleiman the Magnificent against the Habsburgs.",
+        "tr": "I. François ile Kanuni Sultan Süleyman arasında Habsburglara karşı imzalanan diplomatik ve askeri ittifak.",
+        "zh": "法国弗朗索瓦一世与苏莱曼大帝之间针对哈布斯堡王朝建立的外交与军事同盟。",
+        "ru": "Дипломатический и военный союз между Франциском I Французским и Сулейманом Великолепным против Габсбургов.",
+        "es": "Alianza diplomática y militar entre Francisco I de Francia y Solimán el Magnífico contra los Habsburgo."
+      }
+    },
+    {
+      "year": 1568,
+      "sultan_slug": "selim_ii",
+      "name": {
+        "en": "Treaty of Adrianople",
+        "tr": "Edirne Antlaşması",
+        "zh": "阿德里安堡条约",
+        "ru": "Адрианопольский договор",
+        "es": "Tratado de Adrianópolis"
+      },
+      "description": {
+        "en": "Treaty ending the Austro-Turkish War, confirming Ottoman control over Transylvania and establishing a twenty-year truce.",
+        "tr": "Avusturya-Türk Savaşı'nı sona erdiren, Erdel üzerindeki Osmanlı kontrolünü doğrulayan ve yirmi yıllık ateşkes kuran antlaşma.",
+        "zh": "结束奥土战争的条约，确认奥斯曼对特兰西瓦尼亚的控制并建立二十年停战。",
+        "ru": "Договор, завершивший Австро-турецкую войну, подтвердивший османский контроль над Трансильванией и установивший двадцатилетнее перемирие.",
+        "es": "Tratado que puso fin a la Guerra Austro-Turca, confirmó el control otomano sobre Transilvania y estableció una tregua de veinte años."
+      }
+    },
+    {
+      "year": 1606,
+      "sultan_slug": "ahmed_i",
+      "name": {
+        "en": "Treaty of Zsitvatorok",
+        "tr": "Zitvatorok Antlaşması",
+        "zh": "吉托瓦托克条约",
+        "ru": "Житватоцкий мир",
+        "es": "Tratado de Zsitvatorok"
+      },
+      "description": {
+        "en": "Treaty ending the Long Turkish War between the Ottoman Empire and the Habsburg Monarchy, restoring status quo in Hungary.",
+        "tr": "Osmanlı İmparatorluğu ile Habsburg Monarşisi arasındaki Uzun Türk Savaşı'nı sona erdiren ve Macaristan'da statükoyu restore eden antlaşma.",
+        "zh": "结束奥斯曼帝国与哈布斯堡君主国之间长期土耳其战争的条约，恢复匈牙利现状。",
+        "ru": "Договор, завершивший Длинную турецкую войну между Османской империей и Габсбургской монархией и восстановивший статус-кво в Венгрии.",
+        "es": "Tratado que puso fin a la Guerra Larga Turca entre el Imperio Otomano y la Monarquía Habsburgo, restaurando el statu quo en Hungría."
+      }
+    },
+    {
+      "year": 1774,
+      "sultan_slug": "abdulhamid_i",
+      "name": {
+        "en": "Treaty of Küçük Kaynarca",
+        "tr": "Küçük Kaynarca Antlaşması",
+        "zh": "库楚克开纳吉条约",
+        "ru": "Кючук-Кайнарджийский мир",
+        "es": "Tratado de Küçük Kaynarca"
+      },
+      "description": {
+        "en": "Treaty ending the Russo-Turkish War of 1768–1774, granting Russia significant concessions in the Black Sea region.",
+        "tr": "1768-1774 Osmanlı-Rus Savaşı'nı sona erdiren ve Rusya'ya Karadeniz bölgesinde önemli tavizler veren antlaşma.",
+        "zh": "结束1768-1774年俄土战争的条约，向俄罗斯让出黑海地区重大利益。",
+        "ru": "Договор, завершивший Русско-турецкую войну 1768–1774 годов и предоставивший России значительные уступки в регионе Чёрного моря.",
+        "es": "Tratado que puso fin a la Guerra Ruso-Turca de 1768-1774, otorgando a Rusia importantes concesiones en la región del Mar Negro."
+      }
+    },
+    {
+      "year": 1792,
+      "sultan_slug": "selim_iii",
+      "name": {
+        "en": "Treaty of Jassy",
+        "tr": "Yaş Antlaşması",
+        "zh": "雅西条约",
+        "ru": "Ясский мир",
+        "es": "Tratado de Jassy"
+      },
+      "description": {
+        "en": "Treaty ending the Russo-Turkish War of 1787–1792, confirming Russian annexation of Crimea and the Yedisan region.",
+        "tr": "1787-1792 Osmanlı-Rus Savaşı'nı sona erdiren ve Kırım ile Yedisan bölgesinin Rusya'ya ilhakını doğrulayan antlaşma.",
+        "zh": "结束1787-1792年俄土战争的条约，确认俄罗斯对克里米亚和耶迪桑地区的吞并。",
+        "ru": "Договор, завершивший Русско-турецкую войну 1787–1792 годов и подтвердивший присоединение к России Крыма и региона Едисана.",
+        "es": "Tratado que puso fin a la Guerra Ruso-Turca de 1787-1792, confirmando la anexión rusa de Crimea y la región de Yedisan."
+      }
+    },
+    {
+      "year": 1812,
+      "sultan_slug": "mahmud_ii",
+      "name": {
+        "en": "Treaty of Bucharest",
+        "tr": "Bükreş Antlaşması",
+        "zh": "布加勒斯特条约",
+        "ru": "Бухарестский мир",
+        "es": "Tratado de Bucarest"
+      },
+      "description": {
+        "en": "Treaty ending the Russo-Turkish War of 1806–1812, ceding Bessarabia to Russia and allowing Ottoman withdrawal to focus on the Napoleonic threat.",
+        "tr": "1806-1812 Osmanlı-Rus Savaşı'nı sona erdiren, Besarabya'yı Rusya'ya bırakan ve Osmanlı'ya Napolyon tehdidine odaklanmak için geri çekilme olanağı tanıyan antlaşma.",
+        "zh": "结束1806-1812年俄土战争的条约，将比萨拉比亚割让给俄罗斯，使奥斯曼得以抽身应对拿破仑威胁。",
+        "ru": "Договор, завершивший Русско-турецкую войну 1806–1812 годов, уступивший Бессарабию России и позволивший Османской империи сосредоточиться на угрозе Наполеона.",
+        "es": "Tratado que puso fin a la Guerra Ruso-Turca de 1806-1812, cediendo Besarabia a Rusia y permitiendo al Imperio Otomano retirarse para centrarse en la amenaza napoleónica."
+      }
+    },
+    {
+      "year": 1829,
+      "sultan_slug": "mahmud_ii",
+      "name": {
+        "en": "Treaty of Adrianople",
+        "tr": "Edirne Antlaşması",
+        "zh": "阿德里安堡条约",
+        "ru": "Адрианопольский договор",
+        "es": "Tratado de Adrianópolis"
+      },
+      "description": {
+        "en": "Treaty ending the Russo-Turkish War of 1828–1829, granting autonomy to Serbia, Greece, and the Danubian Principalities.",
+        "tr": "1828-1829 Osmanlı-Rus Savaşı'nı sona erdiren, Sırbistan, Yunanistan ve Eflak-Boğdan Prenslikleri'ne özerklik tanıyan antlaşma.",
+        "zh": "结束1828-1829年俄土战争的条约，给予塞尔维亚、希腊和多瑙河诸公国自治权。",
+        "ru": "Договор, завершивший Русско-турецкую войну 1828–1829 годов, предоставивший автономию Сербии, Греции и Дунайским княжествам.",
+        "es": "Tratado que puso fin a la Guerra Ruso-Turca de 1828-1829, otorgando autonomía a Serbia, Grecia y los Principados Danubianos."
+      }
+    },
+    {
+      "year": 1833,
+      "sultan_slug": "mahmud_ii",
+      "name": {
+        "en": "Treaty of Hünkâr İskelesi",
+        "tr": "Hünkâr İskelesi Antlaşması",
+        "zh": "洪基尔-伊斯凯莱西条约",
+        "ru": "Ункар-Искелесийский договор",
+        "es": "Tratado de Hünkâr İskelesi"
+      },
+      "description": {
+        "en": "Defensive alliance between the Ottoman Empire and Russia following Mehmed Ali Pasha's rebellion in Egypt.",
+        "tr": "Mısır'daki Mehmet Ali Paşa isyanı sonrasında Osmanlı İmparatorluğu ile Rusya arasında imzalanan savunma ittifakı.",
+        "zh": "在埃及穆罕默德·阿里帕夏叛乱后，奥斯曼帝国与俄罗斯之间签订的防御同盟。",
+        "ru": "Оборонительный союз между Османской империей и Россией после восстания Мехмеда Али-паши в Египте.",
+        "es": "Alianza defensiva entre el Imperio Otomano y Rusia tras la rebelión de Mehmed Ali Pasha en Egipto."
+      }
+    },
+    {
+      "year": 1856,
+      "sultan_slug": "abdulmejid_i",
+      "name": {
+        "en": "Treaty of Paris",
+        "tr": "Paris Antlaşması",
+        "zh": "巴黎条约",
+        "ru": "Парижский договор",
+        "es": "Tratado de París"
+      },
+      "description": {
+        "en": "Treaty ending the Crimean War, guaranteeing Ottoman territorial integrity and admitting the empire into the European concert.",
+        "tr": "Kırım Savaşı'nı sona erdiren, Osmanlı toprak bütünlüğünü garanti altına alan ve imparatorluğu Avrupa konserine kabul eden antlaşma.",
+        "zh": "结束克里米亚战争的条约，保证奥斯曼领土完整并使其加入欧洲协调。",
+        "ru": "Договор, завершивший Крымскую войну, гарантировавший территориальную целостность Османской империи и принявший её в европейский концерт держав.",
+        "es": "Tratado que puso fin a la Guerra de Crimea, garantizó la integridad territorial otomana e incorporó al imperio al concierto europeo."
+      }
+    },
+    {
+      "year": 1878,
+      "sultan_slug": "abdulhamid_ii",
+      "name": {
+        "en": "Treaty of Berlin",
+        "tr": "Berlin Antlaşması",
+        "zh": "柏林条约",
+        "ru": "Берлинский договор",
+        "es": "Tratado de Berlín"
+      },
+      "description": {
+        "en": "Treaty revising the Treaty of San Stefano, recognizing Balkan states' independence and reducing Ottoman territories in Europe.",
+        "tr": "Ayastefanos Antlaşması'nı revize eden, Balkan devletlerinin bağımsızlığını tanıyan ve Osmanlı'nın Avrupa'daki topraklarını azaltan antlaşma.",
+        "zh": "修订《圣斯特凡诺条约》的条约，承认巴尔干诸国独立并削减奥斯曼在欧洲的领土。",
+        "ru": "Договор, пересмотревший Сан-Стефанский мир, признавший независимость балканских государств и сокративший османские территории в Европе.",
+        "es": "Tratado que revisó el Tratado de San Stefano, reconoció la independencia de los estados balcánicos y redujo los territorios otomanos en Europa."
+      }
     }
   ]
 }

@@ -109,6 +109,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 16
 text = "Leaderboard"
 
+[node name="AchievementsButton" type="Button" parent="CanvasLayer/MenuPanel/MarginContainer/VBoxContainer" unique_id=849556467]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Achievements"
+
 [node name="LanguageSelect" type="OptionButton" parent="CanvasLayer/MenuPanel/MarginContainer/VBoxContainer" unique_id=849556461]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)

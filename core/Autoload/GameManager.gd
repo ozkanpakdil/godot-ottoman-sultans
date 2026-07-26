@@ -17,6 +17,24 @@ const SUPPORTED_LOCALES := ["en", "tr", "zh", "ru", "es"]
 # Audio
 var music_muted: bool = false
 
+# Category mastery badges
+var category_stats: Dictionary = {}
+var earned_badges: Array = []
+const CATEGORIES := ["war", "diplomacy", "family", "chronology"]
+const BADGE_THRESHOLDS := [3, 8, 15, 25]
+const BADGE_TITLES := {
+	"war": ["UI_BADGE_WAR_1", "UI_BADGE_WAR_2", "UI_BADGE_WAR_3", "UI_BADGE_WAR_4"],
+	"diplomacy": ["UI_BADGE_DIPLOMACY_1", "UI_BADGE_DIPLOMACY_2", "UI_BADGE_DIPLOMACY_3", "UI_BADGE_DIPLOMACY_4"],
+	"family": ["UI_BADGE_FAMILY_1", "UI_BADGE_FAMILY_2", "UI_BADGE_FAMILY_3", "UI_BADGE_FAMILY_4"],
+	"chronology": ["UI_BADGE_CHRONOLOGY_1", "UI_BADGE_CHRONOLOGY_2", "UI_BADGE_CHRONOLOGY_3", "UI_BADGE_CHRONOLOGY_4"]
+}
+const CATEGORY_ICONS := {
+	"war": "⚔️",
+	"diplomacy": "🕊️",
+	"family": "👑",
+	"chronology": "⏳"
+}
+
 # Quiz bonus constants
 const CORRECT_ANSWER_BONUS: int = 50
 const TIME_POINTS_INTERVAL: float = 10.0
@@ -27,6 +45,7 @@ signal score_updated(new_score: int)
 signal progress_changed(chapter_index: int, sultan_index: int)
 signal quiz_completed(chapter_id: int, result: Dictionary)
 signal locale_changed(new_locale: String)
+signal badge_earned(badge_id: String)
 
 func _ready() -> void:
 	_load_translation_resources()
@@ -154,3 +173,44 @@ func update_game_center() -> void:
 		var pgs = Engine.get_singleton("GodotPlayGamesServices")
 		if pgs.has_method("leaderboards_submit_score"):
 			pgs.leaderboards_submit_score("com.ottoman.timeline.highscore", score)
+
+func record_category_answer(category: String, correct: bool) -> void:
+	if not (category in CATEGORIES):
+		return
+	if not category_stats.has(category):
+		category_stats[category] = {"correct": 0, "total": 0}
+	category_stats[category]["total"] += 1
+	if correct:
+		category_stats[category]["correct"] += 1
+
+func check_and_award_badges() -> Array:
+	var newly_earned: Array = []
+	for category in CATEGORIES:
+		var stats: Dictionary = category_stats.get(category, {"correct": 0, "total": 0})
+		var correct: int = stats.get("correct", 0)
+		for i in BADGE_THRESHOLDS.size():
+			var badge_id: String = BADGE_TITLES[category][i]
+			if correct >= BADGE_THRESHOLDS[i] and not (badge_id in earned_badges):
+				earned_badges.append(badge_id)
+				newly_earned.append(badge_id)
+				badge_earned.emit(badge_id)
+	if not newly_earned.is_empty():
+		SaveManager.save_progress()
+	return newly_earned
+
+func get_category_badge_level(category: String) -> int:
+	if not (category in CATEGORIES):
+		return -1
+	var stats: Dictionary = category_stats.get(category, {"correct": 0, "total": 0})
+	var correct: int = stats.get("correct", 0)
+	var level := -1
+	for i in BADGE_THRESHOLDS.size():
+		if correct >= BADGE_THRESHOLDS[i]:
+			level = i
+	return level
+
+func get_badge_display_name(badge_id: String) -> String:
+	return tr(badge_id)
+
+func get_category_display_name(category: String) -> String:
+	return tr("UI_CATEGORY_" + category.to_upper())
