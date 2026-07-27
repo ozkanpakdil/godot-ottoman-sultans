@@ -37,7 +37,7 @@ theme_override_constants/separation = 12
 [node name="MenuButton" type="Button" parent="MarginContainer/VBoxContainer/TopBar"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "☰ Menu"
+text = "≡"
 
 [node name="ChapterLabel" type="Label" parent="MarginContainer/VBoxContainer/TopBar"]
 unique_name_in_owner = true
