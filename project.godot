@@ -20,6 +20,11 @@ run/main_scene="res://scenes/Map/Map.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/UI/icon.svg"
 
+[boot_splash]
+
+bg_color=Color(0.0509804, 0.0509804, 0.0705882, 1)
+image="res://assets/UI/icon.svg"
+
 [autoload]
 
 HistoricalData="*res://core/Autoload/HistoricalData.gd"
