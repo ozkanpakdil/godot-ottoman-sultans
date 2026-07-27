@@ -702,11 +702,16 @@ build_linux() {
     echo "Linux executable ready at: $BUILD_DIR/linux/Chronicles_of_the_House_of_Osman.x86_64"
 }
 
+build_web() {
+    export_platform "Web" "build/web/index.html"
+    echo "Web build ready at: $BUILD_DIR/web/"
+}
+
 # -----------------------------------------------------------------------------
 # Argument parsing
 # -----------------------------------------------------------------------------
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 [ios|android|mac|windows|linux|mobile|desktop|all]..." >&2
+    echo "Usage: $0 [ios|android|mac|windows|linux|web|mobile|desktop|all]..." >&2
     echo "       $0 --install-templates" >&2
     exit 1
 fi
@@ -733,12 +738,13 @@ for arg in "$@"; do
         mac|macos) build_mac ;;
         windows|win) build_windows ;;
         linux) build_linux ;;
+        web) build_web ;;
         mobile) build_android; build_ios ;;
         desktop) build_mac; build_windows; build_linux ;;
         all) build_android; build_ios; build_mac; build_windows; build_linux ;;
         *)
             echo "Unknown target: $arg" >&2
-            echo "Valid targets: ios, android, mac, windows, linux, mobile, desktop, all" >&2
+            echo "Valid targets: ios, android, mac, windows, linux, web, mobile, desktop, all" >&2
             exit 1
             ;;
     esac
