@@ -704,6 +704,11 @@ build_linux() {
 
 build_web() {
     export_platform "Web" "build/web/index.html"
+    # The default Godot loading splash is not replaced by the project's boot
+    # splash image for web exports, so copy our splash over index.png.
+    if [ -f "$PROJECT_DIR/assets/UI/splash.png" ]; then
+        cp "$PROJECT_DIR/assets/UI/splash.png" "$BUILD_DIR/web/index.png"
+    fi
     echo "Web build ready at: $BUILD_DIR/web/"
 }
 
