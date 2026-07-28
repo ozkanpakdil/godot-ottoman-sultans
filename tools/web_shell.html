@@ -262,6 +262,121 @@
 			}
 		}());
 	</script>
+	<script>
+		// Mobile touch handling for the web build.
+		// Godot's HTML5 export sometimes delivers touch as mouse motion, so we
+		// track touches directly and forward pan / pinch / tap events to the
+		// game through JavaScriptBridge callbacks registered by Map.gd.
+		(function () {
+			const canvas = document.getElementById('canvas');
+			if (!canvas) {
+				return;
+			}
+
+			const touchState = new Map();
+			let prevTouches = [];
+
+			function touchArrayFromList(list) {
+				const arr = [];
+				for (let i = 0; i < list.length; i++) {
+					const t = list[i];
+					const s = touchState.get(t.identifier) || {
+						moved: false,
+						startX: t.clientX,
+						startY: t.clientY,
+						startTime: Date.now(),
+					};
+					arr.push({
+						id: t.identifier,
+						x: t.clientX,
+						y: t.clientY,
+						moved: s.moved,
+						startX: s.startX,
+						startY: s.startY,
+						startTime: s.startTime,
+					});
+				}
+				return arr;
+			}
+
+			function updateTouchState(curr) {
+				for (const t of curr) {
+					const s = touchState.get(t.id) || {
+						moved: false,
+						startX: t.x,
+						startY: t.y,
+						startTime: Date.now(),
+					};
+					if (Math.hypot(t.x - s.startX, t.y - s.startY) > 10) {
+						s.moved = true;
+					}
+					s.x = t.x;
+					s.y = t.y;
+					touchState.set(t.id, s);
+				}
+			}
+
+			canvas.addEventListener('touchstart', (e) => {
+				e.preventDefault();
+				for (const t of e.changedTouches) {
+					touchState.set(t.identifier, {
+						x: t.clientX,
+						y: t.clientY,
+						startX: t.clientX,
+						startY: t.clientY,
+						startTime: Date.now(),
+						moved: false,
+					});
+				}
+				prevTouches = touchArrayFromList(e.touches);
+			}, { passive: false });
+
+			canvas.addEventListener('touchmove', (e) => {
+				e.preventDefault();
+				const curr = touchArrayFromList(e.touches);
+				if (window.godotMapTouch && prevTouches.length > 0) {
+					if (curr.length === 1 && prevTouches.length === 1) {
+						const dx = curr[0].x - prevTouches[0].x;
+						const dy = curr[0].y - prevTouches[0].y;
+						window.godotMapTouch(['pan', dx, dy]);
+					} else if (curr.length === 2 && prevTouches.length === 2) {
+						const prevCx = (prevTouches[0].x + prevTouches[1].x) / 2;
+						const prevCy = (prevTouches[0].y + prevTouches[1].y) / 2;
+						const currCx = (curr[0].x + curr[1].x) / 2;
+						const currCy = (curr[0].y + curr[1].y) / 2;
+						const prevDist = Math.hypot(prevTouches[0].x - prevTouches[1].x, prevTouches[0].y - prevTouches[1].y);
+						const currDist = Math.hypot(curr[0].x - curr[1].x, curr[0].y - curr[1].y);
+						const ratio = (prevDist > 0 && currDist > 0) ? prevDist / currDist : 1.0;
+						window.godotMapTouch(['pinch', currCx - prevCx, currCy - prevCy, ratio]);
+					}
+				}
+				updateTouchState(curr);
+				prevTouches = curr;
+			}, { passive: false });
+
+			canvas.addEventListener('touchend', (e) => {
+				e.preventDefault();
+				for (const t of e.changedTouches) {
+					const s = touchState.get(t.identifier);
+					if (s && !s.moved && Date.now() - s.startTime < 600 && touchState.size === 1) {
+						if (window.godotMapClick) {
+							window.godotMapClick([t.clientX, t.clientY]);
+						}
+					}
+					touchState.delete(t.identifier);
+				}
+				prevTouches = touchArrayFromList(e.touches);
+			}, { passive: false });
+
+			canvas.addEventListener('touchcancel', (e) => {
+				e.preventDefault();
+				for (const t of e.changedTouches) {
+					touchState.delete(t.identifier);
+				}
+				prevTouches = touchArrayFromList(e.touches);
+			}, { passive: false });
+		}());
+	</script>
 </body>
 
 </html>

@@ -16,6 +16,7 @@ extends Node3D
 @onready var zoom_slider: HSlider = %ZoomSlider
 @onready var zoom_in_button: Button = %ZoomInButton
 @onready var zoom_out_button: Button = %ZoomOutButton
+@onready var center_button: Button = %CenterButton
 
 # Menu bar
 @onready var menu_button: Button = %MenuButton
@@ -52,6 +53,7 @@ var _has_dragged := false
 var _drag_start_pos := Vector2.ZERO
 var _last_mouse_pos := Vector2.ZERO
 var _touches: Dictionary = {}
+var _home_rotation: Vector3 = Vector3.ZERO
 
 func _ready() -> void:
 	go_button.text = tr("UI_GO_TO_SULTAN")
@@ -68,6 +70,7 @@ func _ready() -> void:
 	zoom_in_button.pressed.connect(_on_zoom_in_pressed)
 	zoom_out_button.pressed.connect(_on_zoom_out_pressed)
 	zoom_slider.value_changed.connect(_on_zoom_slider_changed)
+	center_button.pressed.connect(_on_center_pressed)
 
 	menu_button.pressed.connect(_on_menu_button_pressed)
 	continue_button.pressed.connect(_on_continue_pressed)
@@ -83,8 +86,10 @@ func _ready() -> void:
 	_build_earth_mesh()
 	_build_hotspots()
 	_center_globe_on_turkey()
+	_home_rotation = globe.rotation
 	_animate_initial_zoom()
 	_hide_detail()
+	_setup_web_touch_callbacks()
 
 func _process(_delta: float) -> void:
 	_update_hotspot_scales()
@@ -506,3 +511,45 @@ func _on_go_pressed() -> void:
 		return
 	GameManager.set_progress(_selected_chapter_index, 0)
 	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+
+func _on_center_pressed() -> void:
+	# Reset the view to the initial centered-on-Turkey position.
+	var tween := create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+	tween.parallel().tween_property(globe, "rotation", _home_rotation, 0.5)
+	tween.parallel().tween_property(camera, "size", ZOOM_START_SIZE, 0.5)
+	tween.finished.connect(_update_zoom_slider)
+
+func _setup_web_touch_callbacks() -> void:
+	if not OS.has_feature("web"):
+		return
+	if not Engine.has_singleton("JavaScriptBridge"):
+		return
+	var jsb = Engine.get_singleton("JavaScriptBridge")
+	var window = jsb.get_interface("window")
+	if window == null:
+		return
+	window.godotMapTouch = jsb.create_callback(_on_web_touch)
+	window.godotMapClick = jsb.create_callback(_on_web_click)
+
+func _on_web_touch(args: Array) -> void:
+	var data: Array = args[0]
+	var type: String = data[0]
+	var dx: float = float(data[1])
+	var dy: float = float(data[2])
+	if type == "pan":
+		_rotate_globe(Vector2(dx, dy), TOUCH_ROTATION_MULTIPLIER)
+	elif type == "pinch":
+		var ratio: float = float(data[3])
+		_rotate_globe(Vector2(dx, dy), TOUCH_ROTATION_MULTIPLIER)
+		camera.size = clampf(camera.size * ratio, ZOOM_SIZE_MIN, ZOOM_SIZE_MAX)
+		_update_zoom_slider()
+
+func _on_web_click(args: Array) -> void:
+	var data: Array = args[0]
+	var pos := Vector2(float(data[0]), float(data[1]))
+	for pressed in [true, false]:
+		var ev := InputEventMouseButton.new()
+		ev.button_index = MOUSE_BUTTON_LEFT
+		ev.pressed = pressed
+		ev.position = pos
+		Input.parse_input_event(ev)
