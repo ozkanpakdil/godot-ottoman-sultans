@@ -29,7 +29,8 @@ extends Node3D
 @onready var exit_button: Button = %ExitButton
 
 const GLOBE_RADIUS := 3.0
-const ROTATION_SENSITIVITY := 0.005
+const ROTATION_SENSITIVITY := 0.0025
+const TOUCH_ROTATION_MULTIPLIER := 0.6
 const ZOOM_SIZE_MIN := 0.25
 const ZOOM_SIZE_MAX := 24.0
 const ZOOM_START_SIZE := 3.5
@@ -50,6 +51,7 @@ var _dragging := false
 var _has_dragged := false
 var _drag_start_pos := Vector2.ZERO
 var _last_mouse_pos := Vector2.ZERO
+var _touches: Dictionary = {}
 
 func _ready() -> void:
 	go_button.text = tr("UI_GO_TO_SULTAN")
@@ -184,7 +186,7 @@ func _center_globe_on_turkey() -> void:
 func _animate_initial_zoom() -> void:
 	camera.size = ZOOM_SIZE_MAX
 	var tween := create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.tween_property(camera, "size", ZOOM_START_SIZE, 1.5)
+	tween.tween_property(camera, "size", ZOOM_START_SIZE, 2.5)
 	tween.finished.connect(_update_zoom_slider)
 
 func _update_zoom_slider() -> void:
@@ -286,13 +288,58 @@ func _unhandled_input(event: InputEvent) -> void:
 		if motion.position.distance_to(_drag_start_pos) > DRAG_THRESHOLD:
 			_has_dragged = true
 		_rotate_globe(delta)
+	elif event is InputEventScreenTouch:
+		var touch := event as InputEventScreenTouch
+		if touch.pressed:
+			_touches[touch.index] = touch.position
+			if _touches.size() == 1:
+				_dragging = true
+				_has_dragged = false
+				_drag_start_pos = touch.position
+				_last_mouse_pos = touch.position
+		else:
+			_touches.erase(touch.index)
+			if _touches.is_empty() and _dragging and not _has_dragged:
+				_raycast_select(touch.position)
+			if _touches.is_empty():
+				_dragging = false
+	elif event is InputEventScreenDrag:
+		var drag := event as InputEventScreenDrag
+		_touches[drag.index] = drag.position
+		if _touches.size() == 1:
+			if drag.position.distance_to(_drag_start_pos) > DRAG_THRESHOLD:
+				_has_dragged = true
+			_rotate_globe(drag.relative, TOUCH_ROTATION_MULTIPLIER)
+		elif _touches.size() == 2:
+			_has_dragged = true
+			_pinch_zoom(drag)
+		get_viewport().set_input_as_handled()
 
-func _rotate_globe(delta: Vector2) -> void:
+func _rotate_globe(delta: Vector2, touch_multiplier: float = 1.0) -> void:
 	# Scale rotation speed by zoom level so dragging feels consistent whether
-	# zoomed in or out.
-	var sensitivity := ROTATION_SENSITIVITY * (camera.size / ZOOM_START_SIZE)
+	# zoomed in or out. Touch input is slowed down further for mobile.
+	var sensitivity := ROTATION_SENSITIVITY * (camera.size / ZOOM_START_SIZE) * touch_multiplier
 	globe.rotate_y(delta.x * sensitivity)
 	globe.rotate_x(delta.y * sensitivity)
+
+func _pinch_zoom(drag: InputEventScreenDrag) -> void:
+	var other_index := _get_other_touch_index(drag.index)
+	if other_index < 0:
+		return
+	var other_pos: Vector2 = _touches[other_index]
+	var old_pos: Vector2 = drag.position - drag.relative
+	var old_dist := old_pos.distance_to(other_pos)
+	var new_dist := drag.position.distance_to(other_pos)
+	if old_dist > 0.0 and new_dist > 0.0:
+		var ratio := old_dist / new_dist
+		camera.size = clampf(camera.size * ratio, ZOOM_SIZE_MIN, ZOOM_SIZE_MAX)
+		_update_zoom_slider()
+
+func _get_other_touch_index(index: int) -> int:
+	for k in _touches.keys():
+		if k != index:
+			return k
+	return -1
 
 func _zoom(amount: float) -> void:
 	camera.size = clampf(camera.size + amount, ZOOM_SIZE_MIN, ZOOM_SIZE_MAX)
