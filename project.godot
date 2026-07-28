@@ -28,6 +28,7 @@ fullsize=false
 
 [autoload]
 
+SceneManager="*res://core/Autoload/SceneManager.gd"
 HistoricalData="*res://core/Autoload/HistoricalData.gd"
 GameManager="*res://core/Autoload/GameManager.gd"
 SaveManager="*res://core/Autoload/SaveManager.gd"

@@ -100,7 +100,7 @@ func _on_forward_pressed() -> void:
 	_render_sultan()
 
 func _on_quiz_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Quiz/Quiz.tscn")
+	SceneManager.push("res://scenes/Quiz/Quiz.tscn")
 
 func _on_video_pressed() -> void:
 	var sultan := GameManager.get_current_sultan()
@@ -110,4 +110,4 @@ func _on_video_pressed() -> void:
 
 func _on_menu_pressed() -> void:
 	SaveManager.save_progress()
-	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")
+	SceneManager.pop_to_map()

@@ -191,7 +191,7 @@ func _center_globe_on_turkey() -> void:
 func _animate_initial_zoom() -> void:
 	camera.size = ZOOM_SIZE_MAX
 	var tween := create_tween().set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-	tween.tween_property(camera, "size", ZOOM_START_SIZE, 2.5)
+	tween.tween_property(camera, "size", ZOOM_START_SIZE, 1.0)
 	tween.finished.connect(_update_zoom_slider)
 
 func _update_zoom_slider() -> void:
@@ -483,21 +483,21 @@ func _on_menu_button_pressed() -> void:
 	menu_panel.visible = not menu_panel.visible
 
 func _on_continue_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
 
 func _on_knowledge_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/KnowledgeLibrary/KnowledgeLibrary.tscn")
+	SceneManager.push("res://scenes/KnowledgeLibrary/KnowledgeLibrary.tscn")
 
 func _on_leaderboard_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Leaderboard/Leaderboard.tscn")
+	SceneManager.push("res://scenes/Leaderboard/Leaderboard.tscn")
 
 func _on_achievements_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Achievements/Achievements.tscn")
+	SceneManager.push("res://scenes/Achievements/Achievements.tscn")
 
 func _on_language_selected(index: int) -> void:
 	var locales := HistoricalData.get_supported_locales()
 	GameManager.set_locale(locales[index])
-	get_tree().reload_current_scene()
+	SceneManager.reload_current_scene()
 
 func _on_music_mute_pressed() -> void:
 	MusicPlayer.toggle_mute()
@@ -510,7 +510,7 @@ func _on_go_pressed() -> void:
 	if _selected_chapter_index < 0:
 		return
 	GameManager.set_progress(_selected_chapter_index, 0)
-	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
 
 func _on_center_pressed() -> void:
 	# Reset the view to the initial centered-on-Turkey position.

@@ -31,7 +31,7 @@ func _build_chapter_list() -> void:
 
 func _on_chapter_pressed(chapter_index: int) -> void:
 	GameManager.set_progress(chapter_index, 0)
-	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")
+	SceneManager.pop_to_map()

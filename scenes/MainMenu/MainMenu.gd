@@ -51,19 +51,19 @@ func _update_stats() -> void:
 func _on_language_selected(index: int) -> void:
 	var locales := HistoricalData.get_supported_locales()
 	GameManager.set_locale(locales[index])
-	get_tree().reload_current_scene()
+	SceneManager.reload_current_scene()
 
 func _on_continue_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
 
 func _on_map_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")
+	SceneManager.push("res://scenes/Map/Map.tscn")
 
 func _on_knowledge_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/KnowledgeLibrary/KnowledgeLibrary.tscn")
+	SceneManager.push("res://scenes/KnowledgeLibrary/KnowledgeLibrary.tscn")
 
 func _on_leaderboard_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Leaderboard/Leaderboard.tscn")
+	SceneManager.push("res://scenes/Leaderboard/Leaderboard.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

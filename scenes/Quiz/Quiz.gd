@@ -94,9 +94,9 @@ func _on_continue_pressed() -> void:
 	var next_chapter := GameManager.current_chapter_index + 1
 	if next_chapter < HistoricalData.get_chapters().size():
 		GameManager.set_progress(next_chapter, 0)
-		get_tree().change_scene_to_file("res://scenes/Timeline/Timeline.tscn")
+		SceneManager.replace("res://scenes/Timeline/Timeline.tscn")
 	else:
-		get_tree().change_scene_to_file("res://scenes/Leaderboard/Leaderboard.tscn")
+		SceneManager.replace("res://scenes/Leaderboard/Leaderboard.tscn")
 
 func _on_back_to_menu_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")
+	SceneManager.pop_to_map()

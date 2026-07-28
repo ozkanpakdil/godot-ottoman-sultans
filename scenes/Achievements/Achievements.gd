@@ -105,4 +105,4 @@ func _build_badge_list() -> void:
 		badge_list.add_child(entry)
 
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/Map/Map.tscn")
+	SceneManager.pop_to_map()
