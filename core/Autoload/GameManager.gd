@@ -8,6 +8,13 @@ var current_sultan_index: int = 0
 var total_study_time: float = 0.0
 var score: int = 0
 var completed_quizzes: Dictionary = {}
+var level_game_scores: Dictionary = {}
+
+# Mini-game routing context set before pushing ArcheryGame/CannonGame.
+var mini_game_context: Dictionary = {}
+
+const MINI_GAME_ARCHERY := "archery"
+const MINI_GAME_CANNON := "cannon"
 
 # i18n
 var locale: String = "en"
@@ -155,11 +162,42 @@ func mark_quiz_completed(chapter_id: int, correct_answers: int, total_questions:
 	SaveManager.save_progress()
 
 func calculate_score(quiz_points: int) -> void:
-	# 1 point per 10 seconds learned + quiz rewards
+	# 1 point per 10 seconds learned + quiz rewards + mini-games
 	var time_points := int(total_study_time / TIME_POINTS_INTERVAL)
-	score = time_points + quiz_points
+	var game_points := get_total_mini_game_score()
+	score = time_points + quiz_points + game_points
 	score_updated.emit(score)
 	update_game_center()
+
+func get_total_mini_game_score() -> int:
+	var total := 0
+	for chapter_scores in level_game_scores.values():
+		if chapter_scores is Dictionary:
+			for value in chapter_scores.values():
+				if value is int:
+					total += value
+	return total
+
+func record_mini_game_score(game_mode: String, chapter_index: int, game_score: int) -> void:
+	if not level_game_scores.has(chapter_index):
+		level_game_scores[chapter_index] = {}
+	var chapter_scores: Dictionary = level_game_scores[chapter_index]
+	# Keep the best score for each mode per chapter.
+	var current: int = chapter_scores.get(game_mode, 0)
+	chapter_scores[game_mode] = max(current, game_score)
+	calculate_score(0)
+	SaveManager.save_progress()
+
+func set_mini_game_context(mode: String, chapter_index: int, sultan_index: int, return_scene: String) -> void:
+	mini_game_context = {
+		"mode": mode,
+		"chapter_index": chapter_index,
+		"sultan_index": sultan_index,
+		"return_scene": return_scene,
+	}
+
+func clear_mini_game_context() -> void:
+	mini_game_context = {}
 
 func update_game_center() -> void:
 	# Interface with Godot iOS GameCenter / Android Play Games plugin

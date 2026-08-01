@@ -16,7 +16,8 @@ func save_progress() -> void:
 			"locale_user_set": GameManager.locale_user_set,
 			"music_muted": GameManager.music_muted,
 			"category_stats": GameManager.category_stats,
-			"earned_badges": GameManager.earned_badges
+			"earned_badges": GameManager.earned_badges,
+			"level_game_scores": GameManager.level_game_scores
 		}
 		file.store_var(data)
 		file.close()
@@ -40,3 +41,4 @@ func load_progress() -> void:
 			GameManager.music_muted = data.get("music_muted", false)
 			GameManager.category_stats = data.get("category_stats", {})
 			GameManager.earned_badges = data.get("earned_badges", [])
+			GameManager.level_game_scores = data.get("level_game_scores", {})

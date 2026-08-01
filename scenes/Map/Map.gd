@@ -25,6 +25,7 @@ extends Node3D
 @onready var knowledge_button: Button = %KnowledgeButton
 @onready var leaderboard_button: Button = %LeaderboardButton
 @onready var achievements_button: Button = %AchievementsButton
+@onready var archery_button: Button = %ArcheryButton
 @onready var language_select: OptionButton = %LanguageSelect
 @onready var music_mute_button: Button = %MusicMuteButton
 @onready var exit_button: Button = %ExitButton
@@ -63,6 +64,7 @@ func _ready() -> void:
 	knowledge_button.text = tr("UI_KNOWLEDGE_LIBRARY")
 	leaderboard_button.text = tr("UI_LEADERBOARD_PROGRESS")
 	achievements_button.text = tr("UI_ACHIEVEMENTS_TITLE")
+	archery_button.text = tr("UI_ARCHERY_GAME")
 	exit_button.text = tr("UI_EXIT")
 	_update_music_mute_button()
 
@@ -77,6 +79,7 @@ func _ready() -> void:
 	knowledge_button.pressed.connect(_on_knowledge_pressed)
 	leaderboard_button.pressed.connect(_on_leaderboard_pressed)
 	achievements_button.pressed.connect(_on_achievements_pressed)
+	archery_button.pressed.connect(_on_archery_pressed)
 	language_select.item_selected.connect(_on_language_selected)
 	music_mute_button.pressed.connect(_on_music_mute_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
@@ -483,7 +486,13 @@ func _on_menu_button_pressed() -> void:
 	menu_panel.visible = not menu_panel.visible
 
 func _on_continue_pressed() -> void:
-	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
+	GameManager.set_mini_game_context(
+		GameManager.MINI_GAME_ARCHERY,
+		GameManager.current_chapter_index,
+		GameManager.current_sultan_index,
+		"res://scenes/Timeline/Timeline.tscn"
+	)
+	SceneManager.push("res://scenes/ArcheryGame/ArcheryGame.tscn")
 
 func _on_knowledge_pressed() -> void:
 	SceneManager.push("res://scenes/KnowledgeLibrary/KnowledgeLibrary.tscn")
@@ -493,6 +502,15 @@ func _on_leaderboard_pressed() -> void:
 
 func _on_achievements_pressed() -> void:
 	SceneManager.push("res://scenes/Achievements/Achievements.tscn")
+
+func _on_archery_pressed() -> void:
+	GameManager.set_mini_game_context(
+		GameManager.MINI_GAME_ARCHERY,
+		GameManager.current_chapter_index,
+		GameManager.current_sultan_index,
+		"res://scenes/Map/Map.tscn"
+	)
+	SceneManager.push("res://scenes/ArcheryGame/ArcheryGame.tscn")
 
 func _on_language_selected(index: int) -> void:
 	var locales := HistoricalData.get_supported_locales()
@@ -510,7 +528,13 @@ func _on_go_pressed() -> void:
 	if _selected_chapter_index < 0:
 		return
 	GameManager.set_progress(_selected_chapter_index, 0)
-	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
+	GameManager.set_mini_game_context(
+		GameManager.MINI_GAME_ARCHERY,
+		GameManager.current_chapter_index,
+		GameManager.current_sultan_index,
+		"res://scenes/Timeline/Timeline.tscn"
+	)
+	SceneManager.push("res://scenes/ArcheryGame/ArcheryGame.tscn")
 
 func _on_center_pressed() -> void:
 	# Reset the view to the initial centered-on-Turkey position.

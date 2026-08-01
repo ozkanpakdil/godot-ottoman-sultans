@@ -16,15 +16,15 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="Chronicles of the House of Osman"
 config/description="An educational, minimalist narrative-adventure timeline covering the 600+ year history of the Ottoman Empire (1299–1922)."
-run/main_scene="res://scenes/Map/Map.tscn"
+run/main_scene="res://scenes/Splash/Splash.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/UI/icon.svg"
 
 [boot_splash]
 
 bg_color=Color(0.0705882, 0.0705882, 0.109804, 1)
-image="res://assets/UI/icon.svg"
-fullsize=false
+image="res://assets/UI/splash.png"
+fullsize=true
 
 [autoload]
 

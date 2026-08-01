@@ -21,6 +21,7 @@ func _ready() -> void:
 	%MapButton.text = tr("UI_MAP")
 	%KnowledgeButton.text = tr("UI_KNOWLEDGE_LIBRARY")
 	%LeaderboardButton.text = tr("UI_LEADERBOARD_PROGRESS")
+	%ArcheryButton.text = tr("UI_ARCHERY_GAME")
 	%ExitButton.text = tr("UI_EXIT")
 	%ExitButton.disabled = false
 	%LanguageLabel.text = tr("UI_CHOOSE_LANGUAGE")
@@ -31,6 +32,7 @@ func _ready() -> void:
 	%MapButton.pressed.connect(_on_map_pressed)
 	%KnowledgeButton.pressed.connect(_on_knowledge_pressed)
 	%LeaderboardButton.pressed.connect(_on_leaderboard_pressed)
+	%ArcheryButton.pressed.connect(_on_archery_pressed)
 	%ExitButton.pressed.connect(_on_exit_pressed)
 	language_select.item_selected.connect(_on_language_selected)
 	%MusicMuteButton.pressed.connect(_on_music_mute_pressed)
@@ -54,7 +56,13 @@ func _on_language_selected(index: int) -> void:
 	SceneManager.reload_current_scene()
 
 func _on_continue_pressed() -> void:
-	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
+	GameManager.set_mini_game_context(
+		GameManager.MINI_GAME_ARCHERY,
+		GameManager.current_chapter_index,
+		GameManager.current_sultan_index,
+		"res://scenes/Timeline/Timeline.tscn"
+	)
+	SceneManager.push("res://scenes/ArcheryGame/ArcheryGame.tscn")
 
 func _on_map_pressed() -> void:
 	SceneManager.push("res://scenes/Map/Map.tscn")
@@ -64,6 +72,9 @@ func _on_knowledge_pressed() -> void:
 
 func _on_leaderboard_pressed() -> void:
 	SceneManager.push("res://scenes/Leaderboard/Leaderboard.tscn")
+
+func _on_archery_pressed() -> void:
+	SceneManager.push("res://scenes/ArcheryGame/ArcheryGame.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

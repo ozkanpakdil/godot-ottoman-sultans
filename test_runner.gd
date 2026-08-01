@@ -97,6 +97,7 @@ func _ready() -> void:
 
 	# Score calculation: 100s of study time = 10 points, plus 2 correct answers = 100 bonus
 	GameManager.total_study_time = 100.0
+	GameManager.level_game_scores = {}
 	GameManager.calculate_score(2 * GameManager.CORRECT_ANSWER_BONUS)
 	if GameManager.score != 110:
 		print("FAIL: score calc expected 110, got %d" % GameManager.score)
@@ -128,7 +129,7 @@ func _ready() -> void:
 	# UI translation check: make sure project translations are registered so exported
 	# builds show human-readable labels instead of raw keys like UI_EXIT.
 	TranslationServer.set_locale("en")
-	var ui_keys := ["UI_EXIT", "UI_CONTINUE", "UI_BACK", "UI_FORWARD", "UI_MAP", "UI_GO_TO_SULTAN", "UI_KNOWLEDGE_LIBRARY"]
+	var ui_keys := ["UI_EXIT", "UI_CONTINUE", "UI_BACK", "UI_FORWARD", "UI_MAP", "UI_GO_TO_SULTAN", "UI_KNOWLEDGE_LIBRARY", "UI_ARCHERY_GAME", "UI_SCORE", "UI_SHOTS"]
 	for key in ui_keys:
 		var translated: String = tr(key)
 		if translated == key or translated.is_empty():

@@ -91,12 +91,23 @@ func _finish() -> void:
 		continue_button.text = tr("UI_FINISH_JOURNEY")
 
 func _on_continue_pressed() -> void:
-	var next_chapter := GameManager.current_chapter_index + 1
+	var completed_chapter := GameManager.current_chapter_index
+	var completed_sultan := GameManager.current_sultan_index
+	var next_chapter := completed_chapter + 1
+	var return_scene: String
 	if next_chapter < HistoricalData.get_chapters().size():
 		GameManager.set_progress(next_chapter, 0)
-		SceneManager.replace("res://scenes/Timeline/Timeline.tscn")
+		return_scene = "res://scenes/Timeline/Timeline.tscn"
 	else:
-		SceneManager.replace("res://scenes/Leaderboard/Leaderboard.tscn")
+		return_scene = "res://scenes/Leaderboard/Leaderboard.tscn"
+
+	GameManager.set_mini_game_context(
+		GameManager.MINI_GAME_CANNON,
+		completed_chapter,
+		completed_sultan,
+		return_scene
+	)
+	SceneManager.push("res://scenes/ArcheryGame/ArcheryGame.tscn")
 
 func _on_back_to_menu_pressed() -> void:
 	SceneManager.pop_to_map()

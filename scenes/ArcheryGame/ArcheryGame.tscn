@@ -1,0 +1,224 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scenes/ArcheryGame/ArcheryGame.gd" id="1_4vjx8"]
+[ext_resource type="PackedScene" path="res://scenes/ArcheryGame/Archer.tscn" id="2_8q3vn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(720, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(60, 320)
+
+[sub_resource type="Gradient" id="Gradient_sky"]
+colors = PackedColorArray(0.2, 0.35, 0.55, 1, 0.55, 0.75, 0.9, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sky"]
+gradient = SubResource("Gradient_sky")
+fill_from = Vector2(0, 0)
+fill_to = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_confetti"]
+colors = PackedColorArray(0.9, 0.2, 0.2, 1, 0.95, 0.85, 0.25, 1, 0.2, 0.7, 0.4, 1, 0.25, 0.55, 0.85, 1)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_confetti"]
+size = Vector2(8, 8)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sun"]
+bg_color = Color(0.95, 0.85, 0.45, 1)
+corner_radius_top_left = 60
+corner_radius_top_right = 60
+corner_radius_bottom_right = 60
+corner_radius_bottom_left = 60
+
+[node name="ArcheryGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_4vjx8")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource("GradientTexture2D_sky")
+
+[node name="Sun" type="Panel" parent="Background"]
+layout_mode = 0
+offset_left = 520.0
+offset_top = 80.0
+offset_right = 640.0
+offset_bottom = 200.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sun")
+
+[node name="World" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Ground" type="StaticBody2D" parent="World"]
+position = Vector2(360, 1240)
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="ColorRect" type="ColorRect" parent="World/Ground"]
+offset_left = -360.0
+offset_top = -40.0
+offset_right = 360.0
+offset_bottom = 40.0
+color = Color(0.35, 0.5, 0.25, 1)
+
+[node name="Wall" type="StaticBody2D" parent="World"]
+position = Vector2(420, 900)
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="World/Wall"]
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="ColorRect" type="ColorRect" parent="World/Wall"]
+offset_left = -30.0
+offset_top = -160.0
+offset_right = 30.0
+offset_bottom = 160.0
+color = Color(0.5, 0.45, 0.4, 1)
+
+[node name="Crenellations" type="Polygon2D" parent="World/Wall"]
+polygon = PackedVector2Array(-30, -160, -30, -180, -15, -180, -15, -160, 0, -160, 0, -180, 15, -180, 15, -160, 30, -160, 30, -140, -30, -140)
+color = Color(0.55, 0.5, 0.45, 1)
+
+[node name="Launcher" type="Marker2D" parent="World"]
+unique_name_in_owner = true
+position = Vector2(138, 1088)
+
+[node name="Archer" parent="World" instance=ExtResource("2_8q3vn")]
+unique_name_in_owner = true
+position = Vector2(120, 1160)
+
+[node name="Targets" type="Node2D" parent="World"]
+unique_name_in_owner = true
+
+[node name="Projectiles" type="Node2D" parent="World"]
+unique_name_in_owner = true
+
+[node name="AimLine" type="Line2D" parent="."]
+unique_name_in_owner = true
+visible = false
+width = 3.0
+default_color = Color(0.95, 0.95, 0.95, 0.6)
+
+[node name="DragLine" type="Line2D" parent="."]
+unique_name_in_owner = true
+visible = false
+width = 4.0
+default_color = Color(0.95, 0.9, 0.4, 0.8)
+
+[node name="SuccessParticles" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(360, 640)
+emitting = false
+amount = 80
+lifetime = 2.5
+one_shot = true
+explosiveness = 1.0
+texture = SubResource("PlaceholderTexture2D_confetti")
+emission_shape = 1
+emission_sphere_radius = 40.0
+direction = Vector2(0, -1)
+spread = 90.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 250.0
+initial_velocity_max = 500.0
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_confetti")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="UI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 12
+
+[node name="TitleLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.9, 0.75, 1)
+theme_override_font_sizes/font_size = 32
+text = "Archery Siege"
+horizontal_alignment = 1
+
+[node name="EnemyLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.75, 0.35, 1)
+theme_override_font_sizes/font_size = 24
+text = ""
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ScoreLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.9, 0.75, 1)
+theme_override_font_sizes/font_size = 22
+text = "Score: 0"
+horizontal_alignment = 1
+
+[node name="ShotsLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 20
+text = "Shots: 10"
+horizontal_alignment = 1
+
+[node name="ResultLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.75, 0.35, 1)
+theme_override_font_sizes/font_size = 26
+text = ""
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HintLabel" type="Label" parent="UI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.9, 0.95, 1)
+theme_override_font_sizes/font_size = 18
+text = "Drag to aim · Release to shoot"
+horizontal_alignment = 1
+
+[node name="ButtonRow" type="HBoxContainer" parent="UI/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="ResetButton" type="Button" parent="UI/MarginContainer/VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Restart"
+
+[node name="BackButton" type="Button" parent="UI/MarginContainer/VBoxContainer/ButtonRow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Back"

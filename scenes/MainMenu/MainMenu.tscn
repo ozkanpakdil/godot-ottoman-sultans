@@ -107,6 +107,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Leaderboard & Progress"
 
+[node name="ArcheryButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 56)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Archery Siege"
+
 [node name="MusicMuteButton" type="Button" parent="MarginContainer/ScrollContainer/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)

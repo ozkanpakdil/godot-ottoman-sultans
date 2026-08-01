@@ -120,3 +120,14 @@ UI_QUIZ_FAMILY_CHILD_CONTEXT,%s was a child of %s.,"%s, %s'nin çocuğuydu.",%s 
 UI_QUIZ_FAMILY_WIFE,Who was a wife of %s?,%s'nin eşi kimdi?,谁是 %s 的妻子？,Кто была женой %s?,¿Quién fue esposa de %s?
 UI_QUIZ_FAMILY_WIFE_CONTEXT,%s was married to %s.,"%s, %s ile evliydi.",%s 嫁给了 %s。,%s была замужем за %s.,%s estuvo casada con %s.
 UI_QUIZ_DIPLOMACY,Which treaty or agreement is associated with %s?,%s ile ilişkili antlaşma veya anlaşma hangisidir?,与 %s 相关的条约或协议是哪一个？,Какой договор или соглашение связано с %s?,¿Qué tratado o acuerdo se asocia con %s?
+UI_ARCHERY_GAME,Archery Siege,Okçu Kuşatması,射箭围攻,Осада Лучников,Asedio de Arquería
+UI_BACK_TO_MENU,Back to Menu,Menüye Dön,返回菜单,Вернуться в меню,Volver al menú
+UI_SCORE,Score: %d,Puan: %d,分数：%d,Счёт: %d,Puntuación: %d
+UI_SHOTS,Shots: %d,Atış: %d,射击：%d,Выстрелов: %d,Disparos: %d
+UI_DRAG_TO_AIM,Drag toward the target to aim · Release to shoot,Hedefe doğru sürükleyerek nişan al · Atış için bırak,朝目标拖动瞄准 · 松开射击,Тяните к цели для прицеливания · Отпустите для выстрела,Arrastra hacia el objetivo para apuntar · Suelta para disparar
+UI_RESTART,Restart,Yeniden Başlat,重新开始,Заново,Reiniciar
+UI_GAME_OVER,Game Over - Score: %d,Oyun Bitti - Puan: %d,游戏结束 - 分数：%d,Игра окончена - Счёт: %d,Fin del juego - Puntuación: %d
+UI_VICTORY,Fortress Breached! - Score: %d,Kale Fethedildi! - Puan: %d,要塞攻破！ - 分数：%d,Крепость взята! - Счёт: %d,¡Fortaleza tomada! - Puntuación: %d
+UI_CANNON_SIEGE,Cannon Siege,Topçu Kuşatması,火炮围攻,Артиллерийская Осада,Asedio de Cañón
+UI_BOMBARD_THE_FORTRESS,Bombard the fortress!,Kaleyi bombardıman et!,轰击要塞！,Обстреляйте крепость!,¡Bombardea la fortaleza!
+UI_ENEMY,Enemy,Düşman,敌人,Враг,Enemigo

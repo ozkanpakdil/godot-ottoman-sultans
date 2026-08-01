@@ -7,6 +7,19 @@ const MAP_PATH := "res://scenes/Map/Map.tscn"
 
 var _stack: Array[Node] = []
 
+func _ready() -> void:
+	get_tree().root.tree_exiting.connect(_on_tree_exiting)
+
+func _on_tree_exiting() -> void:
+	# Free any scenes held in the stack so they don't leak at shutdown.
+	_clear_stack()
+
+func _clear_stack() -> void:
+	for scene in _stack:
+		if is_instance_valid(scene) and not scene.is_queued_for_deletion():
+			scene.free()
+	_stack.clear()
+
 func push(scene_path: String) -> void:
 	var current := get_tree().current_scene
 	if current != null:
@@ -48,5 +61,5 @@ func pop_to_map() -> void:
 
 func reload_current_scene() -> void:
 	# Clear the stack so a fresh reload does not hold stale scene references.
-	_stack.clear()
+	_clear_stack()
 	get_tree().reload_current_scene()

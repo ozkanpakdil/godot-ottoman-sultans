@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/ArcheryGame/Target.gd" id="1_k2b5n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0"]
+size = Vector2(56, 56)
+
+[node name="FortressBlock" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_k2b5n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0")
+
+[node name="Block" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-28, -28, 28, -28, 28, 28, -28, 28)
+color = Color(0.5, 0.45, 0.4, 1)
+
+[node name="Masonry" type="Line2D" parent="."]
+points = PackedVector2Array(-28, -8, 28, -8, -28, 12, 28, 12)
+width = 2.0
+default_color = Color(0.4, 0.35, 0.3, 1)
+
+[node name="FlagPole" type="Line2D" parent="."]
+points = PackedVector2Array(0, -28, 0, -56)
+width = 2.0
+default_color = Color(0.35, 0.25, 0.2, 1)
+
+[node name="Flag" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(2, -54, 34, -46, 34, -30, 2, -38)
+color = Color(0.75, 0.12, 0.12, 1)
+
+[node name="FlagCrescent" type="Polygon2D" parent="Flag"]
+polygon = PackedVector2Array(10, -46, 18, -42, 18, -34, 10, -30, 6, -34, 14, -34, 18, -38, 18, -42, 14, -46, 6, -46)
+color = Color(0.95, 0.9, 0.75, 1)
+
+[node name="NameLabel" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -26.0
+offset_top = -12.0
+offset_right = 26.0
+offset_bottom = 12.0
+theme_override_colors/font_color = Color(0.95, 0.9, 0.75, 1)
+theme_override_font_sizes/font_size = 10
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
