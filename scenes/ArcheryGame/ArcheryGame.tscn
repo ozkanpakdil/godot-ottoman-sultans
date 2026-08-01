@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="Script" path="res://scenes/ArcheryGame/ArcheryGame.gd" id="1_4vjx8"]
 [ext_resource type="PackedScene" path="res://scenes/ArcheryGame/Archer.tscn" id="2_8q3vn"]
+[ext_resource type="Texture2D" path="res://assets/UI/sun.png" id="3_sunpng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(720, 80)
@@ -23,13 +24,6 @@ colors = PackedColorArray(0.9, 0.2, 0.2, 1, 0.95, 0.85, 0.25, 1, 0.2, 0.7, 0.4, 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_confetti"]
 size = Vector2(8, 8)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sun"]
-bg_color = Color(0.95, 0.85, 0.45, 1)
-corner_radius_top_left = 60
-corner_radius_top_right = 60
-corner_radius_bottom_right = 60
-corner_radius_bottom_left = 60
-
 [node name="ArcheryGame" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -44,13 +38,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = SubResource("GradientTexture2D_sky")
 
-[node name="Sun" type="Panel" parent="Background"]
+[node name="Sun" type="TextureRect" parent="Background"]
 layout_mode = 0
-offset_left = 520.0
-offset_top = 80.0
-offset_right = 640.0
-offset_bottom = 200.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_sun")
+offset_left = 500.0
+offset_top = 60.0
+offset_right = 660.0
+offset_bottom = 220.0
+texture = ExtResource("3_sunpng")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="World" type="Node2D" parent="."]
 unique_name_in_owner = true

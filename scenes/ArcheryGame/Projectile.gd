@@ -10,6 +10,10 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	_ttl.timeout.connect(queue_free)
 
+func _process(_delta: float) -> void:
+	if not freeze and linear_velocity.length_squared() > 1.0:
+		rotation = linear_velocity.angle()
+
 func _on_body_entered(body: Node) -> void:
 	if body.is_in_group("targets"):
 		hit_target.emit(body)
