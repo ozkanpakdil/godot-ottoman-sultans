@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://scenes/ArcheryGame/ArcheryGame.gd" id="1_4vjx8"]
 [ext_resource type="PackedScene" path="res://scenes/ArcheryGame/Archer.tscn" id="2_8q3vn"]
 [ext_resource type="Texture2D" path="res://assets/UI/sun.png" id="3_sunpng"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/bow_shoot.wav" id="4_bow"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/hit_target.wav" id="5_hit"]
+[ext_resource type="AudioStream" path="res://assets/audio/sfx/cannon_fire.wav" id="6_cannon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
 size = Vector2(720, 80)
@@ -130,6 +133,21 @@ initial_velocity_max = 500.0
 scale_amount_min = 0.5
 scale_amount_max = 1.5
 color_ramp = SubResource("Gradient_confetti")
+
+[node name="ShootSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+process_mode = 1
+stream = ExtResource("4_bow")
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+process_mode = 1
+stream = ExtResource("5_hit")
+
+[node name="CannonSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+process_mode = 1
+stream = ExtResource("6_cannon")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

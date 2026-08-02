@@ -36,10 +36,12 @@ func _ready() -> void:
 	%ExitButton.pressed.connect(_on_exit_pressed)
 	language_select.item_selected.connect(_on_language_selected)
 	%MusicMuteButton.pressed.connect(_on_music_mute_pressed)
+	%SfxMuteButton.pressed.connect(_on_sfx_mute_pressed)
 	
 	# Initialize mute button text
 	var muted = MusicPlayer.is_muted()
 	%MusicMuteButton.text = "🔇 Music" if muted else "🔊 Music"
+	%SfxMuteButton.text = "🔇 SFX" if GameManager.sfx_muted else "🔊 SFX"
 
 func _build_language_select() -> void:
 	var locales := HistoricalData.get_supported_locales()
@@ -83,3 +85,7 @@ func _on_music_mute_pressed() -> void:
 	MusicPlayer.toggle_mute()
 	var muted = MusicPlayer.is_muted()
 	%MusicMuteButton.text = "🔇 Music" if muted else "🔊 Music"
+
+func _on_sfx_mute_pressed() -> void:
+	var muted := GameManager.toggle_sfx_mute()
+	%SfxMuteButton.text = "🔇 SFX" if muted else "🔊 SFX"

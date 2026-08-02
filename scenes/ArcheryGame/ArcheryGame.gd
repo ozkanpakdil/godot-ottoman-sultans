@@ -19,6 +19,9 @@ const MAX_SHOTS := 10
 @onready var launcher: Marker2D = %Launcher
 @onready var archer: Node2D = %Archer
 @onready var success_particles: CPUParticles2D = %SuccessParticles
+@onready var shoot_sound: AudioStreamPlayer = %ShootSound
+@onready var hit_sound: AudioStreamPlayer = %HitSound
+@onready var cannon_sound: AudioStreamPlayer = %CannonSound
 @onready var aim_line: Line2D = %AimLine
 @onready var drag_line: Line2D = %DragLine
 @onready var projectiles: Node2D = %Projectiles
@@ -169,6 +172,12 @@ func _shoot() -> void:
 	projectile.hit_target.connect(_on_target_hit)
 	projectiles.add_child(projectile)
 
+	if not GameManager.sfx_muted:
+		if _mode == GameManager.MINI_GAME_CANNON:
+			cannon_sound.play()
+		else:
+			shoot_sound.play()
+
 	if _shots_left == 0:
 		_game_over = true
 		result_label.text = tr("UI_GAME_OVER") % _score if tr("UI_GAME_OVER") != "UI_GAME_OVER" else "Game Over - Score: %d" % _score
@@ -178,6 +187,8 @@ func _shoot() -> void:
 func _on_target_hit(target: Node) -> void:
 	if target.is_queued_for_deletion():
 		return
+	if not GameManager.sfx_muted:
+		hit_sound.play()
 	_score += 100
 	target.queue_free()
 	_update_ui()

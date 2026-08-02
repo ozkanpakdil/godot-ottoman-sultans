@@ -15,6 +15,7 @@ func save_progress() -> void:
 			"locale": GameManager.locale,
 			"locale_user_set": GameManager.locale_user_set,
 			"music_muted": GameManager.music_muted,
+			"sfx_muted": GameManager.sfx_muted,
 			"category_stats": GameManager.category_stats,
 			"earned_badges": GameManager.earned_badges,
 			"level_game_scores": GameManager.level_game_scores
@@ -39,6 +40,7 @@ func load_progress() -> void:
 			GameManager.locale = loaded_locale if loaded_locale in GameManager.SUPPORTED_LOCALES else "en"
 			GameManager.locale_user_set = data.get("locale_user_set", false)
 			GameManager.music_muted = data.get("music_muted", false)
+			GameManager.sfx_muted = data.get("sfx_muted", false)
 			GameManager.category_stats = data.get("category_stats", {})
 			GameManager.earned_badges = data.get("earned_badges", [])
 			GameManager.level_game_scores = data.get("level_game_scores", {})

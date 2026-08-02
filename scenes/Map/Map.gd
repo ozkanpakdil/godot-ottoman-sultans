@@ -28,6 +28,7 @@ extends Node3D
 @onready var archery_button: Button = %ArcheryButton
 @onready var language_select: OptionButton = %LanguageSelect
 @onready var music_mute_button: Button = %MusicMuteButton
+@onready var sfx_mute_button: Button = %SfxMuteButton
 @onready var exit_button: Button = %ExitButton
 
 const GLOBE_RADIUS := 3.0
@@ -67,6 +68,7 @@ func _ready() -> void:
 	archery_button.text = tr("UI_ARCHERY_GAME")
 	exit_button.text = tr("UI_EXIT")
 	_update_music_mute_button()
+	_update_sfx_mute_button()
 
 	go_button.pressed.connect(_on_go_pressed)
 	zoom_in_button.pressed.connect(_on_zoom_in_pressed)
@@ -82,6 +84,7 @@ func _ready() -> void:
 	archery_button.pressed.connect(_on_archery_pressed)
 	language_select.item_selected.connect(_on_language_selected)
 	music_mute_button.pressed.connect(_on_music_mute_pressed)
+	sfx_mute_button.pressed.connect(_on_sfx_mute_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
 
 	menu_panel.visible = false
@@ -482,6 +485,9 @@ func _build_language_select() -> void:
 func _update_music_mute_button() -> void:
 	music_mute_button.text = "🔇" if MusicPlayer.is_muted() else "🔊"
 
+func _update_sfx_mute_button() -> void:
+	sfx_mute_button.text = "🔇" if GameManager.sfx_muted else "🔊"
+
 func _on_menu_button_pressed() -> void:
 	menu_panel.visible = not menu_panel.visible
 
@@ -520,6 +526,10 @@ func _on_language_selected(index: int) -> void:
 func _on_music_mute_pressed() -> void:
 	MusicPlayer.toggle_mute()
 	_update_music_mute_button()
+
+func _on_sfx_mute_pressed() -> void:
+	GameManager.toggle_sfx_mute()
+	_update_sfx_mute_button()
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

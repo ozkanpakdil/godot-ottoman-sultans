@@ -23,6 +23,7 @@ const SUPPORTED_LOCALES := ["en", "tr", "zh", "ru", "es"]
 
 # Audio
 var music_muted: bool = false
+var sfx_muted: bool = false
 
 # Category mastery badges
 var category_stats: Dictionary = {}
@@ -198,6 +199,11 @@ func set_mini_game_context(mode: String, chapter_index: int, sultan_index: int, 
 
 func clear_mini_game_context() -> void:
 	mini_game_context = {}
+
+func toggle_sfx_mute() -> bool:
+	sfx_muted = not sfx_muted
+	SaveManager.save_progress()
+	return sfx_muted
 
 func update_game_center() -> void:
 	# Interface with Godot iOS GameCenter / Android Play Games plugin
