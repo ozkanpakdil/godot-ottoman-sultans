@@ -2,12 +2,9 @@ extends Control
 
 @onready var category_list: VBoxContainer = %CategoryList
 @onready var badge_list: VBoxContainer = %BadgeList
-@onready var back_button: Button = %BackButton
 
 func _ready() -> void:
 	%TitleLabel.text = tr("UI_ACHIEVEMENTS_TITLE")
-	back_button.text = tr("UI_BACK_TO_MAP")
-	back_button.pressed.connect(_on_back_pressed)
 	_build_category_list()
 	_build_badge_list()
 
@@ -104,5 +101,4 @@ func _build_badge_list() -> void:
 		entry.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		badge_list.add_child(entry)
 
-func _on_back_pressed() -> void:
-	SceneManager.pop_to_map()
+

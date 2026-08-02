@@ -22,7 +22,6 @@ func _ready() -> void:
 	forward_button.pressed.connect(_on_forward_pressed)
 	quiz_button.pressed.connect(_on_quiz_pressed)
 	video_button.pressed.connect(_on_video_pressed)
-	%MenuButton.pressed.connect(_on_menu_pressed)
 	_render_sultan()
 
 func _render_sultan() -> void:
@@ -107,7 +106,3 @@ func _on_video_pressed() -> void:
 	var video_id: String = sultan.get("video_id", "")
 	if video_id != "":
 		OS.shell_open("https://www.youtube.com/watch?v=" + video_id)
-
-func _on_menu_pressed() -> void:
-	SaveManager.save_progress()
-	SceneManager.pop_to_map()

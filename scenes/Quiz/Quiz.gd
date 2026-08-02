@@ -11,7 +11,6 @@ var correct_count: int = 0
 @onready var context_label: RichTextLabel = %ContextLabel
 @onready var result_label: Label = %ResultLabel
 @onready var continue_button: Button = %ContinueButton
-@onready var back_to_menu_button: Button = %BackToMenuButton
 
 func _ready() -> void:
 	quiz_system = QuizSystem.new()
@@ -23,7 +22,6 @@ func _ready() -> void:
 	context_label.visible = false
 	continue_button.visible = false
 	continue_button.pressed.connect(_on_continue_pressed)
-	back_to_menu_button.pressed.connect(_on_back_to_menu_pressed)
 
 	questions = quiz_system.generate_quiz(GameManager.current_chapter_index)
 	_show_question()
@@ -109,5 +107,4 @@ func _on_continue_pressed() -> void:
 	)
 	SceneManager.push("res://scenes/ArcheryGame/ArcheryGame.tscn")
 
-func _on_back_to_menu_pressed() -> void:
-	SceneManager.pop_to_map()
+

@@ -31,9 +31,9 @@ const MAX_SHOTS := 10
 @onready var result_label: Label = %ResultLabel
 @onready var enemy_label: Label = %EnemyLabel
 @onready var reset_button: Button = %ResetButton
-@onready var back_button: Button = %BackButton
 @onready var hint_label: Label = %HintLabel
 @onready var title_label: Label = %TitleLabel
+@onready var side_menu: CanvasLayer = $SideMenu
 
 var _drag_start: Vector2 = Vector2.ZERO
 var _drag_current: Vector2 = Vector2.ZERO
@@ -53,14 +53,12 @@ var _player_node: Node2D = null
 func _ready() -> void:
 	_read_context()
 	_setup_player()
-	_back_button_text()
 	_update_title_and_hint()
 	_update_enemy_label()
 	_archer_base_y = _player_node.position.y
 	_update_ui()
 	_spawn_targets()
 	reset_button.pressed.connect(_reset_game)
-	back_button.pressed.connect(_on_back_pressed)
 
 func _read_context() -> void:
 	var ctx := GameManager.mini_game_context
@@ -103,15 +101,12 @@ func _update_enemy_label() -> void:
 	var prefix := tr("UI_ENEMY") if tr("UI_ENEMY") != "UI_ENEMY" else "Enemy"
 	enemy_label.text = "%s: %s" % [prefix, battle_name]
 
-func _back_button_text() -> void:
-	var txt := tr("UI_BACK_TO_MENU")
-	if txt == "UI_BACK_TO_MENU":
-		txt = tr("UI_BACK")
-	back_button.text = txt
-
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if _game_over:
 		return
+	if event is InputEventScreenTouch or event is InputEventMouseButton or event is InputEventScreenDrag or event is InputEventMouseMotion:
+		if side_menu.is_point_over_menu(event.position):
+			return
 
 	if event is InputEventScreenTouch or event is InputEventMouseButton:
 		var pos: Vector2 = event.position
@@ -293,6 +288,3 @@ func _reset_game() -> void:
 		p.queue_free()
 	_spawn_targets()
 	_update_ui()
-
-func _on_back_pressed() -> void:
-	SceneManager.pop()

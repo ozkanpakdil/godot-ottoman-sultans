@@ -2,12 +2,9 @@ extends Control
 
 @onready var chapter_list: VBoxContainer = %ChapterList
 @onready var title_label: Label = %TitleLabel
-@onready var back_button: Button = %BackButton
 
 func _ready() -> void:
 	title_label.text = tr("UI_KNOWLEDGE_LIBRARY")
-	back_button.text = tr("UI_BACK")
-	back_button.pressed.connect(_on_back_pressed)
 	_build_chapter_list()
 
 func _build_chapter_list() -> void:
@@ -32,6 +29,3 @@ func _build_chapter_list() -> void:
 func _on_chapter_pressed(chapter_index: int) -> void:
 	GameManager.set_progress(chapter_index, 0)
 	SceneManager.push("res://scenes/Timeline/Timeline.tscn")
-
-func _on_back_pressed() -> void:
-	SceneManager.pop_to_map()
